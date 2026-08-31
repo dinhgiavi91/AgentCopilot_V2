@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "client/src/pages/Home.tsx",
+    "client/src/lib/supabaseContent.ts",
+    "client/src/lib/sprint4Logic.ts",
+    "client/src/lib/sprint6Logic.ts"
+  ],
+  "exclude": ["node_modules", "dist", "server", "client/src/components", "client/src/_core"]
+}

@@ -1,0 +1,1161 @@
+# Cập nhật BHNT Learning Hub
+
+- [x] Đọc lại các ghi chú nghiên cứu và mục tiêu app đã lưu trong project; tài liệu đánh giá mới chưa tải được do URL đính kèm trả AccessDenied.
+- [x] Thay dấu compass-pulse cũ bằng bản dựng inline theo logo khiên–ngọn lửa navy/gold người dùng chọn.
+- [x] Đồng bộ palette navy–gold và ngôn ngữ thương hiệu với mục tiêu học tập, giữ nhịp và dẫn đội.
+- [x] Kiểm tra lại hero, report rail, module cards, Radar và các điểm chạm gamification.
+- [x] Kiểm thử desktop/mobile và build production; chờ checkpoint mới sau khi người dùng xác nhận phần review đính kèm.
+- [x] Nâng scaffold full-stack và ghi rõ cấu hình Supabase bằng env; không dùng Anon Key cho DDL.
+- [x] Viết SQL migration cho users_profile, daily_logs và xp_ledger cùng RLS policies, grants và trigger XP.
+- [x] Xây Dashboard TVV “Hồ Sơ Chiến Binh” theo flow thu nhập → cuộc gặp → streak/XP.
+- [x] Hoàn thiện source Next.js App Router/Tailwind runnable, sửa import/config và xác minh Next production build thành công.
+- [x] Chuẩn bị migration SQL để người dùng chạy thủ công trong Supabase SQL Editor; không chạy DDL qua Anon Key.
+- [x] Đưa Supabase client vào source Next.js theo lazy initialization để app vẫn build được khi chưa nạp env.
+- [x] Sửa cấu hình build/start production để container luôn tạo và gọi dist/index.js hợp lệ.
+- [x] Xác minh server production lắng nghe đúng cổng bằng smoke test HTTP; sẵn sàng lưu checkpoint deploy mới.
+- [x] Chuẩn hóa Sidebar Navy #1A365D, trạng thái active Gold #F59E0B và hệ card rounded-2xl có hover nâng lên.
+- [x] Nâng Dashboard Hồ Sơ với thanh tiến trình gradient vàng-cam-đỏ và pulse nhẹ.
+- [x] Xây màn hình Bảo Bối Thực Chiến gồm Flashcard tương tác Socratic/SPIN.
+- [x] Xây màn hình Radar Giữ Quân với ba tín hiệu SOS và CTA Cafe Cứu Net có toast.
+- [x] Hoàn thiện hash routing giữa Hồ Sơ, Bảo Bối và Radar; kiểm tra build, Vitest, desktop và mobile.
+- [x] Thêm Daily Quiz đầu Dashboard với trạng thái hoàn thành, confetti, +10 XP và streak reinforcement.
+- [x] Xây Trạm Tiếp Năng Lượng để hiển thị số dư XP và đổi quà giả lập.
+- [x] Áp dụng Freemium Gate cho Radar ở gói FREE và khóa hai thẻ Bảo Bối có nhãn PRO.
+- [x] Thêm màn hình Marketing 1-Chạm với gallery thiệp và CTA Gửi Zalo giả lập.
+- [x] Kiểm thử các luồng Sprint 3, hash routing, Vitest, desktop/mobile và build production.
+- [x] Thêm modal chỉnh Mục tiêu thu nhập và tính lại progress/số cuộc gặp cần tạo theo state.
+- [x] Thêm Welcome Modal La Bàn Khởi Hành với thông điệp không áp lực KPI.
+- [x] Xây Ngôn Ngữ Thấu Cảm và La Bàn Lãnh Đạo dạng Accordion/list từ Sidebar.
+- [x] Thay Gửi Zalo giả lập bằng window.open deep link Zalo có nội dung mẫu mã hóa.
+- [x] Kiểm thử Master Data, kho tri thức, deep link, routing, responsive, Vitest và build production.
+- [x] Kiểm thử logic modal Mục tiêu thu nhập: mục tiêu 40 triệu cập nhật đúng progress 38% và phễu 53 cuộc gặp qua test helper.
+- [x] Kiểm thử logic Welcome Modal: chỉ hiển thị ở root visit đầu tiên, không hiển thị sau dismiss hoặc trên direct hash route.
+- [x] Kiểm thử logic Gửi Zalo ngay: deep link `zalo.me` được tạo đúng với nội dung đã mã hóa; UI gọi window.open trong tab mới.
+- [x] Khảo sát 4 sheet Excel nguồn, đối chiếu schema Supabase hiện hữu và lập mapping Zero-PII.
+- [x] Thay logo vector mặc định bằng PNG logo chính thức ở Sidebar, Topbar và Welcome Modal.
+- [x] Tạo migration/seed script idempotent cho Bảo Bối, Ngôn Ngữ Thấu Cảm, La Bàn Lãnh Đạo và Marketing 1-Chạm.
+- [x] Chạy migration/seed trên Supabase khi quyền thực thi khả dụng và xác minh số bản ghi.
+- [x] Thay Mock Data bằng Supabase queries có loading, error và empty state an toàn.
+- [x] Kiểm thử dữ liệu động, RLS, logo, desktop/mobile và build production.
+- [x] Lưu service-role key qua secrets server-side, không đưa key vào frontend hoặc source control.
+- [x] Chạy migration idempotent và seed 13/4/6/9 bản ghi vào Supabase bằng runner server-side.
+- [x] Đếm và đối chiếu dữ liệu đã seed qua service-role trước khi nghiệm thu Preview.
+- [x] Lưu PAT server-side và dùng Management API database:write để chạy migration Sprint 5.
+- [x] Kiểm tra responsive mobile sau Sprint 5 cho các màn hình render dữ liệu Supabase thật.
+- [x] Kiểm tra RLS read path thực tế bằng Anon Key trên cả bốn bảng Content Library.
+- [x] Chụp và rà soát responsive mobile cho La Bàn Lãnh Đạo đang render dữ liệu Supabase thật.
+- [x] Rà soát Master Data/schema hiện có và lập mapping Zero-PII cho DISC, Cover Letters, Bản Tin, Feedback, XP Ledger và Daily Logs.
+- [x] Tạo migration/seed Supabase idempotent cho các bảng nội dung Sprint 6 và chính sách RLS phù hợp.
+- [x] Thêm năm mục Sidebar: Trạm Đăng Kiểm, Trợ Lý Thẩm Định, Bản Tin 90s, Án Lệ và Góc Lắng Nghe.
+- [x] Xây DISC Modal 5 câu, badge tính cách động, Cover Letter copy và form feedback ghi Supabase.
+- [x] Xây XP Ledger modal bấm được từ Dashboard cùng FAB Ghi Nhịp Đập cố định và form Zero-PII.
+- [x] Thêm motion system cho counter số liệu, CTA hover/focus và transition theo reduced-motion.
+- [x] Kiểm thử migration/seed, RLS, render dữ liệu thật, các Smart Actions và responsive desktop/mobile.
+- [x] Tách Bản Tin 90s và Án Lệ thành hai mục Sidebar với bộ lọc dữ liệu news_case_studies riêng.
+- [x] Bổ sung trạng thái focus-visible có ring/transition cho CTA Sprint 6 và kiểm thử accessibility state.
+- [x] Rà soát các cột sheet DISC, Nhịp Đập, Bảo Bối, Thấu Cảm, Trạm Tiếp Năng Lượng và Bản Tin để map lại nghiệp vụ.
+- [x] Chuyển DISC sang wizard một câu mỗi card, dùng diễn giải tổng hợp có truy vết từ các lựa chọn hành vi trong Excel ở màn kết quả.
+- [x] Bổ sung danh mục Cấp độ dịch vụ 1–6 từ Excel cho Daily Log, có tooltip/description và validation follow-up theo kết quả.
+- [x] Sửa trình bày Bảo Bối và Ngôn Ngữ Thấu Cảm để bảo toàn xuống dòng, nhấn câu hỏi và làm nổi bật câu trả lời.
+- [x] Seed và render Trạm Tiếp Năng Lượng theo sheet 7 cùng dữ liệu Case Study Bồi Thường được phân loại rõ.
+- [x] Kiểm thử UI nghiệp vụ desktop/mobile, build và Vitest trước checkpoint cập nhật.
+- [x] Khôi phục migration bảng lõi users_profile, daily_logs và xp_ledger trên Supabase để Smart Actions có nơi ghi dữ liệu thật.
+- [x] Bổ sung nội dung Master Data DISC đã được Product Owner xác nhận, gồm điểm mạnh, điểm yếu và phong cách cho nhóm cơ bản/lai.
+- [x] Seed dữ liệu DISC cơ bản và Hybrid theo nội dung người dùng cung cấp, thay thế diễn giải tổng hợp chưa được xác nhận.
+- [x] Cập nhật thuật toán DISC xử lý hòa điểm thành nhóm lai DI/DC/IS/SC hoặc Tắc Kè Hoa.
+- [x] Khôi phục Card Nạp Não Mỗi Sáng với Quiz, +10 XP và reinforcement Streak trên Dashboard.
+- [x] Rà soát regression toàn bộ component Sprint 3–6: Quiz, FAB, counter, XP Store, Radar, Freemium và Content Library.
+- [x] Kiểm thử đầy đủ build, Vitest và responsive trước checkpoint Hybrid.
+- [x] Đồng bộ trạng thái Daily Quiz theo ngày từ Supabase để refresh không hiện lại quiz đã claim.
+- [x] Đọc XP/Streak Dashboard từ users_profile khi tải trang thay vì chỉ cập nhật state sau khi claim.
+- [x] Chạy lại regression verification runtime sau khi hoàn tất đồng bộ Quiz/XP/Streak.
+- [x] Bổ sung kiểm thử logic thực chất cho trạng thái Daily Quiz theo ngày và dữ liệu Dashboard Profile.
+- [x] Viết hướng dẫn xác minh authenticated refresh cho claim Daily Quiz và reload XP/Streak trước checkpoint.
+- [x] Tách và kiểm thử helper xác định khoảng ngày UTC của Daily Quiz cùng trạng thái completed từ dữ liệu ledger.
+- [x] Ghi rõ điều kiện xác minh authenticated refresh cần session TVV Supabase hợp lệ trước checkpoint.
+- [x] Rà soát UI/Sprint 3–7 và sheet 7 để map các component cần chỉnh, dữ liệu XP Store và điểm cần bảo toàn.
+- [x] Chuẩn hóa font tiếng Việt, Navy/Gold/gray-50, contrast nền trắng và thay toàn bộ Án Lệ bằng Case Study Thực Chiến.
+- [x] Render 3 phần thưởng XP Store từ Master Data và xử lý CTA Đổi Quà với toast hướng dẫn khi chưa đủ điểm.
+- [x] Thêm toggle Chế Độ Quản Lý (PRO), mở Radar và danh sách SOS demo với hành động Cứu Net.
+- [x] Thiết kế lại Bản Tin 90s & Case Study Thực Chiến theo card feed, tiêu đề/tóm tắt/bài học rõ ràng.
+- [x] Thêm regression tests, accessibility checks, build và desktop/mobile verification cho bản demo Sprint 8.
+- [x] Thay nhãn Case Study Thực Chiến trực tiếp trong JSX/source, bỏ DOM mutation và rà soát toàn bộ nhãn cũ.
+- [x] Mở rộng contrast audit cho toàn bộ card, modal, dropdown/select và surface nền trắng của Sprint 8.
+- [x] Bổ sung accessibility assertions cho Toggle PRO, CTA Radar, CTA XP Store và filter Feed; xác minh keyboard focus desktop/mobile.
+- [x] Lập inventory đầy đủ các surface nền trắng Sprint 8, bổ sung selector contrast còn thiếu và assertion theo từng nhóm component.
+- [x] Thêm kiểm thử keyboard interaction/focus thực chất cho Toggle PRO, Radar CTA, XP Store và Feed filter trên desktop/mobile.
+- [x] Bổ sung kiểm thử keyboard/focus riêng tại mobile viewport và ghi nhận giới hạn CSS viewport của jsdom.
+- [x] Rà soát component/data Sprint 8 và thiết kế state/schema Sprint 9, giữ nguyên bảng lõi Supabase hiện hữu.
+- [x] Hotfix contrast phần mở Bảo Bối và mở rộng Trạm Tiếp Năng Lượng bằng Contest tạo mới cho Leader.
+- [x] Xây social gamification: XP fly-up, tặng 20 XP biết ơn, Nhật Ký công khai/cá nhân và Community Feed tương tác.
+- [x] Mở rộng Mục tiêu với BHNT/PNT và dropdown cấp bậc có tỷ lệ chốt/quy đổi cuộc gặp riêng.
+- [x] Hoàn thiện Radar thấu cảm, Modal Báo cáo GĐ và chỉnh tên đội white-label trên Header.
+- [x] Kiểm thử regression Sprint 3–8, accessibility và responsive cho toàn bộ luồng Sprint 9.
+- [x] Đối chiếu yêu cầu Sprint 9 mở rộng với code hiện hữu và chốt thiết kế CRM Nhật Ký Khách Hàng không lưu PII.
+- [x] Khắc phục nhảy màn hình khi đổi tên Team, bảo đảm Bảo Bối tương phản tốt và hoàn thiện Contest Store theo dữ liệu nguồn.
+- [x] Xây tab CRM Nhật Ký Khách Hàng Zero-PII với phân loại Trước Bán/Sau Bán, tag bối cảnh, gợi ý nuôi dưỡng và nurture streak.
+- [x] Cho phép tặng XP tùy chỉnh cho đồng đội, gồm luồng thưởng nóng của Leader, và cập nhật tương tác Feed cộng đồng.
+- [x] Xác minh mục tiêu BHNT/PNT theo cấp bậc, Radar thấu cảm, Báo cáo Leader và các luồng cũ không bị ảnh hưởng.
+- [x] Bổ sung regression, kiểm tra accessibility/responsive và phát hành checkpoint Sprint 9 mở rộng.
+- [x] Kiểm tra trực quan desktop/mobile cho CRM Nhật Ký Khách Hàng, modal Tặng XP tùy chỉnh và Radar Leader có bảng mục tiêu đội.
+- [x] Bổ sung kiểm thử keyboard/focus cho CRM và modal Tặng XP tùy chỉnh trước checkpoint Sprint 9 mở rộng.
+- [x] Rà soát nguyên nhân input glitch, font và các lỗi Header/kho tri thức Sprint 10.
+- [x] Ổn định state cho White-label, Nhật Ký và Feed; nhúng Plus Jakarta Sans; dọn chữ Header và icon bóng đèn.
+- [x] Nâng Form Mục Tiêu với thu nhập, hoa hồng và size HĐ; sửa phễu cuộc gặp và giải thích Daily Quiz.
+- [x] Mở rộng Nhịp Đập với trạng thái Đã gặp & Đang bám sát, bối cảnh Trước/Sau Bán và gợi ý thấu cảm; tách Marketing TVV/Leader.
+- [x] Xây UI mockup Phòng Luyện Tập Roleplay, Reels Video Thực Chiến và Báo cáo Leader storytelling.
+- [x] Bổ sung regression, accessibility, responsive, build production và checkpoint Sprint 10.
+- [x] Lưu checkpoint Sprint 10 mới và xác nhận bản preview/live dùng đúng phiên bản đã phát hành.
+- [x] Kiểm thử keyboard/focus/close cho Roleplay modal, Reels Video Demo và Báo cáo GĐ storytelling.
+- [x] Xác nhận lại preview và tên miền live sau checkpoint Sprint 10 cuối, gồm hotfix cắt slogan logo.
+- [x] Sprint 11 Phase 1: audit và khắc phục font tiếng Việt, input glitch, text/icon contrast, logo widget và mobile responsive.
+- [x] Sprint 11 Phase 2: tái cấu trúc Mục Tiêu theo vai trò TVV/Leader, sản phẩm BHNT/PNT và widget động lực theo Team.
+- [x] Sprint 11: thêm regression, accessibility và kiểm tra web/mobile cho Phase 1–2.
+- [x] Sprint 11: lưu checkpoint Phase 1–2 và gửi preview để nghiệm thu trước khi mở Phase 3–5.
+- [x] Thêm interaction/accessibility tests cho DISC, Nhật Ký KH và modal Mục Tiêu Sprint 11 ở desktop/mobile.
+- [x] Render widget động lực theo Team/ngày bằng React, xác minh không còn quote CSS tĩnh.
+- [x] Sprint 11: chụp và rà soát preview mobile cho Dashboard, widget động lực, Nhật Ký KH và modal Mục Tiêu TVV/Leader.
+- [x] Sprint 11: bổ sung interaction/accessibility regression ở mobile cho DISC và modal Mục Tiêu, gồm mở/đóng dialog, keyboard navigation và focus behavior.
+- [x] Sprint 11: mở rộng assertion accessibility cho aria dialog naming, keyboard reachability và focus-visible Phase 1–2; chạy lại full suite.
+- [x] Sprint 11 Phase 3: CRM gợi ý theo ngữ cảnh, bối cảnh Khác và Calendar Follow-up Zero-PII.
+- [x] Sprint 11 Phase 3: thêm bối cảnh Khác, lựa chọn ngày follow-up và lịch chạm sắp tới chỉ lưu hành động không định danh.
+- [x] Sprint 11 Phase 3: bổ sung logic/regression cho cadence và Calendar Follow-up Zero-PII.
+- [x] Sprint 11 Phase 3: thêm interaction regression tạo lịch, sắp xếp follow-up, complete touch và kiểm tra surface Calendar không có PII.
+- [x] Sprint 11 Phase 4: Radar lịch sử/drill-down, La Bàn dạng Tabs/Accordion và Storytelling Leader.
+- [x] Sprint 11 Phase 4: thêm drill-down tín hiệu Radar với lịch sử chạm không chứa dữ liệu khách hàng.
+- [x] Sprint 11 Phase 4: tái cấu trúc La Bàn Lãnh Đạo thành Tabs/Accordion có hành động coaching rõ ràng.
+- [x] Sprint 11 Phase 4: thêm regression cho Radar lịch sử, La Bàn tabs và hành vi keyboard cơ bản.
+- [x] Sprint 11 Phase 5: Roleplay 03:00 có trạng thái AI demo, Reels mượt và Poster Generator demo an toàn.
+- [x] Sprint 11 Phase 5: mở rộng Roleplay 03:00 bằng feedback AI mô phỏng, không gọi camera/microphone và không lưu nội dung.
+- [x] Sprint 11 Phase 5: làm Reels chọn clip/trạng thái xem mượt và thêm Poster Generator text-only không chứa PII.
+- [x] Sprint 11 Phase 5: bổ sung regression keyboard cho Roleplay, Reels và Poster Generator demo.
+- [x] Feedback Sprint 11: căn giữa Welcome Modal trên desktop, giữ neo mobile phù hợp và chuẩn hóa font tiếng Việt toàn hệ thống.
+- [x] Feedback Sprint 11: mở rộng hook Nạp Não Mỗi Sáng và bổ sung hình ảnh động lực an toàn vào vùng Mục tiêu tháng.
+- [x] Feedback Sprint 11: sửa typography, padding và chống tràn cho Playbook cards cùng nội dung phụ trợ.
+- [x] Feedback Sprint 11: hiển thị lại Báo cáo Giám đốc đầy đủ trong Radar Leader bên cạnh Tích lũy mục tiêu đội.
+- [x] Feedback Sprint 11: bổ sung gợi ý next-step CRM từ ghi chú Zero-PII, không tạo/lưu trường định danh khách hàng.
+- [x] Feedback Sprint 11: sửa font chi tiết Ngôn ngữ Thấu Cảm và tránh che chữ hero La Bàn Lãnh Đạo.
+- [x] Feedback Sprint 11: tách chính xác Marketing TVV/Leader và bổ sung Poster Giới thiệu sản phẩm/dịch vụ cho cả hai luồng.
+- [x] Feedback Sprint 11: thêm regression, kiểm tra preview desktop/mobile, quality gate và checkpoint phát hành.
+- [x] Feedback Sprint 11: lưu checkpoint mới sau bản vá và xác nhận preview/live dùng đúng phiên bản phát hành.
+- [x] Bugfix: cập nhật ngay danh sách Contest sau khi Leader lưu Contest thành công vào Supabase.
+- [x] Bugfix mobile: hiển thị lại lối vào Sổ cái XP với nhãn hoặc icon gọn.
+- [x] Bugfix mobile: giữ nút Xuất Báo Cáo GĐ luôn khả dụng trong Radar Leader.
+- [x] Bugfix: thêm regression, kiểm tra desktop/mobile, quality gate và checkpoint phát hành.
+- [x] Marketing 1-Chạm: chuẩn hóa category/tag nguồn dữ liệu thành nhóm phục vụ khách hàng và nhóm nội bộ Leader.
+- [x] Marketing 1-Chạm: TVV chỉ hiển thị vũ khí phục vụ khách hàng; Leader hiển thị toàn bộ thư viện.
+- [x] Marketing 1-Chạm: thêm regression, kiểm tra desktop/mobile, quality gate và checkpoint phát hành.
+- [x] Radar Leader: bổ sung Bức tranh Doanh số Goal vs. Actual bằng dữ liệu tự khai báo/mô phỏng Zero-PII trong Modal Báo Cáo Giám Đốc.
+- [x] Radar Leader: hiển thị mục tiêu Team, thực đạt từ Nhịp Đập thành công, tỷ lệ hoàn thành và thanh tiến độ lớn.
+- [x] Radar Leader: thêm regression, kiểm tra desktop/mobile, quality gate và checkpoint phát hành.
+- [x] Báo Cáo GĐ: thêm Section 01B Hiệu suất tháng trước với so sánh doanh số và số hợp đồng theo tháng.
+- [x] Báo Cáo GĐ: thêm drill-down cho Thực đạt và biểu đồ xu hướng doanh thu theo tuần bằng dữ liệu mô phỏng Zero-PII.
+- [x] Báo Cáo GĐ: thêm nút Tải Báo Cáo xuất file ảnh/PDF sắc nét, không cho phép sửa Mục tiêu từ báo cáo.
+- [x] Báo Cáo GĐ: thêm regression và nghiệm thu desktop, riêng tư, mobile 375px/430px; quality gate và checkpoint phát hành.
+- [x] State sync: append hoặc refetch Contest trong danh sách ngay khi API tạo thử thách thành công.
+- [x] State sync: cập nhật Mục tiêu và Progress Bar Dashboard ngay sau khi API lưu mục tiêu thành công.
+- [x] State sync: thêm regression, kiểm tra desktop/mobile, quality gate và checkpoint phát hành.
+- [x] Bàn giao mã nguồn: xác minh đầy đủ các module Sprint 10–11 trong workspace hiện tại.
+- [x] Bàn giao mã nguồn: tạo ZIP sạch có toàn bộ mã nguồn, cấu hình và hướng dẫn chạy local, không kèm phụ thuộc/build cache.
+- [x] Bàn giao mã nguồn: kiểm tra manifest ZIP, checksum và gửi tệp tải về.
+- [x] Pilot Step 1: rà soát schema Supabase hiện có và thiết kế mô hình đa tenant phẳng cho Team/Role/Profile.
+- [x] Pilot Step 1: tạo migration cho teams, profiles, activity_events, followups, signals, signal_reviews, interventions và intervention_outcomes.
+- [x] Pilot Step 1: triển khai helper RLS profile-based, chính sách không rò rỉ chéo team và type-safe models tương ứng.
+- [x] Pilot Step 1: seed an toàn một Team pilot, một Super Admin, một Leader, ba Advisor và dữ liệu can thiệp mẫu.
+- [x] Pilot Step 1: kiểm thử access isolation/RLS và bàn giao tài liệu schema, policy, seed cùng giả định chờ duyệt trước UI wiring.
+- [x] Pilot Step 2: rà soát màn hình/flow hiện có và giữ nguyên visual language trong phạm vi Auth, Activity, Radar, Intervention, Founder Overview.
+- [x] Pilot Step 2: thêm đăng nhập Email/Password Supabase, Profile guard và điều hướng theo role Advisor/Leader/Super Admin.
+- [x] Pilot Step 2: nối Nhịp Đập TVV với activity_events và followups qua các query/mutation tuân thủ RLS.
+- [x] Pilot Step 2: nối Leader Radar với signals, signal_reviews, interventions và cập nhật trạng thái Signal.
+- [x] Pilot Step 2: thêm Founder-only Pilot Overview tổng hợp dữ liệu thật đa Team.
+- [x] Pilot Step 2: thêm regression phân quyền/flow, kiểm tra desktop/mobile, quality gate và checkpoint phát hành.
+- [x] Pilot Step 3: rà soát Community, mobile shell, Radar, luồng reset password, schema Signals và hạ tầng server-side hiện có.
+- [x] Pilot Step 3: vá contrast Community, safe bottom spacing mobile, layout input Mục tiêu, filter/empty state Radar và reset password completion.
+- [x] Pilot Step 3: tạo Signal Engine V1 server-side cho activity_drop và followup_gap với rule thresholds cấu hình được và metadata đánh giá.
+- [x] Pilot Step 3: cung cấp manual dry-run trigger có phân quyền Admin, kiểm thử idempotency và không tạo duplicate unresolved Signal.
+- [x] Pilot Step 3: thêm regression UI/engine, kiểm tra 375px, quality gate, tài liệu tham số và checkpoint phát hành.
+- [x] Pilot Step 3C: rà soát schema Intervention/Outcome, quyền RLS, Signal Engine hiện hữu và Intervention Modal của Leader.
+- [x] Pilot Step 3C: tạo Outcome Evaluator server-side cho checkpoint sau can thiệp, hỗ trợ ngưỡng tham số và dry-run.
+- [x] Pilot Step 3C: ghi intervention_outcomes idempotent theo intervention/checkpoint, đánh giá recovery từ activity hoặc follow-up sau action_date.
+- [x] Pilot Step 3C: thêm manual trigger phân quyền Super Admin cho Outcome Evaluator cùng audit kết quả.
+- [x] Pilot Step 3C: tích hợp Playbook khuyến nghị can thiệp theo signal_type vào Leader Intervention Modal.
+- [x] Pilot Step 3C: thêm regression, kiểm tra RLS/idempotency, responsive 375px, quality gate và checkpoint phát hành.
+- [x] Bàn giao Pilot Step 3C: đóng gói toàn bộ mã nguồn hiện tại thành ZIP sạch, loại trừ dependency, build cache và metadata repository.
+- [x] Bàn giao Pilot Step 3C: kiểm tra manifest/độ toàn vẹn ZIP và gửi tệp tải về.
+- [x] Bảo trì Pilot: thêm script Admin API không lưu mật khẩu trong source và đặt lại mật khẩu test cho Super Admin, Leader và ba Advisor.
+- [x] Pilot Step 4: rà soát schema/policy Social-Gamification, API Supabase và các trang Community, Thi đua, Radar, Nhật ký, Góc Lắng Nghe.
+- [x] Pilot Step 4: mở RLS Team-scoped cho Community, comments, likes, XP Ledger và Contest mà không làm rộng dữ liệu ngoài Team.
+- [x] Pilot Step 4: kết nối lại Community, Thi đua và Báo cáo Leader với dữ liệu Supabase thật, gồm empty state có cấu trúc.
+- [x] Pilot Step 4: refetch Nhật ký ngay sau insert, sửa input Góc Lắng Nghe và bổ sung helper text Founder/Radar/TVV.
+- [x] Pilot Step 4: thêm regression RLS/UI, kiểm tra 375px, quality gate và checkpoint phát hành.
+- [x] Pilot Step 5: rà soát schema, RLS, dữ liệu Pilot và các module Gift XP, Founder Overview, Auth hiện hữu.
+- [x] Pilot Step 5: bổ sung xp_balance, Gift XP toàn Team có giới hạn quỹ và ledger/audit idempotent.
+- [x] Pilot Step 5: xây User Management Super Admin gồm tạo/sửa user, role, Team và quỹ XP tháng.
+- [x] Pilot Step 5: nâng Founder Overview thành Scorecard Detection-Action-Outcome với chỉ số và hành trình can thiệp.
+- [x] Pilot Step 5: tích hợp Gift XP toàn cục, Community post tùy chọn và onboarding lần đầu của Advisor.
+- [x] Pilot Step 5: thêm regression RLS/ngân sách/measurement, kiểm tra 375px, quality gate và checkpoint phát hành.
+- [x] Code Freeze Go-Live: tạo ZIP sao lưu toàn bộ workspace Pilot Step 5, loại trừ dependency, repository metadata và build cache.
+- [x] Code Freeze Go-Live: kiểm tra manifest/độ toàn vẹn ZIP và bàn giao tệp tải về.
+- [x] Hotfix Go-Live: sửa Global Gift XP thành modal overlay fixed, backdrop, z-index và reset state khi đóng.
+- [x] Hotfix Go-Live: bổ sung regression đóng/backdrop và xác minh desktop/mobile trước checkpoint phát hành.
+- [x] Hotfix Go-Live cuối: xác minh vị trí Portal thực tế của Gift XP và loại bỏ mọi stacking context khiến modal bị kẹt.
+- [x] Hotfix Go-Live cuối: đặt overlay document.body z-index 9999, kiểm thử DOM/root, responsive và checkpoint phát hành.
+- [x] Hotfix UI-only mobile: thay Portal thủ công của Gift XP và Onboarding bằng Dialog chuẩn, không đụng backend/RPC/RLS.
+- [x] Hotfix UI-only mobile: thêm regression Dialog, kiểm tra desktop/iPhone-width/Android-width và checkpoint phát hành.
+- [x] Hotfix khẩn Dialog: bỏ hoàn toàn DialogTrigger, chuẩn hóa Gift XP và Onboarding về controlled state cùng DialogPortal/DialogOverlay/DialogContent canh giữa tuyệt đối.
+- [x] Hotfix khẩn Dialog: cập nhật regression cấu trúc/lớp CSS, xác minh desktop và mobile, rồi lưu checkpoint UI-only.
+- [x] Hotfix khẩn Modal Tailwind: thay Gift XP và Onboarding bằng wrapper fixed/z-index/bg-white thuần, không dùng Radix UI, Portal hoặc custom modal CSS.
+- [x] Hotfix khẩn Modal Tailwind: cập nhật regression, kiểm thử desktop/mobile và lưu checkpoint UI-only.
+- [x] Hotfix khẩn Portal SSR-safe: render Gift XP và Onboarding qua createPortal(document.body) sau mounted state, dùng Tailwind thuần toàn phần.
+- [x] Hotfix khẩn Portal SSR-safe: chuẩn hóa Tailwind cho input/select/textarea/checkbox/button, cập nhật regression và kiểm thử desktop/mobile.
+- [x] Hotfix khẩn Inline Style: thay hai modal bằng lớp fixed/z-index/bg-white inline style bắt buộc, không dùng Radix UI hoặc Portal.
+- [x] Hotfix khẩn Inline Style: cô lập state Gift XP/Onboarding, cập nhật regression không chồng chéo và kiểm thử desktop/mobile.
+- [x] Tinh chỉnh Gift XP: cấu trúc form Tailwind rõ ràng, copy cảnh báo trừ điểm theo role và nhãn Tặng Điểm.
+- [x] Tinh chỉnh Onboarding: thay list chặt bằng các khối hướng dẫn có khoảng thở rõ ràng.
+- [x] Gamification Gift XP: thêm hiệu ứng +XP bay lên sau khi tặng thành công, cập nhật regression và kiểm thử toàn bộ.
+- [x] Bugfix Modal UI: chuẩn hóa toàn bộ input/select/textarea, submit và danh sách Onboarding theo class Tailwind được yêu cầu.
+- [x] Bugfix Ledger XP: lưu lời vinh danh vào lý do/description của giao dịch Gift XP thay vì “manual adjustment”.
+- [x] Bugfix Onboarding: trì hoãn hiển thị 2,5 giây, cập nhật regression và kiểm thử toàn bộ.
+- [x] Premium UI: đồng bộ nội dung Gift XP và Onboarding với thẩm mỹ Sổ cái XP bằng spacing, nền slate, bo góc và CTA chuẩn.
+- [x] Automated Dopamine: xây cơ chế cấp XP tự động có idempotency, ghi ledger và hiệu ứng +XP bay toàn cục.
+- [x] Reward Matrix: gắn mức thưởng Quiz, Nhịp đập, Cộng đồng và Training; bổ sung regression và kiểm thử end-to-end.
+- [x] Bugfix Reward Store: ép so sánh số dư/giá quà sang Number để đổi quà đúng khi đủ XP.
+- [x] Bugfix Gift XP: TVV tặng điểm phải bị khấu trừ xp_balance an toàn qua RPC.
+- [x] Reward Mục tiêu: thưởng tự động +5 XP sau khi lưu mục tiêu thành công.
+- [x] Realtime Gift XP: toast cho người nhận ledger Gift XP, bổ sung regression và kiểm thử toàn diện.
+- [x] Reward Engine: bổ sung thưởng DISC +20 XP idempotent và thay fly-up bằng Confetti CSS toàn cục.
+- [x] Leader Dashboard: thay 4 metric bằng copy storytelling kèm mô tả hành động rõ ràng.
+- [x] Radar SOP: thêm banner Cẩm nang quản trị bằng Radar phía trên danh sách tín hiệu.
+- [x] Regression: kiểm thử rewards, Confetti, Leader/Radar và xác minh desktop/mobile trước checkpoint.
+- [x] Bugfix Redemption: RPC đổi quà khấu trừ xp_balance nguyên tử, lưu yêu cầu và cập nhật số dư session tức thì.
+- [x] Bugfix Gift XP: TVV-to-TVV transfer không bị chặn, khấu trừ/cộng số dư và refresh state cho cả sender/receiver.
+- [x] Bugfix Realtime: listener toàn cục nhận mọi INSERT xp_ledger của người dùng và phát toast theo lý do giao dịch.
+- [x] Bugfix Quỹ Leader: hiển thị đúng xp_balance khả dụng của Leader và cập nhật ngay sau khi Leader tặng điểm; thêm regression/migration/quality gate.
+- [x] O2O: rà soát bảng reward_redemptions hiện hữu và bổ sung trạng thái/ủy quyền xác nhận trao quà theo team.
+- [x] Notification Center: dựng dropdown từ biểu tượng Chuông, truy vấn các hoạt động XP/cộng đồng theo người dùng và sắp xếp mới nhất trước.
+- [x] Kho quà TVV: hiển thị các yêu cầu đổi quà đã tạo trong Reward Store và mở voucher O2O theo từng yêu cầu.
+- [x] Voucher O2O: thiết kế chứng nhận amber/gold có viền nét đứt, nội dung khích lệ và trạng thái pending/fulfilled.
+- [x] Leader O2O: thêm danh sách yêu cầu chưa trao quà của đúng team cùng thao tác xác nhận fulfilled có phản hồi tức thì.
+- [x] Leader Radar: chuyển Cẩm nang thành section thu gọn/mở rộng bằng React state và làm nổi bật CTA Ghi nhận hỗ trợ.
+- [x] Leader Overview: xác nhận báo cáo số liệu chi tiết luôn hiển thị cho Leader với empty state an toàn khi chưa có dữ liệu.
+- [x] Regression O2O: kiểm thử schema/RPC Team scope, Notification Center, voucher, keyboard, type-check và build production.
+- [x] Remote O2O: chuẩn hóa Pride Voucher theo thiết kế amber/orange, screenshot-friendly và trạng thái Chờ Sếp Phát Quà/Đã Sử Dụng.
+- [x] Leader Fulfillment: xác minh và hoàn thiện danh sách redemption pending theo Team cùng nút Đánh dấu đã tặng cập nhật voucher tức thì.
+- [x] Notification cleanup: chuẩn hóa toast duration 4 giây, closable và tinh chỉnh Bell dropdown bằng Tailwind premium.
+- [x] Leader UX: xác nhận Cẩm nang Radar thu gọn, Overview ở trên Radar và CTA Ghi nhận hỗ trợ amber/bold.
+- [x] Regression Remote O2O: bổ sung test voucher, fulfillment, Bell/toast và chạy type-check/build production.
+- [x] UI eJoy Radar: thay Cẩm nang cồng kềnh bằng HelpCircle hover panel cạnh tiêu đề Radar, không đổi logic Signal.
+- [x] UI eJoy Bell: nâng dropdown Chuông thành glass panel hover/click với trạng thái trống và item Tailwind premium.
+- [x] UI Pride Voucher: đồng bộ chính xác voucher amber/orange, dashed border, Trophy và hover scale nhưng giữ nguyên data/redemption logic.
+- [x] UI Leader Fulfillment: chuyển danh sách pending thành grid card và đổi CTA thành Trao Quà Xong, không đổi mutation/RLS.
+- [x] Regression UI-only: kiểm thử classes/luồng hiện hữu, type-check, build production và responsive mobile.
+- [x] UI Toaster: cấu hình Toaster toàn cục duration 3500ms, closeButton và top-right để dẹp toast chồng.
+- [x] UI Guide: đối chiếu và áp dụng đúng JSX HelpCircle eJoy với copy Cách dùng Radar, không giữ static guide.
+- [x] UI Voucher: render Pride Voucher trực tiếp trong Kho Quà theo thẻ amber/orange được chỉ định, không chỉ trong modal.
+- [x] Leader Overview: render LeaderTargetOverview trực tiếp phía trên Báo cáo/Radar cho mọi Leader hợp lệ.
+- [x] Regression cưỡng chế: kiểm thử Toaster, Guide, Voucher Kho Quà, Overview Leader và responsive/build production.
+- [x] Agent Moment: tạo AgentMomentCard ba biến thể recovery/consistency/recognition từ dữ liệu xp_ledger, không thêm schema.
+- [x] Agent Moment: thiết kế ticket 9:16 navy/amber với watermark icon, divider cutout, proof/reward/quote/CTA/footer theo design system.
+- [x] Kho Quà: thay voucher/raw reward hiện hữu bằng AgentMomentCard trải nghiệm có hành động chia sẻ cột mốc.
+- [x] UI Bell/Guide: đối chiếu wrapper glass hover strict JSX, giữ Toaster toàn cục 3500ms/closeButton/top-right.
+- [x] Leader Overview: xác nhận render số liệu trực tiếp trước Radar trong mọi role Leader hợp lệ.
+- [x] Regression Agent Moment: kiểm thử ba variant, đọc ledger, share CTA, Toaster/Bell/Overview, responsive và build production.
+- [x] Cưỡng chế Toaster: đặt chính xác position top-right, duration 3000, closeButton true và visibleToasts 1.
+- [x] Cưỡng chế Kho Quà: thay block render redemption bằng card strict Tailwind người dùng cung cấp, không tự thêm className.
+- [x] Adapter Kho Quà: ánh xạ reward/currentUser hiện hữu vào strict JSX mà không đổi backend hoặc schema.
+- [x] Regression UI cưỡng chế: xác nhận exact Toaster props, card classes, Tailwind build và production build.
+- [x] Chẩn đoán: trích xuất nguyên văn App.tsx và Home.tsx hiện tại để người dùng kiểm tra Toaster/Kho Quà; không chỉnh code.
+- [x] Kiến trúc Tailwind: rà soát vite config, index.css và nguồn Tailwind để xác nhận utility CSS được compile từ TSX.
+- [x] Sonner: xóa state/render toast thủ công ở Home và chuyển notify sang Sonner, giữ Toaster một thông báo toàn cục.
+- [x] Radar: xác nhận và chuẩn hóa eJoy Guide tại PilotStep2Modules.tsx, không giữ guide static.
+- [x] Regression kiến trúc: kiểm thử no custom toast, Sonner, Tailwind output, Guide và production build.
+- [x] Sonner-only: loại bỏ helper notify Home và dùng trực tiếp toast.success/toast.error phù hợp với luồng hiện có.
+- [x] Leader Rewards: gỡ O2OLeaderRewards khỏi RadarView và render trong xpOpen Sổ cái XP khi role Leader.
+- [x] Voucher Master Card: thay Kho Quà bằng exact Master Card navy/amber/cutouts/Share2 JSX được cung cấp.
+- [x] Radar Leader: xác nhận LeaderTargetOverview nằm trên PilotRadar và eJoy Guide ở PilotStep2Modules.
+- [x] Regression O2O correction: kiểm thử no notify wrapper, vị trí Leader Rewards, Master Card, Overview/Guide, responsive và build.
+- [x] Agent Moment refined: thay block Kho Quà bằng exact card navy glory, watermark Trophy, divider cutouts, reward panel, quote và CTA theo đặc tả.
+- [x] Agent Moment spacing: gỡ wrapper/border gây bó hẹp, giữ dữ liệu reward/currentUser và không đổi logic backend.
+- [x] Regression Agent Moment refined: kiểm thử token Tailwind, Tailwind build và production build sau thay thế UI-only.
+- [x] Agent Moment contrast: thay exact card Kho Quà bằng block navy gradient, khung 400px và lớp !text-* ép màu theo đặc tả.
+- [x] Agent Moment proportions: dùng divider/cutout và bottom card compact để tránh card quá cao hoặc bó hẹp.
+- [x] Regression contrast: kiểm thử token !text-white/!text-slate/!text-amber, Tailwind build và production build.
+- [x] Handover: tạo AGENT_COPILOT_ARCHITECTURE.md tại root với tổng quan core logic, UI và tính năng Pilot V1.
+- [x] Backup: tạo AgentCopilot_PilotV1_Backup.zip, loại trừ dependencies, Git, build output và tệp môi trường chứa secrets.
+- [x] Backup verification: kiểm tra archive có README và source cần thiết, không có node_modules, .git, dist hoặc .env.
+- [x] Privacy by Choice: thêm rewardShareMode team/leader/hidden và panel radio chọn nguồn ghi nhận ngoài share card.
+- [x] Agent Moment share card: thay block Kho Quà bằng card capture-friendly có nguồn ghi nhận động theo lựa chọn privacy.
+- [x] Download card: bổ sung downloadAgentMoment chỉ capture card, không bao gồm options panel hoặc CTA tải.
+- [x] Regression Privacy: kiểm thử state, ba mode, capture target, icons/import và type-check/build production.
+- [x] Agent Moment hex Master Spec: thay card bằng JSX dùng #0B1431, #FFB020, #22C55E và inline color override cho h2.
+- [x] Download chống crash: cập nhật downloadAgentMoment với reset transform, allowTaint và scale 2.
+- [x] Regression hex: cập nhật assertion Agent Moment, chạy test, type-check và production build.
+- [x] html-to-image: thay html2canvas bằng toPng với export chống crash trong modal.
+- [x] Agent Moment horizontal Master Card: thay Kho Quà bằng layout 400px, identity/reward ngang và controls ngoài vùng capture.
+- [x] Regression export/card: cập nhật assertion, chạy test, type-check, build production và kiểm tra bundle không còn html2canvas.
+- [x] Agent Moment Master: thay card Kho Quà theo kiến trúc 10 module, Hero trophy generic và badge achievement.
+- [x] Reward Asset modular: cô lập khối phần thưởng ngang gồm fallback Gift, tên reward, đối tác và hạn dùng.
+- [x] CTA share/card capture: giữ CTA ngoài capture target và bỏ panel options theo Master Spec mới.
+- [x] Regression Master Card: kiểm thử token 10 module, export toPng, responsive và production build.
+- [x] Universal AgentMomentCard: tạo component độc lập với props và Theme Mapping default/recovery/consistency/leader.
+- [x] Universal card UI: thực thi overlap badge, identity/reward modular, CTA dynamic và footer logo chính chủ.
+- [x] Kho Quà integration: thay JSX inline bằng AgentMomentCard và giữ toPng capture/share hoạt động.
+- [x] Regression universal card: kiểm thử themes, props, Kho Quà integration, type-check và build production.
+- [x] Agent Moment master assets: xác thực, giải nén và đưa tám PNG vào lưu trữ tĩnh đúng chuẩn deploy.
+- [x] Asset mapping: khai báo URL theo tám loại moment/reward để tái sử dụng trong ba luồng.
+- [x] bgAssetUrl card: cập nhật Universal AgentMomentCard dùng master image tại Hero và giữ text/reward dynamic.
+- [x] Regression asset card: kiểm thử URL, Hero background, export toPng, type-check và production build.
+- [x] Privacy by Choice: khôi phục panel radio Team/Leader/Hidden ngoài vùng capture ở Kho Quà.
+- [x] Download share card: giữ toPng siêu nét và CTA tải ảnh ngoài AgentMomentCard.
+- [x] Theme Mapping: mở rộng Universal Card với default/recovery/consistency/leader, asset fallback và CTA màu động.
+- [x] Moment Copy Engine: thêm matrix copy Recovery có năm Tone cho System Voice.
+- [x] Leader Moment Creator: tạo modal chọn Tone, Human Voice và live preview không đổi backend/schema.
+- [x] Regression Moment flows: kiểm thử privacy/download/theme/creator, type-check và production build.
+- [x] Agent Moment full-card layer: đưa asset full-card vào absolute background toàn card với tỷ lệ width-lock.
+- [x] Dynamic content mask: để Hero trong suốt và dùng divider/bottom solid white z-20 che placeholder nền.
+- [x] Regression CSS layering: kiểm thử lớp nền, mask, toPng export, type-check và build production.
+- [x] Agent Moment Blank Template: dùng ảnh master là toàn bộ UI thay cho layout CSS card.
+- [x] Absolute overlays: đặt tên TVV, nguồn ghi nhận, reward, quote và CTA theo tọa độ phần trăm.
+- [x] Regression Blank Template: kiểm thử asset image, overlay coordinates, toPng export, type-check và production build.
+- [x] Sniper coordinate mapping: áp dụng đúng bounding boxes Avatar, Identity, Recognition, Reward, Quote và CTA.
+- [x] Official logo overlay: dùng logo thật đè đúng vị trí footer của blank template.
+- [x] Regression precision card: kiểm thử các tọa độ bắt buộc, logo overlay, toPng export, type-check và production build.
+- [x] Real logo asset: tải logo Agent Copilot chính chủ vào lưu trữ web và dùng URL ổn định.
+- [x] Overlay container: bọc toàn bộ dynamic layers bằng absolute inset-0 đúng tỷ lệ ảnh template.
+- [x] Final coordinate mapping: áp dụng các tọa độ Avatar/Identity/Recognition/Reward/Quote/CTA đã chỉ định.
+- [x] Regression real-logo card: kiểm thử logo không grayscale, overlay layer, toPng export, type-check và production build.
+- [x] Final invisible boxes: áp dụng tọa độ Avatar/Name/Source/Reward/Quote không dùng margin trong lớp absolute.
+- [x] CTA precision: tách label né mũi tên và vùng tương tác phủ toàn nút vẽ.
+- [x] Footer logo precision: cập nhật mask/logo vàng theo tọa độ final và bỏ grayscale.
+- [x] Regression final mapping: kiểm thử các hộp, CTA, logo, toPng export, type-check và production build.
+- [x] Agent Moment typography: áp dụng Navy/Slate/font-black/tracking premium cho Avatar, Identity, Reward và Quote.
+- [x] Visual alignment: cập nhật bounding boxes né icon, CTA và logo theo tọa độ typography mới.
+- [x] Regression visual polish: kiểm thử token typography, CTA/logo overlay, toPng export, type-check và production build.
+- [x] Fluid Typography: thêm containerType inline-size và chuyển toàn bộ font-size card sang đơn vị cqi.
+- [x] Mobile fluid mapping: cập nhật bounding boxes/CTA/footer override theo đặc tả co giãn.
+- [x] Regression Fluid Card: kiểm thử cqi tokens, responsive overlay, toPng export, type-check và production build.
+- [x] Pixel-Perfect boxes: hiệu chỉnh Avatar, Identity, Source, Reward, Quote và CTA theo tọa độ final.
+- [x] Calibrated typography: dùng Navy #09112B và cqi đã đo lại cho mọi layer dynamic.
+- [x] Footer calibration: cập nhật vị trí footer, logo và typography branding theo template final.
+- [x] Regression calibrated card: kiểm thử cqi/tọa độ mới, toPng export, type-check và production build.
+- [x] Hybrid Hero Mask: chỉ giữ art 3D ở top section và mask toàn bộ phần dưới bằng white content layer.
+- [x] Flexbox rebuild: xây Identity, Reward, Quote, CTA và Brand Footer bằng Tailwind responsive.
+- [x] Kho Quà compatibility: bảo toàn props, Privacy panel và toPng capture/download.
+- [x] Regression Flexbox card: kiểm thử Hero mask, layout rows, CTA, export, type-check và production build.
+- [x] Hybrid Master Hero: chuẩn hóa Hero 240px và huy hiệu Award overlap giữa hai phần.
+- [x] Reward metadata: thêm TVV tag, recognition badge, reward image/fallback, watermark Gift, mô tả và hạn sử dụng.
+- [x] Enhanced CTA/footer: thêm subtext CTA và footer branding theo Master Card.
+- [x] Kho Quà Master integration: truyền metadata có sẵn, giữ Privacy panel và toPng export.
+- [x] Regression Hybrid Master: kiểm thử visual rows, metadata badges, CTA, export, type-check và production build.
+- [x] Full artwork background: đưa master image vào absolute background toàn card theo aspect 4/5.
+- [x] Half-mask layout: dùng white mask và Flexbox content bắt đầu từ mốc 46%, bỏ Award badge HTML.
+- [x] Emotional cleanup: gỡ expiry tag xanh và giữ nguyên badge vàng gốc trong artwork.
+- [x] Regression Half-Mask: kiểm thử background/mask/CTA/toPng, type-check và production build.
+- [x] New Moment artwork: đưa ba artwork Heart, Growth và Trophy vào lưu trữ web ổn định.
+- [x] Hero left alignment: áp dụng Hero 260px, gradient readability và text w-[65%] tránh vật thể 3D bên phải.
+- [x] Card Master data section: thực thi badge, identity, reward, quote, CTA và footer theo blueprint 10 điểm.
+- [x] Asset mapping integration: chọn artwork theo theme và giữ Privacy/toPng trong Kho Quà.
+- [x] Regression Card Master: kiểm thử Hero alignment, mapping artwork, CTA/export, type-check và production build.
+- [x] Gold Gradient Hero: thêm tiêu đề Hero ba lớp, gradient vàng và achievement badge xanh theo Card Master mới.
+- [x] Custom Laurel Shield: thay recognition icon bằng SVG vòng nguyệt quế và khiên custom.
+- [x] Static Milestone Banner: thay CTA button bằng banner tĩnh trong vùng export PNG.
+- [x] Full fluid overlay: áp dụng cqi coordinates cho Identity, Reward, Quote và Footer logo.
+- [x] Regression static card: kiểm thử không còn button CTA, Gold Gradient, Laurel SVG, export, type-check và production build.
+- [x] Pure Flexbox Hero: dùng hero 280px, artwork object-right và Gold Gradient copy căn trái.
+- [x] Pure Flexbox data: thay các tọa độ absolute bằng Identity, Reward, Quote, Banner, Footer xếp chồng gap-5.
+- [x] Static export compatibility: giữ banner tĩnh, Privacy panel và toPng capture hoạt động.
+- [x] Regression Flexbox rebuild: kiểm thử không còn overlay content absolute, responsive stack, export, type-check và production build.
+- [x] Viral Pure Card: tinh chỉnh Hero marketing, Gold Gradient, TVV tag và reward panel theo Pure Card đặc tả.
+- [x] Moment Share Screen: tạo wrapper caption sẵn, nút copy, chia sẻ cộng đồng và tải PNG thực tế.
+- [x] Kho Quà integration: mở Share Screen từ từng reward, giữ Privacy by Choice và toPng capture.
+- [x] Regression Viral Loop: kiểm thử Pure Card, caption copy, download, opening flow, type-check và production build.
+- [x] Dynamic Pure Card: thêm avatar gamified an toàn, Hero Dark refinement và Reward Box amber nổi bật.
+- [x] Dynamic Share integration: dùng fallback avatar tại Card, giữ Share Screen, Privacy by Choice và toPng capture.
+- [x] Regression Dynamic Card: kiểm thử avatar fallback, Reward Box, không có nút trong file ảnh, type-check và production build.
+- [x] Visual DNA assets: đưa bốn ảnh Core Cast người dùng cung cấp vào lưu trữ web theo mapping Navigator/Nurturer/Wise Copilot/Loyal Guardian.
+- [x] Agent Profile Settings: xây modal chọn Core Cast, đổi danh xưng và tải ảnh cá nhân tại chỗ với UI responsive.
+- [x] Profile integration: phản ánh danh xưng/avatar trong Header và Agent Moment, bảo toàn Zero-PII khách hàng cùng các luồng hiện hữu.
+- [x] Regression Visual DNA: kiểm thử modal, chọn avatar, upload preview, lưu state, mobile 375px và production build.
+- [x] Header Profile Widget: tạo Profile Pill Navy có squircle avatar, danh xưng, vai trò và Logout.
+- [x] Header integration: thay cụm đăng nhập/icon cũ bằng Profile Pill, mở được Agent Profile Settings và giữ callback logout.
+- [x] Regression Profile Pill: kiểm thử settings trigger, avatar fallback, logout, mobile 375px và production build.
+- [x] Vibrant Avatar Modal: nâng cấp Header, avatar grid và Dynamic Trait Box theo bốn Core Cast.
+- [x] Preserve Profile behaviors: giữ upload ảnh cục bộ, trạng thái custom, lưu lựa chọn, Profile Pill và Agent Moment.
+- [x] Regression Dynamic Traits: kiểm thử màu/traits/quote động theo avatar, mobile 375px và production build.
+- [x] Avatar grid 2×2: khôi phục card avatar lớn có tên/vai trò, giữ Navy/Amber/Cyan/Emerald hiện hữu.
+- [x] Speech Bubble: hiển thị trait và quote cạnh nhân vật được chọn, không làm chiếm khối không gian bên dưới.
+- [x] Regression Bubble Layout: kiểm thử đổi vị trí/màu/nội dung bubble, upload/lưu state, mobile 375px và production build.
+- [x] Team Badge Card: thay Recognition Source bằng nhãn TEAM có Award icon, uppercase và truncate.
+- [x] Team Name integration: truyền team name động vào Kho Quà/Moment Share Screen, giữ export PNG và Privacy by Choice.
+- [x] Regression Team Badge: kiểm thử team name dài, fallback, Share Screen, type-check và production build.
+- [x] Recognition Type: bổ sung badge theo ngữ cảnh personal/team/leader với nhãn HÀNH TRÌNH CÁ NHÂN, TEAM và LEADER VINH DANH.
+- [x] Privacy integration: ánh xạ Privacy by Choice vào Recognition Type, giữ Team Name, Share Screen và PNG export.
+- [x] Regression Context Badge: kiểm thử ba context, truncate team name, mobile 375px, type-check và production build.
+- [x] Horizontal Laurel Badge: chuyển Context Badge thành icon Award trái, chữ nhỏ bên phải, break-words và không truncate.
+- [x] Preserve Context Logic: giữ Recognition Type personal/team/leader, Privacy by Choice, Share Screen và export PNG.
+- [x] Regression Laurel Badge: kiểm thử ba nhãn không cắt chữ, layout ngang, mobile 375px, type-check và production build.
+- [x] Laurel Wreath Seal: thay Award UI bằng SVG vòng nguyệt quế ôm khiên vàng, không nền hộp/padding bao ngoài.
+- [x] Stamp Typography: dùng text Slate 10px, standard case và rớt dòng tự nhiên cạnh con dấu.
+- [x] Regression SVG Seal: kiểm thử SVG, ba Recognition Type, layout không nền, mobile 375px, type-check và production build.
+- [x] Detailed Laurel Seal: nâng SVG lên vòng lá mảnh, khiên trung tâm và hình người theo nhận diện bản gốc.
+- [x] Single-line Stamp: ép nhãn Recognition thành một hàng 9.5px với whitespace-nowrap và truncate có kiểm soát.
+- [x] Regression Detailed Seal: kiểm thử SVG 64px, user silhouette, ba context, layout một hàng, type-check và production build.
+- [x] 3D Laurel asset: đưa ảnh Con dấu Nguyệt quế vàng do người dùng cung cấp lên kho asset web của dự án.
+- [x] Image Seal Card: loại bỏ custom SVG, dùng ảnh 3D trong Identity Row và giữ Stamp Typography một hàng 9.5px.
+- [x] Regression Image Seal: kiểm thử nguồn asset, Recognition Type, layout stamp, type-check và production build.
+- [x] Magic Blend Seal: áp dụng mix-blend-multiply, contrast-105 và kích thước h-8 w-8 cho asset 3D.
+- [x] Preserve Stamp Context: giữ nhãn 9.5px một hàng, Recognition Type, Privacy, Share Screen và PNG export.
+- [x] Regression Magic Blend: kiểm thử class blend/contrast/kích thước và quality gate production.
+- [x] Agent Dashboard Greeting: xây widget bốn trạng thái Sáng/Trưa/Chiều/Tối với gradient, icon và thông điệp thấu cảm.
+- [x] Dashboard integration: thay banner chào tĩnh bằng Greeting, truyền avatar/danh xưng Core Cast từ hồ sơ hiện hữu.
+- [x] Regression Empathy Greeting: kiểm thử mapping theo giờ, avatar fallback, mobile 375px, type-check và production build.
+- [x] Leader 3D time assets: đưa icon 3D Morning/Noon/Afternoon/Night người dùng cung cấp lên kho asset web.
+- [x] Leader Dashboard Greeting: xây widget bốn trạng thái theo giờ với gradient, 3D blended icon, avatar và copy lãnh đạo thấu cảm.
+- [x] Leader integration: thay lời chào tĩnh Leader bằng Greeting mà không ảnh hưởng Radar/Overview.
+- [x] Regression Leader Greeting: kiểm thử mapping theo giờ, asset 3D, avatar fallback, mobile 375px và production build.
+- [x] Agent 3D Greeting: thay Lucide icon bằng bốn asset 3D theo buổi với inline multiply blend.
+- [x] Typography DNA sync: dùng Navy cho lời chào, Amber cho tên người dùng và Quote Amber trong cả Agent/Leader.
+- [x] Regression Greeting polish: kiểm thử icon URL, style mixBlendMode inline, Typography DNA, mobile 375px và production build.
+- [x] Frosted Glass Badge: bọc icon 3D Agent và Leader trong container white/80, backdrop blur, bo góc và border trắng.
+- [x] Remove Blend Dependency: loại bỏ inline multiply blend, thu icon về 32px trong badge và giữ avatar/Typography DNA.
+- [x] Regression Glass Badge: kiểm thử wrapper, kích thước icon, fallback và production build.
+- [x] Agent Streak Widget: xây Chuỗi Bền Bỉ với ngọn lửa, tracker 7 ngày, progress line và reward Gift.
+- [x] Dashboard Streak Integration: kết nối streak hoạt động thực tế hiện có và đặt widget dưới Contextual Greeting.
+- [x] Regression Streak Engine: kiểm thử clamp progress, ngày quà, tracker mobile 375px, type-check và production build.
+- [x] Streak Details Modal: xây dashboard chi tiết với ngọn lửa lớn, mốc 7/14/21/30 ngày và XP rewards.
+- [x] Streak Details Integration: kết nối nút Chi tiết của Agent Streak Widget với modal và streak Supabase thực tế.
+- [x] Regression Streak Details: kiểm thử next milestone, modal close/focus, desktop/mobile, type-check và production build.
+- [x] Smart Scroll Streak Details: cố định header/footer, đưa Roadmap thành vùng flex-1 overflow-y-auto để không cắt contextual text.
+- [x] Header Gamification Bar: xây hai pill Navy XP/Rank và Amber Xu đổi quà với dữ liệu Dashboard hiện hữu.
+- [x] Gamification Header Integration: thay cụm XP Header hiện tại, giữ tương tác XP Ledger và mobile responsive.
+- [x] Regression Smart Scroll/Header: kiểm thử cấu trúc scroll, số XP/Xu, click XP Ledger, mobile, type-check và production build.
+- [x] Greeting Quote Orientation: lật Quote icon đúng chiều trong Dashboard Greeting liên quan.
+- [x] Header Streak Pill: thêm pill Ngọn Lửa gọn nhẹ vào Header Gamification để mở Streak Details.
+- [x] Dashboard Action Cleanup: bỏ AgentStreakWidget khỏi body và xóa CTA "Ghi hoạt động" trùng lặp trong Pilot card.
+- [x] Regression Dashboard Cleanup: kiểm thử Header Streak CTA, loại bỏ layout/CTA cũ, keyboard, mobile, type-check và production build.
+- [x] Twin Capsule Header: gộp XP danh dự và Xu đổi quà vào một capsule Navy có divider tinh tế.
+- [x] Twin Capsule Interactions: giữ riêng hover, keyboard focus và điều hướng XP Ledger/Kho Quà cho từng nửa capsule.
+- [x] Regression Twin Capsule: kiểm thử container Navy, divider, Streak độc lập, điều hướng, responsive, type-check và production build.
+- [x] Floating Gamification Dock: xây dock cố định bên phải, thu gọn thành Flame/Shield/Coins và mở rộng số liệu khi hover.
+- [x] Floating Dock Integration: chuyển Streak Details, XP Ledger và Kho Quà từ Header sang Dock ở root Dashboard.
+- [x] Header Gamification Cleanup: gỡ Twin Capsule/Gamification Bar khỏi top navigation để trả lại không gian Header.
+- [x] Regression Floating Dock: kiểm thử trạng thái compact/expand, ba luồng click, root placement, mobile safety, type-check và production build.
+- [x] Agent Moment Narrow Layout: điều chỉnh hero width, padding, gap, avatar và identity row cho viewport cực hẹp.
+- [x] Agent Moment No-Wrap Labels: áp dụng whitespace-nowrap + truncate cho badge và nhãn nhận diện để không phá Flexbox.
+- [x] Regression Agent Moment Fold: kiểm thử 280px/375px, asset Laurel/Visual DNA, export/share, type-check và production build.
+- [x] Dashboard Streak Restoration: đưa AgentStreakWidget về dưới Contextual Greeting với streak Supabase thực tế.
+- [x] Floating Dock Focus: loại Flame/Streak và Tặng XP khỏi dock, giữ XP Ledger/Kho Quà và animation mở rộng.
+- [x] Regression Restored Streak/Dock: kiểm thử vị trí widget, Dock hai icon, luồng XP/Xu, mobile, type-check và production build.
+- [x] Leader Command Center: thay Radar scroll-heavy bằng Control Bar, Vital Signs và layout một màn hình.
+- [x] Empathy Matrix: phân loại theo Nỗ lực/Kết quả bằng dữ liệu team hiện hữu, không đưa PII khách hàng vào giao diện.
+- [x] Action Radar Prioritization: ưu tiên tín hiệu quá hạn/giảm hoạt động và nối nút Ghi hỗ trợ với luồng can thiệp có sẵn.
+- [x] Regression Leader Command Center: kiểm thử filter, export, metric, matrix, action button, responsive, type-check và production build.
+- [x] Empathy Vital Signs V2: tính Active Ratio, Happiness Index, tín hiệu cần thấu cảm và kết quả Team từ dữ liệu Team hiện hữu.
+- [x] Empathy Matrix V2: làm rõ trục Nỗ lực/Kết quả, phân nhóm hỗ trợ và tránh mọi PII khách hàng hoặc avatar giả.
+- [x] Empathy Quick Actions: thay CTA chung bằng hỏi thăm/động viên/gợi ý kịch bản nhưng vẫn mở Intervention Playbook thật.
+- [x] Regression Empathy Radar V2: kiểm thử chỉ số, action copy, export, matrix, mobile, type-check và production build.
+- [x] Recognition Live Preview: thay quote box bằng AgentMomentCard thật nhưng giữ nguyên panel Tone, input và submit bên trái.
+- [x] Recognition Quote Binding: nối state textarea của Leader vào quoteText, đồng bộ theme/asset/recipient hiện hữu.
+- [x] Regression Recognition Preview: kiểm thử card thật, reactive quote, form controls không đổi, type-check và production build.
+- [x] Executive Data Model: tổng hợp nhịp, chuỗi, coaching và doanh số tự khai báo theo Team mà không dùng mock hoặc PII khách hàng.
+- [x] Executive Performance Report: xây overlay A4 với KPI ROI, bảng tương quan và kết luận chiến lược có căn cứ dữ liệu.
+- [x] Executive Report Integration: mở report từ Xuất Báo Cáo, cung cấp PDF/đóng modal và giữ các luồng Command Center.
+- [x] Regression Executive Report: kiểm thử tổng hợp, bảng, empty state, export PDF, mobile/print, type-check và production build.
+- [x] Agent Moment cardType: bổ sung Reward/Recognition context, Hero/Seal khác biệt và mặc định không nhầm lẫn.
+- [x] Dynamic Spotlight: giữ Reward Box khi có rewardName và hiển thị lời nhắn Leader khi recognition không kèm quà.
+- [x] Recognition Message Binding: chuyển Live Preview và luồng gửi thẻ Leader sang cardType recognition + leaderMessage.
+- [x] Regression Reward/Recognition: kiểm thử Hero, Heart seal, reward/message box, Visual DNA, responsive, type-check và production build.
+- [x] Recognition Emerald Theme: đồng bộ badge, title gradient và Heart Seal Recognition sang Emerald/Teal theo asset hiện hữu.
+- [x] Leader Reward Selector: thêm dropdown Bùa/XP/Cà phê/Không tặng quà cho Modal vinh danh.
+- [x] Mutual Exclusion Form: khóa Human Voice khi chọn quà, mở form lời nhắn khi Không tặng quà và đồng bộ Live Preview.
+- [x] Regression Emerald Selector: kiểm thử theme, select, disable textarea, preview Reward/Message, responsive, type-check và production build.
+- [x] Recognition Hero Luminance: mở rộng hero copy, tăng Emerald sáng và drop-shadow để tránh chìm vào background.
+- [x] Recognition Heart Seal Elevation: tăng seal 80px, viền sáng và bóng 3D nổi bật khỏi banner.
+- [x] Regression Recognition Elevation: kiểm thử width, gradient, shadow, seal, narrow viewport, type-check và production build.
+- [x] Heart Emerald Asset: đưa ảnh tim xanh 3D người dùng cung cấp vào kho asset web và dùng làm Recognition Heart Seal.
+- [x] Greeting Card Shape: mở rộng Agent Moment Card lên max-w 460px và Hero 280px cho dáng thiệp sang trọng.
+- [x] Recognition Hero Brightness: làm overlay sáng hơn, Hero title no-wrap và giữ Reward Card amber không đổi.
+- [x] Regression Greeting Heart Asset: kiểm thử asset, kích thước card/hero, overlay, no-wrap, Reward fallback, type-check và production build.
+- [x] Recognition Background Focus: bỏ Heart Seal trung tâm riêng của Recognition để nền Trái tim 3D là trọng tâm.
+- [x] Recognition Hero Rebalance: căn nền sang phải, overlay trái–trong suốt, thu Hero text về 65%/60% và giảm title 20/22px.
+- [x] Recognition Seamless Body: gắn section trắng -mt-4 rounded-t-[24px] cho Recognition, giữ Reward Card amber/Gift hiện hữu.
+- [x] Regression Background Focus: cập nhật test Recognition/Reward, kiểm thử type-check, production build và viewport mobile.
+- [x] Bright Heart Asset: đưa nền Heart Emerald sáng người dùng cung cấp vào kho static web.
+- [x] Hero Accent Clipping: thêm leading 1.2, pt-2, pb-1 và background-clip chuẩn cho title Recognition tiếng Việt.
+- [x] Recognition Preview Background: truyền nền sáng mới vào AgentMomentCard của Leader Live Preview, giữ props/luồng hiện hữu.
+- [x] Regression Combo Tỏa Sáng: kiểm thử asset, anti-clipping, Live Preview binding, type-check, build và mobile.
+- [x] Recognition Light Overlay: thay overlay Recognition bằng white glassmorphism, giữ nửa phải trong suốt cho background rực rỡ.
+- [x] Recognition Light Typography: chuyển badge, subtitle và description sang emerald/navy/slate tương phản nền sáng.
+- [x] Reward Dark Preservation: giữ Hero Reward dùng overlay Navy, chữ trắng và gradient amber hiện có.
+- [x] Regression Light Theme: kiểm thử hai theme, typography anti-clipping, build và mobile responsive.
+- [x] Recognition Master Overlay: giảm white overlay còn 90%/10% để giữ phần lớn background Heart Emerald rực rỡ.
+- [x] Recognition Forest Green: áp dụng gradient #047857/#064E3B/#0F766E, text 22/24px và badge white crisp.
+- [x] Master Contrast Preservation: giữ description slate-700, Reward dark theme và anti-clipping leading/padding hiện hữu.
+- [x] Regression Master Clarity: kiểm thử overlay, Forest Green, theme Reward, type-check, build và mobile.
+- [x] Celebration Modal: tạo AgentMomentCelebrationModal cinematic dark overlay, card trung tâm và confetti Lucide.
+- [x] Claim Reward Callback: CTA nhận quà có trạng thái, gọi onClaimReward trước animation thu nhỏ/đóng modal.
+- [x] Dock Extension Contract: định nghĩa callback nhận rewardName để Gamification Dock có điểm tích hợp an toàn, không đổi schema/backend.
+- [x] Regression Celebration: kiểm thử mở/đóng, confetti, card data, callback thứ tự, desktop/mobile, type-check và build.
+- [x] Agent Celebration Mount: gắn AgentMomentCelebrationModal vào root Dashboard TVV với state showCelebration độc lập.
+- [x] Celebration Test Trigger: thêm nút [TEST] cố định góc dưới trái, chỉ hiển thị cho TVV và mở Celebration Modal.
+- [x] Claim Feedback Contract: callback test gửi Sonner xác nhận phần thưởng sẵn sàng cho Dock, không đổi backend/schema.
+- [x] Regression Celebration Mount: kiểm thử role visibility, open/close/claim flow, desktop/mobile, type-check và build.
+- [x] Recognition Schema & RLS: tạo bảng recognitions, index, RLS theo sender/receiver, policy Leader→Advisor cùng team và publication Realtime.
+- [x] Leader Recognition Delivery: thay onSubmit UI-only bằng insert Recognition thực với receiver TVV đúng team và feedback Sonner.
+- [x] Advisor Recognition Antenna: subscribe INSERT receiver_id hiện tại, map payload không PII vào Celebration Modal, cleanup channel.
+- [x] Recognition Claim: xác nhận claim đúng receiver và chuẩn bị thông tin nhận quà/Dock không thay đổi số dư tự ý.
+- [x] Realtime Regression: kiểm thử schema contract, role/team guard, payload mapping, subscription cleanup, type-check và build.
+- [x] Recognition Mailbox Query: thêm helper lấy Recognition chưa claim mới nhất theo receiver hiện tại, không dùng PII khách hàng.
+- [x] Login Celebration Trigger: quét Mailbox khi TVV session sẵn sàng, map thẻ vào Celebration Modal và tránh race với Realtime.
+- [x] Mailbox Regression: kiểm thử query latest-first, trạng thái rỗng, cleanup và claim không lặp khi đăng nhập lại.
+- [x] Recognition Fulfillment Schema: rà soát/thiết kế grant inventory và ledger cho Bùa, XP, Voucher/Xu với dữ liệu tối thiểu.
+- [x] Atomic Claim RPC: thực hiện claim + phân loại phần thưởng + grant idempotent trong một giao dịch quyền TVV.
+- [x] Dock Instant Refresh: đồng bộ XP/Xu và thông báo UI ngay sau claim, không cần tải lại trang.
+- [x] Fulfillment Regression: kiểm thử Bùa, XP, Voucher/Xu, idempotency, quyền receiver, type-check và build.
+- [x] Celebration Open Chime: thêm tiếng chuông khi thẻ mở, không làm gián đoạn confetti hoặc modal lifecycle.
+- [x] Celebration Claim Coin: thêm tiếng Ting Ting chỉ sau thao tác nhận thưởng và giữ await RPC fulfillment trước khi đóng modal.
+- [x] Sound Failure Safety: xử lý autoplay/network failure im lặng, không chặn claim hay UI trên mobile Safari/Android.
+- [x] Audio Regression: kiểm thử audio trigger, callback thứ tự, fulfillment preservation, type-check và build.
+- [x] Morale Score Model: thay Happiness Index bằng chỉ số động lực minh bạch từ streak, phản hồi và hoạt động Team thật.
+- [x] Three-Pillar Aggregation: phân loại Nhịp đập thành Học tập, Gắn kết, Thực chiến từ activity events và dữ liệu hiện hữu.
+- [x] Executive 3-Pillar Table: thay cột Nhịp Hoạt Động bằng micro-bar 3 màu, score động lực và trạng thái cảnh báo năng suất ảo.
+- [x] Report Regression: kiểm thử dữ liệu thật/empty state, tỷ trọng pillar an toàn, mobile responsive, type-check và build.
+- [x] Leader Metrics Guide: tạo drawer Cẩm nang Tham mưu giải thích Morale, 3 Trụ cột và Radar theo What/Where/Why/How.
+- [x] Guide Entry Points: thêm nút info cạnh Xuất Báo Cáo và các metric trọng tâm tại Leader Command Center.
+- [x] Guide Accessibility: đảm bảo đóng bằng backdrop/ESC, focus rõ, cuộn an toàn và responsive mobile.
+- [x] Metrics Guide Regression: kiểm thử mở/đóng, nội dung 3 triết lý, điểm mở và type-check/build.
+- [x] Metrics Dictionary Master-Detail: tái cấu trúc Cẩm nang thành modal 2 cột, sidebar 5 chỉ số và nội dung chi tiết.
+- [x] Dictionary Deep Links: gắn deep-link từ Năng lượng, Động lực, Cần thấu cảm, Ma trận và Radar vào tab chính xác.
+- [x] Dictionary Accessibility: đồng bộ initialTab khi mở, đóng bằng backdrop/ESC, mobile layout không tràn ngang.
+- [x] Dictionary Regression: kiểm thử 5 tab, deep-link, cập nhật initialTab, responsive, type-check và build.
+- [x] Pillars Dictionary Entry: bổ sung mục Cấu trúc 3 Trụ Cột, giải thích tương quan Học tập–Gắn kết–Thực chiến và cảnh báo năng suất ảo.
+- [x] Executive Report Dictionary Links: gắn nút thông tin có thể truy cập cho Chỉ số Động lực và Cấu trúc Nhịp đập trong Báo cáo A4.
+- [x] Pillars Deep-link Regression: kiểm thử deep-link morale/pillars từ Báo cáo A4, type-check và build production.
+- [x] Dynamic Copilot Insight Engine: sinh bức tranh tổng thể, tương quan hành động–kết quả và cảnh báo ưu tiên từ dữ liệu Team thật.
+- [x] Executive Dark Strategic Panel: thay khối kết luận sáng tĩnh bằng panel dark mode, responsive và vẫn an toàn khi Team không có dữ liệu.
+- [x] Strategic Engine Regression: kiểm thử đủ nhánh doanh số/thực chiến/năng suất ảo và chạy quality gate production.
+- [x] Leader Weekly Oracle: xây modal bốc thẻ Sci-Fi hologram có trạng thái draw/reveal, thao tác đóng và truy cập bàn phím an toàn.
+- [x] Oracle Signal Logic: chuyển tín hiệu Team thật thành quẻ Hỏa Long, Rùa Bọc Thép hoặc Bão Cảm Xúc cùng hành động thiết thực.
+- [x] Oracle Command Center Trigger: thêm nút Bắt Tín Hiệu cạnh Xuất Báo Cáo và mount Oracle tại Leader Command Center.
+- [x] Oracle Regression: kiểm thử nút mở, chu trình rút thẻ, kết quả tham mưu và quality gate production.
+- [x] Oracle Galaxy Backdrop: thêm dải ngân hà xoay chậm, sao lơ lửng và vẫn đảm bảo khả năng đọc nội dung quẻ.
+- [x] Oracle Two-Tier Reveal: trình bày Lời sấm vũ trụ tếu táo, mũi tên dẫn nhịp và Bí kíp hành động theo từng trạng thái tín hiệu Team.
+- [x] Oracle 2.0 Regression: kiểm thử copywriting hai tầng, nhánh cảnh báo và quality gate production.
+- [x] Oracle Digital Tarot 3D: chuyển kết quả Oracle thành thẻ hai mặt, mặt trước lời bói vui và mặt sau bí kíp chiến lược bằng lật 180 độ.
+- [x] Oracle Galaxy Radar: tăng độ rõ vòng radar/ngân hà màu sắc sống động, đồng thời hỗ trợ reduced motion.
+- [x] Oracle Interaction SFX: gắn âm thanh không chặn UI cho thao tác rút thẻ, lật bài và mở bí kíp.
+- [x] Tarot Oracle Regression: kiểm thử chu trình draw–front–back, âm thanh an toàn và quality gate production.
+- [x] Oracle Viral Copy: làm mới lời bói, bí kíp và gợi ý lan tỏa theo ba trạng thái Team, giữ giọng vui nhưng không tạo áp lực KPI.
+- [x] Oracle Share CTA: thêm khung gợi ý chia sẻ và CTA Lan tỏa cho Team nổi bật bên cạnh nút đóng.
+- [x] Oracle Viral Regression: kiểm thử mặt sau Tarot, hành vi lan tỏa/đóng và quality gate production.
+- [x] Oracle Orbiting Planets: bổ sung ba hành tinh quay quanh lõi Oracle, màu sắc rõ nét và tôn trọng reduced motion.
+- [x] Oracle Empathy Copy: điều chỉnh chiến lược thành giọng cố vấn nhẹ nhàng, không dùng ngôn từ mệnh lệnh hoặc ép KPI.
+- [x] Oracle Share Progress: thêm chu trình tạo/lưu ảnh giả lập có trạng thái đang xử lý và sẵn sàng lan tỏa.
+- [x] Oracle Polish Regression: kiểm thử trạng thái chia sẻ và quality gate production.
+- [x] Oracle Eight-Planet System: hiển thị Mercury, Venus, Earth–Moon, Mars, Jupiter, Saturn, Uranus và Neptune trên các quỹ đạo motion-safe.
+- [x] Oracle Canvas PNG: tạo ảnh quẻ PNG thật từ dữ liệu Oracle bằng Canvas và kích hoạt tải xuống trực tiếp.
+- [x] Solar Oracle Regression: kiểm thử trạng thái tải ảnh, hành vi Canvas/download và quality gate production.
+- [x] Oracle Solar Full Replacement: thay toàn bộ LeaderWeeklyOracle bằng phiên bản Solar System dùng inline keyframes, không còn nhãn Digital Tarot Oracle.
+- [x] Oracle Canvas Safety: bảo vệ Canvas PNG bằng try-catch và hiển thị trạng thái thất bại an toàn.
+- [x] Oracle Solar Replacement Regression: kiểm thử nhãn mới, trạng thái tạo PNG và quality gate production.
+- [x] Oracle Tailwind Orbit Fix: thay keyframes inject bằng animate-spin Tailwind với duration/timing inline để quỹ đạo luôn hiển thị.
+- [x] Oracle Canvas Curve Fix: dùng lineTo và quadraticCurveTo thay API roundRect để tải PNG tương thích WebView.
+- [x] Oracle Compatibility Regression: kiểm thử trạng thái tạo/tải PNG và quality gate production.
+- [x] Oracle Visible Orbit Patch: tăng viền vòng quỹ đạo thành slate rõ nét cho các hành tinh hiển thị ổn định.
+- [x] Oracle Download CTA Patch: đổi CTA mặt sau thành Tải Ảnh Chia Sẻ nối trực tiếp Canvas PNG.
+- [x] Oracle Download Regression: kiểm thử nhãn tải ảnh, trạng thái Canvas và quality gate production.
+- [x] Oracle Eight-Orbit Visual: tăng độ nổi bật đồng bộ cho tám quỹ đạo hành tinh, gồm Earth–Moon và Saturn có vành.
+- [x] Oracle Canvas Download Flow: xác minh CTA tải ảnh luôn kết nối Canvas và phản hồi thành công/thất bại rõ ràng.
+- [x] Oracle Orbit Regression: kiểm thử chu trình quẻ, tải PNG và quality gate production.
+- [x] Oracle Inline Orbit Borders: thay viền quỹ đạo phụ thuộc Tailwind bằng border inline để chống JIT purge.
+- [x] Oracle Safe Anchor Download: gắn anchor PNG vào document.body trước khi click, dọn dẹp bằng finally để không đơ UI.
+- [x] Oracle Stable Download Regression: kiểm thử chu trình Canvas tải ảnh và quality gate production.
+- [x] Galaxy Oracle Visuals: tạo nền deep-space với nebula nhiều lớp, hành tinh phát sáng và quỹ đạo premium.
+- [x] Sandbox Image Overlay: tạo Data URL bằng Canvas và hiển thị ảnh trong overlay để người dùng lưu thủ công.
+- [x] Galaxy Oracle Regression: kiểm thử tạo ảnh overlay, đóng overlay và quality gate production.
+- [x] Oracle Fullscreen Galaxy: mở rộng nebula và bốn quỹ đạo phát sáng tới 70vw–190vw, phủ toàn bộ viewport.
+- [x] Oracle Blob Export: tạo PNG Canvas bằng API chuẩn, thử tải Blob an toàn và vẫn giữ preview Data URL khi sandbox chặn tải.
+- [x] Fullscreen Galaxy Regression: kiểm thử preview fallback, đóng overlay và quality gate production.
+- [x] Oracle Visible Solar System: thay quỹ đạo viewport quá lớn bằng quỹ đạo 350px–1300px cố định, có lõi phát sáng giữa thẻ.
+- [x] Oracle ToBlob Preview Fallback: tạo PNG Canvas qua toBlob, thử tải object URL an toàn và luôn hiển thị preview Data URL.
+- [x] Solar System Regression: kiểm thử ảnh preview, đóng overlay và quality gate production.
+- [x] Oracle Five-Planet System: thêm năm quỹ đạo với hành tinh cyan, pink, Earth-like, Mars-like và Saturn-like quanh lõi.
+- [x] Oracle Twinkling Stars: tạo nền 100 sao nhấp nháy ổn định, tôn trọng reduced motion.
+- [x] Oracle Native Anchor Export: tiền tạo Data URL khi lật quẻ và gắn native anchor download, đồng thời giữ preview overlay.
+- [x] Five-Planet Oracle Regression: kiểm thử quẻ, native tải ảnh/preview và quality gate production.
+- [x] Oracle Blob Preview Flow: chuyển CTA tạo ảnh sang Canvas toBlob và mở Preview Modal bằng object URL.
+- [x] Oracle Preview Save Fallback: thêm hướng dẫn nhấn giữ/click phải cùng anchor tải PNG trong Preview Modal.
+- [x] Oracle Blob Preview Regression: kiểm thử mở/đóng Preview Modal, fallback tải ảnh và quality gate production.
+- [x] Oracle Flat Action Controls: đưa CTA tải ảnh ra khỏi transform 3D để pointer event hoạt động ổn định đa trình duyệt.
+- [x] Oracle Canvas Fail-Safe: đơn giản hóa Canvas và thêm try-catch cùng Sonner phản hồi rõ khi tạo ảnh thất bại.
+- [x] Oracle Interaction Regression: kiểm thử click CTA mặt sau, preview ảnh và quality gate production.
+- [x] Advisor Mobile Cleanup: ẩn Sổ cái XP thừa ở mobile, giữ text Streak một dòng và ưu tiên FAB Ghi nhịp đập trên widget xanh.
+- [x] Agent Moment Capture Isolation: cô lập DOM khi tạo ảnh Agent Moment để ảnh tải không dính overlay giao diện.
+- [x] Premium Gift XP Action: thiết kế lại nút Tặng XP dạng pill tinh gọn cho cả desktop và mobile.
+- [x] Leader Mobile Layout: căn giữa Oracle Galaxy và chuyển Báo cáo A4 sang một cột full-width an toàn trên mobile.
+- [x] Responsive Regression: kiểm thử layout 375px/desktop, type-check và build production.
+- [x] Mobile-only Report & Oracle: ép wrapper full-width/căn giữa dưới 768px bằng lớp max-md quan trọng, không đổi desktop.
+- [x] Agent Moment Canvas Clean Export: đánh dấu overlay nổi để loại trừ khỏi ảnh xuất DOM-to-image.
+- [x] Mobile-only Hotfix Regression: kiểm thử class override, cờ ignore, TypeScript và build production.
+- [x] Export Deadlock Recovery: khôi phục luồng tải Agent Moment ổn định và chỉ dùng cờ native data-html2canvas-ignore cho medallion nổi.
+- [x] Recognition Live Preview Mobile: xếp dọc Form/Preview dưới md, giữ Preview khả dụng và cuộn dọc an toàn.
+- [x] Brute-force Report & Oracle Mobile: gỡ width ép cứng và ép stack/layout full-width theo breakpoint md.
+- [x] iPhone 7 Plus Compatibility: thay dvh trong các component chỉnh sửa bằng đơn vị vh chuẩn.
+- [x] Critical Hotfix Regression: kiểm thử bốn bản sửa, TypeScript và build production.
+- [x] Kho Quà Export Rollback: khôi phục hàm export gốc ổn định và đánh dấu riêng Gift/blur bằng data-html2canvas-ignore.
+- [x] Oracle Mobile Download CTA: thu nhỏ duy nhất nút Tải Ảnh Chia Sẻ ở max-md.
+- [x] PDF Mobile Desktop Capture: ép canvas báo cáo dùng windowWidth/width 1200 và scale 2 khi xuất PDF.
+- [x] Locked-scope Regression: kiểm thử đúng ba thay đổi, TypeScript và build production.
+- [x] Kho Quà Sync Overlay Hide: ẩn/khôi phục trực tiếp overlay Gift quanh capture để loại artifact không dùng React state.
+- [x] PDF Mobile OOM Guard: dùng scale 1 trên màn hình dưới 768px, giữ scale 2 và desktop-width capture ở desktop.
+- [x] Oracle CTA Mobile Height: áp đúng lớp mobile h-10/min-h-40/py-2, giữ sizing md.
+- [x] Safari 15 Syntax Audit: loại API ES2022+ và state undefined trong các tệp vừa chỉnh sửa.
+- [x] Artifact/OOM Regression: kiểm thử bốn hotfix, TypeScript và build production.
+- [x] Restore Gift Icon Export: bỏ visibility hack, tạm gỡ rồi khôi phục blur/shadow quanh Gift trong capture.
+- [x] Oracle Mobile Card Height: tăng container thẻ lên 600px và thêm margin dưới Gợi ý Kêu gọi Team ở mobile.
+- [x] Mobile PDF Lower-Memory Capture: dùng scale 0.8/windowWidth 800 ở mobile, giữ scale 2/windowWidth 1200 desktop.
+- [x] Gift/Oracle/PDF Regression: kiểm thử ba sửa đổi, TypeScript và build production.
+- [x] Admin Control Center UI: tạo User & Team Matrix với action controls và bảng quản lý tài khoản.
+- [x] XP Treasury UI: tạo form cấp ngân sách XP có người nhận, số lượng, loại giao dịch và lý do.
+- [x] Admin Dashboard Regression: kiểm thử cấu trúc UI và xác minh responsive desktop/mobile.
+- [x] Pilot Admin CMS Schema: xác định schema playbook, leadership và marketing theo supabaseContent hiện hữu.
+- [x] Pilot Admin CMS UI: xây split-screen editor, danh sách bản ghi và live preview dùng component sẵn có.
+- [x] Pilot Admin CMS Persistence: tải/upsert nội dung bằng Supabase, có trạng thái loading/error/success.
+- [x] Pilot Admin CMS Regression: kiểm thử schema, live preview và responsive desktop/mobile.
+- [x] CMS Full Content Fields: thêm mindset/skill_system cho Playbook và occasion/image_url cho Marketing theo type Supabase hiện hữu.
+- [x] CMS Inline Previews: thay preview modal bằng thẻ mô phỏng inline cho Playbook, Marketing và Leadership.
+- [x] CMS Editor UX: tăng chiều cao textarea và cập nhật tiêu đề/nền Preview Pane.
+- [x] CMS Inline Preview Regression: kiểm thử schema mới, preview inline, TypeScript và build production.
+- [x] Marketing Studio Component: thay PosterGeneratorDemo bằng studio chọn template, tùy chỉnh thông điệp và preview canvas.
+- [x] Marketing Studio Export: tạo luồng html2canvas/toBlob an toàn để tải ảnh chia sẻ.
+- [x] Marketing Studio Integration: truyền PilotSession và marketing templates thật vào luồng Advisor/Leader.
+- [x] Marketing Studio Regression: kiểm thử chọn template, đồng bộ thông điệp, export và responsive.
+- [x] MarketingStudio Fallback: thêm fallback template an toàn khi thư viện Marketing trống.
+- [x] MarketingStudio Premium Controls: nâng picker, editor, CTA và preview canvas theo bố cục Studio mới.
+- [x] MarketingStudio Zero-PII Signature: hiển thị role-based signature không có số điện thoại hoặc thông tin định danh giả.
+- [x] MarketingStudio Upgrade Regression: kiểm thử fallback, export CORS, profile signature và responsive.
+- [x] Marketing Studio Only: gỡ lưới MarketingLibrary cũ để Marketing 1-Chạm chỉ hiển thị Studio.
+- [x] Marketing Studio Advanced Editor: thêm tab theo category, font/màu/căn lề và điều khiển tọa độ thông điệp/chữ ký.
+- [x] Marketing Studio Signature Safety: giữ chữ ký role-based Zero-PII, không hiển thị số điện thoại hay định danh khách hàng.
+- [x] Advanced Studio Regression: kiểm thử filter tab, controls editor, export CORS và responsive desktop/mobile.
+- [x] Ultimate Studio Typography: thêm font family, căn lề, màu và cỡ chữ cho thông điệp.
+- [x] Ultimate Studio Signature: thêm tên/chức danh nội bộ, icon và controls chữ ký theo chuẩn Zero-PII.
+- [x] Ultimate Studio Template Tabs: xác minh filter khách hàng/đồng nghiệp/vinh danh theo role.
+- [x] CMS Marketing Poster Preview: nâng preview Marketing trong PilotAdminCMS theo lớp layout poster mới.
+- [x] Ultimate Studio Regression: kiểm thử editor, chữ ký/icon, preview CMS, export và responsive.
+- [x] MarketingStudio Inline Typography: thay lớp font/text bằng CSS inline để tránh override toàn cục.
+- [x] MarketingStudio Rich Formatting: thêm Bold, Italic, Script/Classic và font size áp dụng trực tiếp trên canvas.
+- [x] MarketingStudio Color Picker: thêm native color input cùng palette mở rộng cho canvas text.
+- [x] Typography Regression: kiểm thử style inline, formatting controls, export và responsive desktop/mobile.
+- [x] MarketingStudio Font Loading: nạp Playfair Display, Dancing Script và Montserrat để render/export nhất quán.
+- [x] MarketingStudio Glass Signature: hạ opacity nền chữ ký, giữ glassmorphism và đồng bộ icon/chữ với màu lựa chọn.
+- [x] Font Glass Regression: kiểm thử font injection, style chữ ký, export và responsive desktop/mobile.
+- [x] MarketingStudio Reliable Font Link: nạp font Google qua link được quản lý bằng useEffect để render/export đáng tin cậy.
+- [x] MarketingStudio Handwriting Fonts: bổ sung Caveat và Great Vibes vào bộ chọn font, vẫn giữ các font hiện có.
+- [x] Handwriting Font Regression: kiểm thử vòng đời font link, lựa chọn font, export CORS-safe và responsive desktop/mobile.
+- [x] MarketingStudio Font Override: ánh xạ font chọn thành lớp CSS ưu tiên cao để không bị typography toàn cục ghi đè.
+- [x] MarketingStudio Light Glass Signature: dùng nền trắng trong suốt nhẹ, blur và viền trắng rõ để không che ảnh nền.
+- [x] Font Override Regression: kiểm thử lớp font bắt buộc, màu/định dạng, chữ ký glass và responsive desktop/mobile.
+- [x] MarketingStudio Vietnamese Fonts: thay font viết tay không phù hợp bằng Kalam và Dancing Script để hiển thị dấu tiếng Việt ổn định.
+- [x] MarketingStudio Background Blob: tải ảnh nền ngoài thành object URL, dọn dẹp URL đúng vòng đời và fallback an toàn khi CORS không cho phép.
+- [x] Vietnamese Font & Blob Export Regression: kiểm thử font, object URL, export CORS-safe và responsive desktop/mobile.
+- [x] MarketingStudio Base64 Background: chuyển ảnh nền qua proxy công khai thành Base64 Data URL trước khi xuất ảnh, có fallback an toàn.
+- [x] MarketingStudio Font Import Fallback: thêm @import font trong style canvas bên cạnh stylesheet link và chờ font hoàn tất trước export.
+- [x] MarketingStudio Transparent Glass Signature: giảm nền chữ ký xuống bg-white/5 và blur nhẹ để ưu tiên hiển thị ảnh nền.
+- [x] Base64 Export Regression: kiểm thử Base64, font fallback, chữ ký trong suốt, export và responsive desktop/mobile.
+- [x] MarketingStudio Native Canvas Background: dùng Image/canvas qua proxy để chuyển ảnh nền thành Data URL trước khi export.
+- [x] MarketingStudio No-Blur Signature: loại bỏ mọi backdrop blur/filter trong canvas export để tránh lỗi html2canvas.
+- [x] MarketingStudio Sriracha Pacifico Fonts: thay Kalam bằng Sriracha và Pacifico cho typography tiếng Việt.
+- [x] Native Canvas Export Regression: kiểm thử proxy, Data URL, không blur, font và responsive desktop/mobile.
+- [x] MarketingStudio HTML-to-Image Export: thay html2canvas bằng toPng để xuất PNG từ DOM canvas.
+- [x] MarketingStudio Export Dependency: cài và nạp động html-to-image cho luồng export client-side.
+- [x] HTML-to-Image Regression: kiểm thử loại bỏ html2canvas, toPng, fallback lỗi và responsive desktop/mobile.
+- [x] MarketingStudio Stable Canvas Export: gỡ html-to-image và khôi phục html2canvas với Base64 Data URL đã nạp trước.
+- [x] MarketingStudio Background Ready State: khóa CTA xuất khi ảnh nền đang chuyển Base64 và phản hồi rõ trạng thái.
+- [x] Stable Canvas Export Regression: kiểm thử html2canvas, Base64, không treo UI và responsive desktop/mobile.
+- [x] MarketingStudio Direct Supabase Background: loại wsrv/proxy, Base64 và trạng thái tải nền; dùng image_url trực tiếp có CORS.
+- [x] MarketingStudio Clean Canvas Export: giữ html2canvas CORS-safe với ảnh nền Supabase trực tiếp, không dùng html-to-image.
+- [x] Direct Storage Export Regression: kiểm thử không proxy/Base64, html2canvas CORS-safe và responsive desktop/mobile.
+- [x] MarketingStudio Direct Base64 Background: fetch image_url Supabase có cache-buster, chuyển Blob thành Data URL và fallback an toàn.
+- [x] MarketingStudio Export Readiness: khóa CTA đến khi Base64 ảnh nền hoàn tất để html2canvas không đọc ảnh nguồn chéo.
+- [x] Direct Base64 Export Regression: kiểm thử cache-buster, Data URL, html2canvas, fallback và responsive desktop/mobile.
+- [x] MarketingStudio DOM-to-Image Export: thay html2canvas bằng dom-to-image-more/toPng, có fallback html-to-image.
+- [x] MarketingStudio Export Cleanup: loại Base64 prefetch, proxy fallback và trạng thái nạp nền của luồng export cũ.
+- [x] DOM-to-Image Regression: kiểm thử dependency, toPng, fallback, Zero-PII và responsive desktop/mobile.
+- [x] MarketingStudio Stable Template Selection: ổn định phụ thuộc chọn phôi, tránh state update lặp khi mảng templates đổi tham chiếu.
+- [x] MarketingStudio Native Image Base64: nạp ảnh nền bằng native Image/canvas với cache-buster trước html2canvas.
+- [x] MarketingStudio Emoji Signature Export: dùng emoji native trong canvas export để tránh parse SVG lucide.
+- [x] Stable Canvas Loop Regression: kiểm thử dependency, Base64, emoji, html2canvas và responsive desktop/mobile.
+- [x] MarketingStudio Cache-Busting URL: thêm timestamp cho URL phôi khi đổi tab hoặc chọn phôi để buộc tải CORS mới.
+- [x] MarketingStudio Direct CORS Export: loại Base64/proxy, dùng ảnh cache-busting có crossOrigin anonymous với html2canvas.
+- [x] Cache-Busting Export Regression: kiểm thử timestamp, CORS export, Zero-PII và responsive desktop/mobile.
+- [x] MarketingStudio CSS Background Export: thay img nền trong vùng export bằng backgroundImage/backgroundSize/backgroundPosition.
+- [x] MarketingStudio Background CORS Regression: kiểm thử URL cache-busting, html2canvas CSS background, Zero-PII và responsive desktop/mobile.
+- [x] MarketingStudio Native Canvas Export: loại html2canvas, vẽ ảnh nền/đoạn chữ/chữ ký bằng CanvasRenderingContext2D thuần.
+- [x] MarketingStudio Proxy Image Load: tải ảnh nền qua proxy CORS trước khi drawImage, có fallback và báo lỗi rõ ràng.
+- [x] Native Canvas Export Regression: kiểm thử native canvas, text/signature Zero-PII, không DOM-to-canvas và responsive desktop/mobile.
+- [x] MarketingStudio Direct Supabase Canvas Load: bỏ proxy ảnh, nạp image_url Supabase trực tiếp với cache-buster trước drawImage.
+- [x] MarketingStudio System Signature Font: dùng stack system-ui để chữ ký native canvas hiển thị tiếng Việt ổn định.
+- [x] Optimized Native Canvas Regression: kiểm thử không proxy, ảnh trực tiếp, system font, Zero-PII và responsive desktop/mobile.
+- [x] MarketingStudio Dynamic Canvas Resolution: dùng naturalWidth/naturalHeight ảnh nền, giới hạn 1200px để xuất PNG sắc nét nhưng tiết kiệm bộ nhớ.
+- [x] MarketingStudio Elegant Signature Font: dùng Playfair Display cho tên chữ ký, giữ chức danh sans-serif và nền glass trong suốt.
+- [x] Dynamic Canvas Regression: kiểm thử kích thước động, bóng chữ sắc, chữ ký Playfair, Zero-PII và responsive desktop/mobile.
+- [x] Marketing Contextual Admin Toggle: thêm chuyển đổi Marketing Studio/Quản lý Phôi chỉ cho leader và super_admin.
+- [x] Marketing CMS Relocation: chuyển form/bảng CMS Marketing cùng luồng Supabase refresh vào chính Marketing 1-Chạm.
+- [x] Pilot Marketing Cleanup: gỡ sub-tab và code CMS Marketing khỏi Pilot, giữ Pilot cho analytics và quản trị toàn cục.
+- [x] Contextual Admin Regression: kiểm thử phân quyền, CRUD phôi, refresh nội dung và responsive desktop/mobile.
+- [x] MarketingStudio Template Grid: thay thanh phôi ngang bằng lưới 3/4 cột có chiều cao giới hạn và cuộn dọc.
+- [x] Marketing Contextual CMS Persistence: giữ Studio/CMS mounted khi chuyển toggle và nạp CMS từ templates có sẵn.
+- [x] Marketing Layout Performance Regression: kiểm thử lưới phôi, preview không bị ép, toggle không reload và responsive desktop/mobile.
+- [x] MarketingStudio Memoized Filtering: memoize phôi theo activeTab để tránh tính lại và re-render không cần thiết.
+- [x] MarketingStudio Stable Background Selection: chỉ đổi selectedBg khi nền hiện tại không còn thuộc danh sách phôi đã lọc.
+- [x] Marketing Tab Switching Regression: kiểm thử đổi tab/thêm phôi, ảnh nền hợp lệ và responsive desktop/mobile.
+- [x] MarketingStudio Derived Background: dùng manualSelectedBg + selectedBg derived state để đồng bộ phôi không qua effect trễ khung hình.
+- [x] MarketingStudio Render Cache Cleanup: gỡ timestamp/cache-buster khỏi thumbnail và preview JSX để giữ browser cache khi gõ chữ.
+- [x] MarketingStudio Export Cache-Buster: giữ cache-buster chỉ trong Native Canvas fetch lúc xuất PNG.
+- [x] Marketing Flicker Regression: kiểm thử đổi tab, gõ thông điệp, ảnh nền cache và responsive desktop/mobile.
+- [x] MarketingStudio Derived Displayed Text: thay text state/effect theo selectedBg bằng editedText theo mã phôi và displayedText suy ra đồng bộ.
+- [x] MarketingStudio Synchronous Mount Regression: kiểm thử tab Marketing khởi tạo đồng bộ preview và thông điệp trên desktop/mobile.
+- [x] Marketing Strict Conditional Mounting: unmount hẳn Studio hoặc CMS khi chuyển view mode, không dùng block/hidden.
+- [x] Marketing Zombie Component Regression: kiểm thử role toggle, refresh CMS và Studio không chạy nền khi inactive.
+- [x] MarketingStudio Category Normalization: chuẩn hóa activeTab/category để phôi Đồng nghiệp luôn lọc đúng bất kể hoa/thường hoặc dấu tiếng Việt.
+- [x] Marketing CMS Safe Preview: thêm fallback an toàn cho preview và trường template có thể null/undefined.
+- [x] Marketing Image Placeholder: thêm nền slate ổn định cho thumbnail và preview trước khi ảnh Supabase tải xong.
+- [x] Marketing Filter and Preview Regression: kiểm thử category mixed-case, dữ liệu thiếu và render desktop/mobile.
+- [x] Marketing CMS Effect Audit: rà soát mọi useEffect và callback refresh để loại trigger tự động theo props.
+- [x] Marketing CMS Local State Guard: không mirror templates vào state; chỉ reset form theo thao tác Create/Edit rõ ràng.
+- [x] Marketing CMS Manual Refresh Regression: xác minh refresh content chỉ chạy sau mutation CRUD thành công, không chạy khi render hoặc đổi reference props.
+- [x] Root Content Fetch Callback Audit: cố định callback tải Content Library và các callback dữ liệu root bằng dependency ổn định.
+- [x] Root Effect Dependency Audit: loại dependency templates/callback bất ổn khỏi effect tải ban đầu và state sync toàn cục.
+- [x] App-Wide Render Storm Regression: xác minh chuyển view không tạo fetch lặp hoặc state update dây chuyền trên desktop/mobile.
+- [x] Emergency Root Effect Audit: kiểm toán các effect root có setState/fetch và xác nhận không có dependency gây cycle.
+- [x] Emergency Realtime Subscription Audit: kiểm toán callbacks subscription toàn cục, cleanup và cơ chế dedupe state update.
+- [x] Emergency Global Loop Fix: áp dụng bản vá tối thiểu ở root/subscription, không chạm UI MarketingStudio.
+- [x] Emergency Global Stability Regression: xác minh navigation, effect lifecycle và render desktop/mobile sau bản vá.
+- [x] Marketing CMS Legacy Category Mapping: chuẩn hóa các nhãn category cũ khi mở chỉnh sửa phôi.
+- [x] Marketing CMS Strict Select Regression: kiểm thử mapping đồng nghiệp, vinh danh, poster và fallback khách hàng.
+- [x] Marketing Dynamic Tabs: sinh tab trực tiếp từ category của dữ liệu phôi, không giữ danh sách tab hardcode.
+- [x] Marketing Local Text Editor: dùng state text cục bộ reset theo selected template key, không ghi đè khi người dùng đang nhập.
+- [x] Marketing Smart Suggestions: hiển thị danh sách thông điệp duy nhất của tab hiện hành để chọn nhanh.
+- [x] Marketing CMS Dynamic Categories: dropdown category từ dữ liệu hiện có, hỗ trợ “Thêm Tab mới” bằng input tùy chỉnh.
+- [x] Marketing Zero-Code Regression: kiểm thử tab mới, category legacy, quick suggestion, export Canvas và responsive/role access.
+- [x] BaoBoi Contextual Admin: đặt Studio/CMS dưới parent Bảo Bối với toggle chỉ Leader/Super Admin và unmount view inactive.
+- [x] BaoBoi Dynamic Categories: CMS sinh dropdown Hệ Kỹ Năng từ dữ liệu thực và hỗ trợ thêm danh mục mới bằng input.
+- [x] BaoBoi Dynamic Flip Cards: Studio sinh tab từ skill_category, giữ nguyên mechanics perspective/rotate/backface của thẻ 3D.
+- [x] BaoBoi AI Mentor Modal: thêm phòng roleplay audio-only mô phỏng bốn trạng thái idle/recording/analyzing/result, không lưu PII khách hàng.
+- [x] BaoBoi Regression: kiểm thử schema mapping, role access, conditional mounting, dynamic tabs và UI desktop/mobile.
+- [x] BaoBoi Card Back Layout: tách khối Góc nhìn định tâm và Kịch bản/Khai vấn để không chồng chữ với badge.
+- [x] BaoBoi Roleplay CTA Contrast: đưa nút Roleplay đậm, dễ đọc và sticky ở đáy mặt sau; chặn click lật ngược thẻ.
+- [x] BaoBoi Card Back Regression: kiểm thử JSX 3D backface và responsive desktop/mobile sau hotfix.
+- [x] BaoBoi Card Back Scroll Constraint: thêm min-h-0 cho vùng scroll và shrink-0 cho các khối nội dung để tránh lock scroll.
+- [x] BaoBoi Record CTA Gradient: chuyển CTA Roleplay sang gradient Emerald/Teal với mô tả ghi âm rõ ràng.
+- [x] BaoBoi Scroll CTA Regression: kiểm thử flex/backface, click stopPropagation và responsive desktop/mobile sau hotfix.
+- [x] BaoBoi Click-to-Flip Card: tách PlaybookCard với isFlipped local state, không phụ thuộc hover để lật.
+- [x] BaoBoi Interactive Backface: thêm nút quay lại trên mặt sau, giữ vùng scroll/select text và CTA Roleplay tương tác độc lập.
+- [x] BaoBoi Click Flip Regression: kiểm thử class state-driven, back button, scroll lock và CTA desktop/mobile.
+- [x] BaoBoi Teaser Backface: bỏ scroll mặt sau, hiển thị định tâm đầy đủ và kịch bản line-clamp với fade-out.
+- [x] BaoBoi Immersive Roleplay Room: mở rộng AI Mentor thành modal max-w-5xl hai cột, đọc full context bên trái và luyện giọng mô phỏng bên phải.
+- [x] BaoBoi Immersive Privacy Copy: giữ rõ luồng mô phỏng và không lưu giọng nói/PII trong trải nghiệm Roleplay.
+- [x] BaoBoi Teaser Modal Regression: kiểm thử teaser, modal split layout, CTA và responsive desktop/mobile.
+- [x] BaoBoi Pillar Mapping: nhóm micro-skill thành bốn trụ cột UI bằng helper getPillar với fallback thực chiến.
+- [x] BaoBoi Emerald CTA: chuyển CTA mặt sau sang Emerald rõ chữ, giữ stopPropagation và state Roleplay.
+- [x] BaoBoi Two-Way Roleplay: mô phỏng khách hàng nói trước, TVV phản hồi, chấm điểm sau cùng; nêu rõ không thu/lưu audio hoặc PII.
+- [x] BaoBoi Macro Roleplay Regression: kiểm thử mapping tab, CTA, flow state hai chiều và responsive desktop/mobile.
+- [x] BaoBoi Core Logic Data: bổ sung trường core_logic vào type/schema CMS Bảo Bối và luồng CRUD an toàn.
+- [x] BaoBoi Mastery Preparation: thêm bước My Voice bắt buộc trước mô phỏng khách hàng trong Roleplay Studio.
+- [x] BaoBoi Reflective Feedback: thêm transcript mô phỏng, so khớp kịch bản và phân tích điểm mù sau phiên luyện.
+- [x] BaoBoi Mastery Privacy: diễn đạt rõ đây là mô phỏng, không thu, xử lý hoặc lưu âm thanh/PII.
+- [x] BaoBoi Mastery Loop Regression: kiểm thử CMS core logic, state flow và responsive desktop/mobile.
+- [x] BaoBoi Customer Insight Data: thêm trường customer_insight vào playbook_cards, type, Content Library và CMS.
+- [x] BaoBoi Iceberg Medical Seed: upsert 7 Bảo Bối W001/W002/W003/W005/W006/W011/W013 theo mapping schema hiện hữu.
+- [x] BaoBoi Master Data UI: hiển thị Customer Insight và dữ liệu Mastery Loop đầy đủ trong Studio/CMS.
+- [x] BaoBoi Master Data Regression: kiểm thử schema mapping, seed fields và UI desktop/mobile.
+- [x] BaoBoi Iceberg Learning Path: chuẩn hóa pane đọc năm bước Situation → Insight → Mindset → The Why → The How.
+- [x] BaoBoi CMS CRUD Contract: xác nhận create, update, delete qua playbook_cards với đủ trường Customer Insight và Core Logic.
+- [x] BaoBoi AI Brain Payload: tách payload đánh giá Roleplay có cấu trúc, ánh xạ schema thực và giữ mô phỏng Zero-PII ở client.
+- [x] BaoBoi Iceberg Regression: kiểm thử CRUD, lộ trình năm bước, payload và responsive desktop/mobile.
+- [x] Trợ lý Thẩm định Schema: tạo bảng uw_dictionary, chính sách RLS đọc phù hợp và seed idempotent nội dung do Founder cung cấp.
+- [x] Trợ lý Thẩm định CMS: xây CRUD role-gated cho Condition, Layman, Decision, Docs và Tips.
+- [x] Trợ lý Thẩm định Dynamic UI: thay nội dung tĩnh bằng tra cứu hai cột từ Supabase, trạng thái loading/empty/error và chọn mục chi tiết.
+- [x] Trợ lý Thẩm định Zero-PII Generator: tạo thư giải trình từ placeholder trung tính, chặn email/số điện thoại/tên khách và thêm disclaimer nghiệp vụ.
+- [x] Trợ lý Thẩm định Regression: kiểm thử schema/CRUD/generator, TypeScript, build và desktop/mobile.
+- [x] Trợ lý Thẩm định V2: thêm tabs Giải trình Y khoa, Xin Tái Thẩm định và Khiếu nại Claim với mẫu thư theo ngữ cảnh.
+- [x] Trợ lý Thẩm định V2 Privacy: dùng mã tham chiếu không định danh thay Tên Khách hàng, chặn email/số điện thoại và nêu rõ không lưu/gửi nội dung.
+- [x] Trợ lý Thẩm định V2 Regression: kiểm thử đủ ba mẫu thư, autofill vấn đề, Zero-PII, TypeScript/build và desktop/mobile.
+- [x] Trợ lý Thẩm định V3 Disclaimer: thêm tuyên bố quản trị kỳ vọng theo công ty/sản phẩm, y khoa và quy tắc UW/Claim.
+- [x] Trợ lý Thẩm định V3 Templates: thêm Giải trình Sai lệch VssID và Đàm phán Loại trừ theo form không định danh.
+- [x] Trợ lý Thẩm định V3 Regression: kiểm thử năm mẫu thư, disclaimer, Zero-PII, TypeScript/build và desktop/mobile.
+- [x] Trợ lý Thẩm định V4.1 Templates: thêm mẫu Tái kê khai lịch sử y tế và Tường trình tai nạn theo mã tham chiếu không định danh.
+- [x] Trợ lý Thẩm định V4.1 Tone: chuẩn hóa hướng dẫn và thư theo văn phong trung lập, tôn trọng quy tắc và chỉ dùng dữ kiện/chứng từ cung cấp.
+- [x] Trợ lý Thẩm định V4.1 Accident: nêu chứng từ đầy đủ là chuẩn bắt buộc; chỉ giải thích thiếu chứng từ nếu có nguyên nhân khách quan, kiểm chứng được.
+- [x] Trợ lý Thẩm định V4.1 Regression: kiểm thử bảy loại thư, guide động, Zero-PII, TypeScript/build và desktop/mobile.
+- [x] Trợ lý Thẩm định V6 SOP: thêm quy trình Claim bốn bước cạnh disclaimer mà vẫn giữ Từ điển Thẩm định.
+- [x] Trợ lý Thẩm định V6 Generator: chuẩn hóa sáu mẫu thư, guide động và checklist chứng từ thay đổi theo loại thư.
+- [x] Trợ lý Thẩm định V6 Integration: đồng bộ mục từ điển được chọn sang Tên vấn đề, chứng từ khuyến nghị và form generator.
+- [x] Trợ lý Thẩm định V6 Regression: kiểm thử SOP, sáu tabs, checklist động, Zero-PII, TypeScript/build và desktop/mobile.
+- [x] Trợ lý Thẩm định V6.1 Tabs: nhóm bốn mẫu Pre-UW và hai mẫu Claim trong Smart Generator, không đổi logic sinh thư.
+- [x] Trợ lý Thẩm định V6.1 SOP: đổi nhãn SOP bao quát cả thẩm định cấp hợp đồng và bồi thường.
+- [x] Trợ lý Thẩm định V6.1 Regression: kiểm thử phân nhóm, hành vi sáu tab, TypeScript/build và desktop/mobile.
+- [x] Trợ lý Thẩm định Enterprise Schema: mở rộng uw_dictionary với ICD, category, company tag, reference link và active state.
+- [x] Trợ lý Thẩm định Templates: tạo uw_templates có RLS, seed idempotent mẫu Medical/Accident bằng mã tham chiếu Zero-PII.
+- [x] Trợ lý Thẩm định Dynamic Generator: đọc templates từ Supabase, quản trị CRUD và không dùng letter-body hardcode.
+- [x] Trợ lý Thẩm định Enterprise Regression: kiểm thử migration, RLS, CRUD templates, Zero-PII, TypeScript/build và desktop/mobile.
+- [x] Multi-tenant Schema: map các bảng thực tế cho Bản tin, Bảo Bối, UW và Team trước migration.
+- [x] Multi-tenant Migration: thêm team scope và product/company tags idempotent vào content tables hiện hữu.
+- [x] Multi-tenant RLS Strategy: viết tài liệu Global Data, Local Data và Admin Write theo team scope.
+- [x] Multi-tenant Verification: xác minh cột, FK/policy hiện hữu và bàn giao không thay đổi UI.
+- [x] Concierge Schema: xác minh và bổ sung ai_evaluation_rules cho playbook_cards theo mô hình multi-tenant hiện hữu.
+- [x] Concierge Policy Review Seed: upsert Bác Sĩ Hợp Đồng với kịch bản trung lập, team scope Global và luật gamification JSON.
+- [x] Concierge Strategy: soạn tài liệu Data Flow Super Admin → Team và AI Evaluation qua Edge Function, không triển khai UI.
+- [x] Concierge Verification: xác minh schema/seed rules và bàn giao không thay đổi policy RLS hoặc UI.
+- [x] Shared Access RBAC: cho TVV, Leader và Super Admin truy cập toggle Global/Local trong Trợ lý Thẩm định và Bảo Bối.
+- [x] Shared Access Filtering: lọc Global bằng team_id null và Local bằng currentUser.team_id theo cùng một contract cho Leader/TVV.
+- [x] Shared Access Regression: kiểm thử role gating, chuyển tab, type-check/build và desktop/mobile.
+- [x] Strict CMS RBAC: ẩn hoàn toàn quản trị Bảo Bối và UW khỏi Leader; chỉ Super Admin được mở CMS.
+- [x] Workspace Assignment: thêm chọn Global/Team thực tế trong form Bảo Bối, UW Dictionary và UW Templates; lưu team_id cùng record.
+- [x] Workspace Admin Regression: kiểm thử phân quyền, validation team scope, persistence, type-check/build và responsive.
+- [x] Community Schema: bổ sung post_type, image_urls và parent_comment_id theo schema thực tế, không tạo bảng XP mới.
+- [x] Community Leaderboard: tạo RPC get_weekly_leaderboard_v1 từ xp_ledger, theo Team và tuần hiện hành.
+- [x] Community UI: thêm post categories, threaded replies, Top 5 tuần và gọi gift_team_xp_v2 từ hành động Tặng XP.
+- [x] Community Regression: kiểm thử migration/RPC, Zero-PII, TypeScript, Vitest, build và responsive.
+- [x] V12 Rewards Schema: bổ sung team_id cho xp_rewards theo schema hiện hữu và chỉ số hỗ trợ Team scope.
+- [x] V12 Central Bank RPC: tạo admin_fund_leader_v1 với role/Leader/amount/Zero-PII validated và chỉ authenticated được execute.
+- [x] V12 God Mode UI: thêm Super Admin delete post, cấp ngân sách Leader và cấu hình kho quà Team trong Admin Control Center.
+- [x] V12 Regression: kiểm thử RLS/RPC security, CRUD rewards, moderation, type-check, Vitest, build và responsive.
+- [x] V13 Data Foundation: audit và bổ sung streak_milestones cùng team defaults theo schema/RLS thực tế.
+- [x] V13 Agent Home: thêm tự điền mục tiêu theo Team, progress Thực đạt/Mục tiêu và streak milestone động cho TVV/Leader.
+- [x] V13 Admin Home: dựng God Mode telemetry, Content Master Control, Quiz CMS và Team Benchmark cho Super Admin.
+- [x] V13 Regression: kiểm thử RBAC Home, persistence, Zero-PII, TypeScript, Vitest, build và responsive.
+- [x] V14 Schema/Claim: xác minh và bổ sung contract streak_milestones, streak claims và claim_streak_milestone_v1 an toàn.
+- [x] V14 Milestone Configurator: thêm Super Admin CRUD cho Global milestones gồm ngày, XP và danh hiệu.
+- [x] V14 Dynamic Streak: thay tracker 7 vòng tròn bằng thanh tiến độ vô hạn tới milestone kế tiếp và CTA nhận thưởng động.
+- [x] V14 Regression: kiểm thử logic progress/claim, RBAC, Zero-PII, TypeScript, Vitest, build và responsive.
+- [x] V15 Daily Quiz Rotation: thêm RPC UTC deterministic chọn câu hỏi từ Question Bank và phân quyền execute an toàn.
+- [x] V15 Question Bank CMS: chuyển Nạp Não CMS sang thêm câu hỏi, hiển thị tổng số trong kho và không ghi đè câu hiện hành.
+- [x] V15 Data Integration: đọc câu Daily Quiz qua RPC xoay vòng, giữ tương thích claim XP theo ngày hiện có.
+- [x] V15 Regression: kiểm thử rotation, RBAC, type-check, Vitest, build và responsive trước checkpoint.
+- [x] V17 Content RLS Audit: xác minh bảng, RLS và chính sách SELECT cho Content Library theo role/scope thực tế.
+- [x] V17 Content Read Repair: RLS hiện hữu đã đúng cho đọc Global/Local nên không cần mở thêm quyền hoặc thay policy ghi.
+- [x] V17 Fetch Resilience: tách lỗi từng nguồn, giữ tab còn lại hoạt động và bổ sung retry/empty-state phù hợp.
+- [x] V17 Regression: kiểm thử loading/error/retry, RLS, TypeScript, Vitest, build và responsive trước checkpoint.
+- [x] V18 Philosophy Metrics: audit nguồn signals/interventions/outcomes/xp gifts/daily logs và định nghĩa 4 trụ cột đo lường không PII.
+- [x] V18 Philosophy RPC: tạo get_app_philosophy_metrics_v1 chỉ Super Admin, tổng hợp Recovery, TTI, Competence và Happiness an toàn.
+- [x] V18 Admin Philosophy UI: thay telemetry tổng quát bằng dashboard 4 nhịp đập, đồng thời giữ Daily Quiz/CMS/Content Grid hiện hữu.
+- [x] V18 Regression: kiểm thử RBAC, số liệu, TypeScript, Vitest, build và responsive trước checkpoint.
+- [x] V19 God Mode Visual: nâng hero thành SaaS-native với glow/gradient và trạng thái Pilot OS rõ ràng.
+- [x] V19 Pulse Trends: bổ sung sparkline SVG rõ ràng, có nhãn trợ năng cho bốn nhịp triết lý mà không làm giả dữ liệu.
+- [x] V19 App Health: tích hợp lại DAU, tính năng nổi bật và nhịp hoạt động 7 ngày từ telemetry thật, cùng Content Grid/CMS hiện hữu.
+- [x] V19 Regression: kiểm thử telemetry thật, cấu trúc dashboard, TypeScript, Vitest, build và responsive trước checkpoint.
+- [x] V20 Hero Contrast: đổi tiêu đề God Mode thành “Trung Tâm Điều Hành Vĩ Mô” với tương phản trắng và drop shadow.
+- [x] V20 Pulse Explainability: thêm tooltip trợ năng cạnh bốn nhịp, diễn giải đúng công thức số liệu tổng hợp và không PII.
+- [x] V20 Sparkline Fix: sửa SVG sparkline co giãn đúng đáy card bằng preserveAspectRatio, vẫn tránh giả dữ liệu định lượng.
+- [x] V20 Regression: kiểm thử hero, tooltip, SVG, TypeScript, Vitest, build và responsive trước checkpoint.
+- [x] V21 Radar Audit: rà soát ma trận Radar, nguồn intervention/outcome, số dư XP Leader và hàm xuất PDF hiện hữu.
+- [x] V21 Recovery Watchlist: truy xuất danh sách can thiệp theo Team an toàn, hiển thị trạng thái phục hồi không PII và tỷ lệ tuần thực.
+- [x] V21 Empathy UX: thêm Ngân sách Động viên, đổi CTA thành “Hỗ trợ ngay”, giữ nguyên handler và toàn bộ Radar/Cosmic/PDF hiện hữu.
+- [x] V21 Coaching ROI PDF: bổ sung tổng ca hỗ trợ và số TVV phục hồi vào cuối báo cáo PDF mà không xóa dữ liệu cũ.
+- [x] V21 Regression: kiểm thử RBAC, watchlist, PDF, TypeScript, Vitest, build và responsive trước checkpoint.
+- [x] V22 Data Audit: rà soát Radar Team/Leader, Oracle cũ, usage Playbook, XP ledger và recognition để tái sử dụng dữ liệu thật.
+- [x] V22 Supabase Contracts: tạo cosmic_tarot_cards, RLS/RPC và contract tổng hợp Leadership Radar/Agent Mirror theo role, không PII.
+- [x] V22 Admin Leadership Radar: thêm ma trận Team/Leader Thấu cảm–Hiệu suất chỉ Super Admin, giữ nguyên Radar Leader.
+- [x] V22 Tarot CMS: thay dữ liệu Oracle hardcode bằng kho quẻ động và thêm CMS quản trị Super Admin.
+- [x] V22 Agent Mirror: thêm modal Hành Trình Của Tôi cho TVV với XP tuần, Playbook đã dùng, ghi nhận đồng đội và gợi ý tuần mới dựa dữ liệu thật.
+- [x] V22 Regression: kiểm thử RLS/RBAC, radar, tarot, mirror, TypeScript, Vitest, build và responsive trước checkpoint.
+- [x] V23 GA Audit: rà soát role profiles/users_profile, teams, hierarchy hiện hữu và routing Radar theo role.
+- [x] V23 Team Hierarchy: thêm parent_team_id self-reference, index, role director hợp lệ và migration idempotent an toàn.
+- [x] V23 Agency Radar RPC: mở rộng Leadership Matrix để Super Admin xem Global và Director chỉ xem child teams của primary_team_id.
+- [x] V23 Director UI: tái dùng Leadership Matrix cho Director, giữ nguyên Agent-level Radar cho Leader và personal fallback cho TVV.
+- [x] V23 Regression: kiểm thử RLS/RBAC Global–Agency, hierarchy, TypeScript, Vitest, build và responsive trước checkpoint.
+- [x] V24 Audit: rà soát daily_logs, Agent Mirror, Tarot/Oracle, User Management và các contract Supabase hiện hữu.
+- [x] V24 Agent Mirror: tổng hợp cuộc gặp tuần từ daily_logs không bao gồm Dời lịch/Hủy, hiển thị stat và gợi ý Bảo Bối khi cần.
+- [x] V24 Smart Tarot: thêm RPC Team-scoped chọn bài đúng signal, không lặp bài tuần trước và không làm lộ Tarot CMS.
+- [x] V24 Director CMS: hiển thị/sửa được role Director, chỉ rõ gán GA Team và bảo toàn giới hạn Super Admin.
+- [x] V24 Regression: kiểm thử scope, rotation, Mirror, role UI, TypeScript, Vitest, build và responsive trước checkpoint.
+- [x] V25 Audit: xác minh constraint/enum profiles.role, API tạo account, mapping session profile và routing Home theo role.
+- [x] V25 Director Create: bảo đảm backend/DB nhận director, form tạo tài khoản gửi đúng payload và hiển thị lỗi thao tác rõ ràng.
+- [x] V25 Super Admin Routing: ngăn fallback TVV khi profile đang hydrate hoặc role super_admin/director/leader/advisor chưa hợp lệ.
+- [x] V25 Regression: test role creation, auth routing, TypeScript, Vitest, build và preview responsive trước checkpoint.
+- [x] V26 Recovery: xác minh và khôi phục profile Founder `pilot.super-admin@agentcopilot.test` về super_admin.
+- [x] V26 Self-demotion Failsafe: khóa thay đổi role khi Super Admin chỉnh sửa chính tài khoản của mình; giữ quyền cập nhật tài khoản khác.
+- [x] V26 Regression: kiểm thử DB recovery, khóa role, TypeScript, Vitest, build và preview trước checkpoint.
+- [x] V27 Audit: rà soát CMS quản lý user, Team gán GAD và quyền tạo Auth–Profile.
+- [x] V27 CMS UX: thay form phẳng bằng bảng tài khoản và dialog Create/Edit độc lập; giữ khóa role self-edit.
+- [x] V27 GAD Seed: tạo/đồng bộ auth user `pilot.director@agentcopilot.test` với profile director, tên Pilot GAD Director, XP 10.000 và GA Team hợp lệ.
+- [x] V27 Regression: kiểm thử modal flows, self-edit lock, Auth–Profile GAD, TypeScript, Vitest, build và responsive.
+- [x] V28 Audit: xác minh GAD account, direct Team scope và Radar routing hiện hữu.
+- [x] V28 GAD Password: cập nhật mật khẩu `pilot.director@agentcopilot.test` thành `Pilot@123456` bằng Admin API và xác minh Auth user còn active.
+- [x] V28 Hybrid Director Radar: thêm segmented toggle Macro Matrix/Direct Agent Radar, không nới scope Agency hoặc làm hỏng Leader Radar.
+- [x] V28 Regression: test password update contract, Director Macro/Micro routing, TypeScript, Vitest, build và responsive.
+- [x] Backup: đóng gói toàn bộ source Agent Copilot thành `agent-copilot-full-source.zip`, loại trừ node_modules, .next, .git và .vercel.
+- [x] V29 Audit: rà soát Agent Radar, Nhịp Đập/daily_logs, Team hierarchy và RLS/RPC hiện hữu.
+- [x] V29 Admin Drill-down: thêm chọn Team và Radar vận hành chỉ-đọc, scope được kiểm soát ở DB cho Super Admin/Director.
+- [x] V29 Heartbeat Hierarchy: thêm selector Team/User cho Leader, Director, Super Admin; TVV chỉ đọc log riêng qua RPC scope an toàn.
+- [x] V29 Regression: kiểm thử RBAC, read-only, Zero-PII, TypeScript, Vitest, build và responsive trước checkpoint.
+- [x] V30 Audit: rà soát payload users Heartbeat và membership hierarchy theo role.
+- [x] V30 Strict Dropdown RBAC: Leader chỉ thấy Advisor; Director chỉ thấy Leader/Advisor; Super Admin giữ phạm vi toàn hệ thống; loại chính user khỏi dropdown.
+- [x] V30 Regression: kiểm thử UI/RPC hierarchy, TypeScript, Vitest, build và preview trước checkpoint.
+- [x] V32 Audit: rà soát Signal Engine Leader Radar, nguồn streak/activity và luồng CTA hỗ trợ hiện hữu.
+- [x] V32 Inactivity Detector: tạo tín hiệu mất nhịp Zero-PII cho TVV có streak 0 hoặc không có hoạt động trong 24 giờ, không trùng tín hiệu hiện hữu.
+- [x] V32 Intervention Flow: bảo đảm tín hiệu động vẫn mở được modal Hỗ trợ ngay để tặng XP hoặc ghi nhận coaching.
+- [x] V32 Regression: kiểm thử scope Team, detector, CTA hỗ trợ, TypeScript, Vitest, build và responsive trước checkpoint.
+- [x] V33 Audit: rà soát routing tab Hồ Sơ và dashboard theo role hiện hữu.
+- [x] V33 Player-Coach: định tuyến Leader vào Agent Home Dashboard, giữ Super Admin/Director ở Macro Dashboard và Advisor ở personal dashboard.
+- [x] V33 Regression: kiểm thử role routing, TypeScript, Vitest, build và preview trước checkpoint.
+- [x] V34 Audit: rà soát modal Mục Tiêu Cá Nhân, state và persistence hiện hữu.
+- [x] V34 Player-Coach Goals: render mục tiêu đầu vào riêng cho Leader/Director gồm cá nhân, coaching/XP và kích hoạt chuỗi Team.
+- [x] V34 Persistence: lưu và nạp lại mục tiêu quản trị theo user/Team, không chứa PII khách hàng.
+- [x] V34 Regression: kiểm thử role-based modal, lưu/nạp mục tiêu, TypeScript, Vitest, build và responsive trước checkpoint.
+- [x] V35 Audit: rà soát Bảo Bối, dashboard Hồ Sơ, form Nhịp Đập và cơ chế XP/ledger hiện hữu.
+- [x] V35 Capability Quest: thêm gợi ý thực chiến trên Hồ Sơ và CTA nhận thử thách tại Bảo Bối.
+- [x] V35 Proof of Work: ghi nhận bài học/thử thách trong Nhịp Đập và thưởng XP idempotent, Zero-PII cho TVV.
+- [x] V35 Regression: kiểm thử journey học-hành-thưởng, RBAC, TypeScript, Vitest, build và responsive trước checkpoint.
+- [x] V36 Audit: rà soát Leader Goal Form, persistence Player-Coach và role routing hiện hữu.
+- [x] V36 Leader Input Goals: thiết kế lại form theo bốn trụ cột Cá nhân, Tuyển dụng, Active Rate và Coaching/XP với copy B2B BHNT.
+- [x] V36 Persistence: lưu/nạp chỉ tiêu tuyển dụng và Active Rate cùng các chỉ tiêu Player-Coach hiện hữu theo user/Team.
+- [x] V36 Regression: kiểm thử modal role-based, persistence, TypeScript, Vitest, build và responsive trước checkpoint.
+- [x] V39 Audit: rà soát layout chính, modal/fixed overlay, FAB, Tarot, Marketing Studio và split-screen Roleplay/Từ điển.
+- [x] V39 Responsive Layout: chuẩn hóa grid/flex mobile-first cho Radar, Dashboard, Marketing Studio và Bảo Bối.
+- [x] V39 Modal & Visual Fixes: thêm body scroll/sticky footer, z-index FAB/modal, backface Tarot và template Marketing không phụ thuộc URL ngoài.
+- [x] V39 Split-screen: chuyển Roleplay/Từ điển AI sang stack mobile/tablet và chỉ split từ desktop.
+- [x] V39 Regression: kiểm thử responsive desktop/tablet/mobile, TypeScript, Vitest, build và đồng bộ preview trước checkpoint.
+- [x] V40 Audit: rà soát các luồng xuất ảnh Agent Moment/Tarot và master-detail Từ điển hiện hữu.
+- [x] V40 Safe Export: loại decor/blur/animation khỏi html2canvas và chuẩn hóa export target nền đặc, kích thước rõ ràng.
+- [x] V40 Dictionary Detail Modal: mở chi tiết Từ điển trong dialog có nút đóng tại mobile/tablet, giữ side-by-side từ desktop.
+- [x] V40 Regression: kiểm thử export safe mode, modal responsive, TypeScript, Vitest, build và đồng bộ preview trước checkpoint.
+- [x] V41 Audit: rà soát PlaybookCard/Bảo Bối và luồng detail mobile hiện hữu.
+- [x] V41 Tablet Cards: loại fixed-height/absolute flow gây overlap, chuẩn hóa min-height, flex column, overflow và CTA tự đẩy xuống đáy.
+- [x] V41 Mobile Detail Safety: gia cố selected item, overlay z-index, scroll và đóng modal tường minh để chống freeze.
+- [x] V41 Regression: kiểm thử card responsive, modal safety, TypeScript, Vitest, build và đồng bộ preview trước checkpoint.
+- [x] V44 Audit: rà soát master-detail Bảo Bối, Marketing export/html2canvas, Tarot và FAB sau các bản vá đa thiết bị.
+- [x] V44 Knowledge Base: thiết lập master-detail desktop, overlay mobile/tablet, null guard và trigger card click an toàn.
+- [x] V44 Export Safety: khôi phục thumbnail UI bình thường, chuẩn hóa config html2canvas và bỏ decor động khỏi ảnh xuất.
+- [x] V44 Layering: xác nhận mặt Tarot cách ly, nền đặc và FAB dưới toàn bộ modal.
+- [x] V44 Regression: kiểm thử responsive desktop/tablet/mobile, TypeScript, Vitest, build và đồng bộ preview trước checkpoint.
+- [x] V45 Audit: rà soát cấu trúc Bảo Bối flip-card, modal mobile và state preview Marketing sau V44.
+- [x] V45 Flip Cards: khôi phục 3D flip desktop/tablet, bảo đảm CTA mặt sau click được trên iPad.
+- [x] V45 Mobile Detail: dựng modal chi tiết fixed z-999 có null guard và nút đóng độc lập dưới breakpoint lg.
+- [x] V45 Marketing Preview: đồng bộ ảnh thumbnail/template được chọn vào preview không dùng crossOrigin trên UI.
+- [x] V45 Regression: cập nhật tests, type-check, Vitest, build và xác minh desktop/tablet/mobile trước checkpoint.
+- [x] V46 Source Audit: xác định App/Home route và component chính xác đang render Marketing Studio, Bảo Bối trên preview.
+- [x] V46 Marketing Override: bỏ crossOrigin ở ảnh UI và ép preview dùng image state của template được chọn.
+- [x] V46 Handbook Override: xác nhận/ép group perspective flip, CTA mặt sau click-safe và mobile modal fixed z-9999.
+- [x] V46 Verification: thêm regression source-active, type-check, build, restart và xác minh preview đa thiết bị.
+- [x] V47 Audit: rà soát class grid, overlay Bảo Bối và preview Marketing hiện hữu trước khi override hẹp.
+- [x] V47 Handbook Layout: phục hồi grid 1/2/3 cột, click-safe back face và modal overlay mobile đúng cấu trúc.
+- [x] V47 Marketing Bounds: giới hạn preview 9:16/max-height, giữ selected image state và thumbnail UI không crossOrigin.
+- [x] V47 Verification: cập nhật regression, type-check, build, restart và xác minh preview đa thiết bị.
+- [x] V48 Audit: rà soát khung preview Marketing và điều kiện render Roleplay trong Bảo Bối hiện hành.
+- [x] V48 Marketing Fit: đổi nền preview sang bg-contain, bỏ ràng buộc tỷ lệ gây crop nhưng giữ luồng state template.
+- [x] V48 Roleplay Restore: nhận diện loại nội dung Roleplay và mở AIRoleplayStudio/luồng thực hành từ desktop lẫn mobile.
+- [x] V48 Verification: cập nhật regression, type-check, build, restart và kiểm tra preview đa thiết bị.
+- [x] V49 Audit: xác định component active của Bảo Bối, Marketing Studio và Báo cáo Leader trước khi sửa luồng.
+- [x] V49 Handbook Interactivity: gia cố vùng click card và entry point AIRoleplayStudio không làm che CTA mặt sau.
+- [x] V49 Marketing Export: render ảnh nền export bằng phần tử ảnh an toàn và giữ preview/template state.
+- [x] V49 Leader PDF: xác minh CTA tải PDF, bổ sung fallback native khi export lỗi.
+- [x] V49 Verification: cập nhật regression, type-check, build, restart và kiểm tra preview đa thiết bị.
+- [x] V50 Audit: đối chiếu cấu trúc active Bảo Bối, Marketing và Báo cáo Leader với schema/contract hiện hành.
+- [x] V50 Handbook: áp dụng flip-card 300px, CTA mặt sau click-safe và giữ mobile selection không vỡ flow.
+- [x] V50 Marketing: thay preview export bằng ảnh nền full-size, khung 9:16 trắng và lớp text nổi.
+- [x] V50 Print: gắn leader-report-container và CSS print chỉ in báo cáo, ẩn nút/chrome.
+- [x] V50 Verification: cập nhật regression, type-check, build, restart và xác minh preview đa thiết bị.
+- [x] V52 Audit: rà soát handler PDF, preview Marketing và contract Roleplay/CTA Bảo Bối active.
+- [x] V52 PDF: chuẩn hóa capture leader-report-container bằng html2canvas/jsPDF, có native print fallback.
+- [x] V52 Marketing Fit: đổi nền preview export sang hiển thị contain không crop ảnh template.
+- [x] V52 Handbook: khôi phục trigger Roleplay và CTA mặt sau z-99, pointer-events auto cho iPad.
+- [x] V52 Verification: cập nhật regression, type-check, build, restart và xác minh preview đa thiết bị.
+- [x] V53 Audit: rà soát handler PDF, node Marketing và click/Roleplay Bảo Bối theo schema đang chạy.
+- [x] V53 PDF: chuyển sang tải PDF trực tiếp JPEG/jsPDF, bỏ fallback in và giữ report nền trắng.
+- [x] V53 Marketing: giữ ảnh nền vật lý trong export node, khóa ratio 9:16 và pointer-events an toàn.
+- [x] V53 Handbook: gia cố click toàn card và điều hướng Roleplay theo các trường Bảo Bối thực tế.
+- [x] V53 Verification: cập nhật regression, type-check, build, restart và xác minh preview đa thiết bị.
+- [x] V56 Audit: đối chiếu modal Bảo Bối, card face, node Marketing và handler PDF đang hoạt động.
+- [x] V56 Handbook Mobile: tinh chỉnh modal full-screen dưới lg và line clamp để chống chồng chữ iPad.
+- [x] V56 Marketing Export: giới hạn node 9:16 360px và đảm bảo ảnh nền vật lý/CORS trong export.
+- [x] V56 PDF: bảo toàn tải PDF trực tiếp JPEG/jsPDF, không gọi print dialog.
+- [x] V56 Verification: cập nhật regression, type-check, build, restart và xác minh preview đa thiết bị.
+- [x] V57 Audit: xác nhận html2canvas/jsPDF đã có dependency và rà soát các handler export active.
+- [x] V57 Marketing Lock: khóa node export 320×568 trong flex-center và dùng html2canvas dynamic CORS-resilient.
+- [x] V57 Dynamic PDF: dùng dynamic import html2canvas/jsPDF với alert lỗi rõ ràng cho Báo cáo Leader.
+- [x] V57 Verification: cập nhật regression, type-check, build, restart và xác minh preview đa thiết bị.
+- [x] V59 Audit: rà soát dependencies và export handler active trước khi bỏ html2canvas.
+- [x] V59 Dependency: loại html2canvas trực tiếp, giữ html-to-image và jspdf; externalize plugin tùy chọn của jsPDF để production bundle không có html2canvas.
+- [x] V59 Marketing Export: chuyển export sang toPng và ảnh preview object-contain không crop.
+- [x] V59 Leader PDF: tạo PDF từ toPng/jsPDF với thông báo lỗi rõ ràng.
+- [x] V59 Verification: cập nhật regression, TypeScript, Vitest, build, restart và xác minh preview desktop/tablet/mobile.
+- [x] V60 Audit: rà soát handler Marketing/PDF và contract export hiện hành trước khi tối ưu chống treo.
+- [x] V60 Marketing Anti-Freeze: dùng toPng nền trắng, pixelRatio 1 và skipFonts để giảm bộ nhớ/vòng lặp parse font.
+- [x] V60 Leader PDF Pagination: phân trang PNG trên nhiều trang A4, không cắt nội dung báo cáo.
+- [x] V60 Verification: cập nhật regression, TypeScript, Vitest, build, restart và kiểm tra preview desktop/tablet/mobile.
+- [x] V61 Audit: rà soát handler xuất ảnh Marketing hiện hành và contract Blob/CORS.
+- [x] V61 Blob Injection: fetch ảnh nền thành Blob URL, inject tạm thời, xuất toPng và dọn dẹp/khôi phục DOM.
+- [x] V61 Verification: cập nhật regression, TypeScript, Vitest, build, restart và kiểm tra preview không hồi quy.
+- [x] V62 Audit: rà soát handler xuất ảnh Marketing và contract proxy CORS hiện hành.
+- [x] V62 Proxy Tunnel: tải ảnh nền qua allorigins, inject Blob URL tạm thời, chờ render và dọn dẹp DOM.
+- [x] V62 Verification: cập nhật regression, TypeScript, Vitest, build, restart và kiểm tra preview không hồi quy.
+- [x] V63 Audit: rà soát handler xuất ảnh Marketing và các luồng fetch CORS/proxy hiện hành.
+- [x] V63 Multi-Proxy Fallback: thử direct cache-bust, corsproxy.io rồi codetabs trước khi inject Blob URL và xuất ảnh.
+- [x] V63 Verification: cập nhật regression, TypeScript, Vitest, build, restart và kiểm tra preview không hồi quy.
+- [x] V64 Audit: rà soát handler xuất ảnh Marketing và điều kiện chuyển nguồn sang Canvas redraw.
+- [x] V64 Canvas Redraw: tải lại ảnh CORS bằng cache-buster, vẽ Canvas thành Base64, thay tạm src và khôi phục DOM.
+- [x] V64 Verification: cập nhật regression, TypeScript, Vitest, build, restart và kiểm tra preview không hồi quy.
+- [x] V65 Audit: rà soát node export Marketing và handler Canvas redraw/JPEG hiện hành.
+- [x] V65 Pixel Fidelity: chuyển node export từ 9:16 sang 4:5, nền object-cover và JPEG pixelRatio 2.5/quality 1.0.
+- [x] V65 Verification: cập nhật regression, TypeScript, Vitest, build, restart và kiểm tra preview không hồi quy.
+- [x] V66 Audit: rà soát schema Supabase, content client, các station end-user và admin panel hiện hành.
+- [x] V66 Schema: chuẩn hóa năm bảng news_90s, case_studies, empathy_dictionary, leader_playbook và user_feedbacks với RLS phù hợp Zero-PII; migration đã áp dụng trên Supabase.
+- [x] V66 Admin CMS: tạo CRUD Super Admin cho Bản Tin, Case Study, Ngôn Ngữ Thấu Cảm, La Bàn; viewer/xóa spam cho Góc Lắng Nghe.
+- [x] V66 Client Binding: thay dữ liệu tĩnh của năm station bằng fetch Supabase có loading/empty/error states.
+- [x] V66 Verification: bổ sung Vitest, type-check, build, restart và kiểm tra preview desktop/mobile; Supabase security advisor không báo lint mới cho bảng V66.
+- [x] V67 Audit: rà soát năm station thực tế, role model và CMS Matrix V66 để tái bố trí quản trị tại chỗ.
+- [x] V67 Schema/API: chuẩn hóa tương thích video_url, coaching type và feedback feature mà không mất dữ liệu V66; migration đã áp dụng trên Supabase.
+- [x] V67 In-Place CMS: thêm quản lý/tạo/sửa/xóa role-gated trên Bản Tin, Case Study, Thấu Cảm và La Bàn tại đúng station.
+- [x] V67 Feedback Admin: Super Admin xem Data Grid user_feedbacks và xóa spam; TVV/Leader giữ form góp ý.
+- [x] V67 Verification: bổ sung Vitest, type-check, build, restart và xác minh layout read-only desktop/mobile không hồi quy.
+- [x] V68 Audit: rà soát survey feedback, schema và control in-place hiện hành để giữ Pilot tab không có CMS nội dung.
+- [x] V68 Schema/API: tạo feedback_config một bản ghi, RLS và hooks Supabase cho khảo sát động/cấu hình Admin; migration đã áp dụng trên Supabase.
+- [x] V68 Survey Dynamic: render form TVV/Leader từ cấu hình live; Admin có inbox, lọc sao/tính năng/ngày và form cấu hình.
+- [x] V68 Contextual CMS: tinh chỉnh CTA và thao tác tại chỗ cho Bản Tin, Case Study, Thấu Cảm, Nguyên Tắc/Kịch bản Coaching.
+- [x] V68 Verification: thêm Vitest, type-check, build, restart và xác minh preview desktop/mobile không hồi quy.
+- [x] V69 Audit: rà soát role gate, route La Bàn và control in-place đang render cho Super Admin.
+- [x] V69 Leader Controls: bổ sung CTA thêm nội dung, sửa/xóa tại accordion Nguyên tắc và menu ba chấm tại card Coaching.
+- [x] V69 Content Fields: hỗ trợ note/tagline tùy chọn, giữ lưu/xóa trực tiếp leader_playbook qua Supabase.
+- [x] V69 Verification: cập nhật Vitest, type-check, build, restart và xác minh phân quyền Super Admin qua regression role-gated.
+- [x] V70 Audit: rà soát schema mục tiêu Player-Coach, CRM logs, Signal Engine, Radar và báo cáo Leader.
+- [x] V70 Goal Signal RPC: đánh giá mục tiêu tháng theo team, gồm cảnh báo Low Coaching từ số session đã hoàn tất.
+- [x] V70 State Binding: đưa tín hiệu dựa trên mục tiêu vào Ma Trận Hiệu Suất và summary Báo Cáo Hiệu Suất Cấp Cao.
+- [x] V70 Verification: bổ sung Vitest, type-check, build, restart và xác minh không đổi CSS/UI mục tiêu hoặc Radar.
+- [x] V71 Audit: rà soát persistence onboarding DISC, Daily Push/XP, năm station TVV, CRM và leaderboard cộng đồng.
+- [x] V71 TVV Logic: hoàn thiện DISC checkpoint và Daily Push CMS/XP theo ngày bằng Supabase, không đổi layout.
+- [x] V71 Dynamic CRM: lấy gợi ý scenario từ Supabase, điều hướng ngữ cảnh, default follow-up và refresh timeline tức thời.
+- [x] V71 Leaderboard: chỉ đổi Tailwind cho Top 5 XP tuần này, gồm podium Gold/Silver/Bronze và hover motion.
+- [x] V71 Verification: bổ sung Vitest, type-check, build, restart và xác minh các luồng TVV không hồi quy.
+- [x] V74 Audit: rà soát signal Leader/TVV, modal hỗ trợ và điểm đặt mục tiêu quản trị trong dashboard.
+- [x] V74 Team Radar: lọc Tín Hiệu Radar chỉ còn TVV cấp dưới và chuẩn hóa CTA hỗ trợ TVV.
+- [x] V74 Goal Tracker: tách bốn tiến độ mục tiêu Leader sang khu theo dõi riêng với status badge, không có CTA hỗ trợ.
+- [x] V74 Verification: bổ sung Vitest, type-check, build, restart và kiểm tra preview Leader không hồi quy.
+- [x] V75 Audit: rà soát effect Nạp Não Mỗi Sáng và render gợi ý CRM để khoanh đúng hai lỗi UI/UX.
+- [x] V75 Sequencing: trì hoãn Daily Push sau lời chào trợ lý mà vẫn giữ điều kiện một lần mỗi ngày.
+- [x] V75 CRM Text: chuẩn hóa prefix ba gợi ý thấu cảm để mỗi nhãn chỉ hiển thị một lần.
+- [x] V75 Verification: bổ sung regression, type-check, build và restart cho hai hotfix TVV.
+- [x] V76 Audit: xác thực JSON curriculum và schema Playbook hiện hữu, gồm category, level và cấu trúc iceberg.
+- [x] V76 Data Injection: chuẩn hóa và nạp an toàn dữ liệu Playbook vào bảng Supabase tương thích mà không đổi frontend.
+- [x] V76 Verification: kiểm tra record đã nạp, bổ sung regression dữ liệu và xác nhận không thay đổi mã UI.
+- [x] V77 Audit: xác thực schema Playbook, JSON Iceberg và luồng fetch theo role hiện hữu.
+- [x] V77 Data Injection: nạp curriculum V77 qua bulk upsert idempotent vào playbook_cards.
+- [x] V77 RBAC: chặn Leader-only ở RLS và áp dụng defense-in-depth tại client cho role advisor/TVV.
+- [x] V77 Verification: bổ sung Vitest, type-check, build, restart và xác minh dữ liệu/phân quyền.
+- [x] V78 Audit: rà soát Trạm Đăng Kiểm, DISC flow, profile contract và JSON Leadership Test.
+- [x] V78 Data: tạo schema/seed Supabase cho Leadership Test và lưu kết quả phong cách quản trị.
+- [x] V78 Role Flow: chuyển title/description, disclaimer, câu hỏi/kết quả theo role Leader/Super Admin mà không đổi CSS/layout.
+- [x] V78 Verification: bổ sung Vitest, type-check, build, restart và xác minh role-based quiz flow.
+- [x] V79 Audit: rà soát state Leadership Test, session profile và route Trạm Đăng Kiểm sau V78.
+- [x] V79 Onboarding: tự mở modal chặn dashboard cho Leader chưa có leadership_style và lưu trait/mô tả kết quả.
+- [x] V79 Result View: hiển thị phong cách quản trị đã lưu cùng mô tả và hành động làm lại tại Trạm Đăng Kiểm.
+- [x] V79 Verification: bổ sung Vitest, type-check, build, restart và bảo toàn DISC TVV.
+- [x] V80 Audit: xác thực schema/mapping playbook_cards và RLS Leader-only hiện hữu.
+- [x] V80 Data Injection: chuẩn hóa JSON nhúng và nạp bốn thẻ curriculum qua upsert idempotent.
+- [x] V80 RBAC: xác minh/củng cố RLS và client filter để TVV không thể đọc thẻ cấp Leader.
+- [x] V80 Verification: bổ sung Vitest, type-check, build, restart và truy vấn xác minh dữ liệu/phân quyền.
+- [x] V81 Audit: rà soát JSON 15 câu L.E.A.D, leadership_tests, kết quả phong cách và điểm nối Bảo Bối/Roleplay hiện hữu.
+- [x] V81 Data: thay bộ câu hỏi Leadership Test bằng đầy đủ 15 câu và metadata kết quả được người dùng cung cấp.
+- [x] V81 Cross-link: từ kết quả L.E.A.D mở đúng Bảo Bối/AI Roleplay theo phong cách, giữ Role/RLS Leader-only.
+- [x] V81 Verification: bổ sung Vitest, kiểm tra Supabase/RBAC, type-check, build, preview và checkpoint phát hành.
+- [x] V82 Audit: xác thực schema/mapping playbook_cards, prompt Roleplay và guard Leader-only đang áp dụng.
+- [x] V82 Data Injection: parse năm scenario BHNT nhúng và append qua bulk upsert idempotent.
+- [x] V82 RBAC: xác minh thẻ Leader không thể được đọc/mở bởi advisor, trong khi các cấp còn lại vẫn sẵn sàng.
+- [x] V82 Verification: bổ sung Vitest, truy vấn Supabase, type-check, build, restart và checkpoint phát hành.
+- [x] V83 Audit: rà soát La Bàn, leader_playbook, phân quyền team TVV và CTA L.E.A.D hiện hữu.
+- [x] V83 Data: thêm schema/RLS coaching_logs, tags cho leader_playbook và seed ba nội dung coaching được cung cấp.
+- [x] V83 Smart Playbook: thêm filter tình huống, modal ghi nhận áp dụng, chọn TVV cấp dưới và lưu coaching log không thưởng XP.
+- [x] V83 Leader L.E.A.D: đổi CTA Dashboard sang bài trắc nghiệm 15 câu và hiển thị thẻ kết quả bền vững cho Leader.
+- [x] V83 Verification: thêm Vitest, xác minh Supabase/RBAC, type-check, build, preview, restart và checkpoint phát hành.
+- [x] V86 Audit: rà soát dữ liệu mẫu La Bàn, contract accordion/card và tiếp nhận prompt Roleplay.
+- [x] V86 Data: thêm metadata share_text/roleplay_prompt và thay dữ liệu mẫu toàn cục bằng 2 Nguyên tắc + 3 Kịch bản đã cung cấp.
+- [x] V86 Behavioral UX: lọc cảm xúc ở Tab Kịch bản, Gửi Team sao chép thông điệp, và mở Roleplay theo prompt riêng của từng kịch bản.
+- [x] V86 Verification: bổ sung Vitest, xác minh Supabase/RBAC, type-check, build, preview, restart và checkpoint phát hành.
+
+- [x] V87 Audit: đối chiếu 14 nội dung được cung cấp với dữ liệu V86, schema và dependencies coaching log.
+- [x] V87 Data: thay thế an toàn dữ liệu mẫu La Bàn bằng 4 nguyên tắc và 10 kịch bản coaching có tags/share/prompt.
+- [x] V87 Behavioral UX: xác minh filter cảm xúc, gửi Team và Roleplay tiếp tục nhận đầy đủ dữ liệu V87.
+- [x] V87 Verification: thêm regression, xác minh Supabase/RBAC, test, type-check, build, preview, restart và checkpoint phát hành.
+
+- [x] V88 Audit: rà soát mapping type V87, renderer Tab 1/Tab 2, schema và ảnh hưởng của lệnh thay dữ liệu toàn bảng.
+- [x] V88 Data: xác thực flat JSON và thay toàn bộ leader_playbook bằng 2 nguyên tắc + 4 coaching_script đã được cung cấp.
+- [x] V88 UI: áp dụng filter type nghiêm ngặt, prefix/title/description/action đúng tab và trigger Gửi Team/Roleplay theo metadata.
+- [x] V88 Verification: thêm regression, xác minh Supabase/RBAC, test, type-check, build, preview, restart và checkpoint phát hành.
+
+- [x] V89 Audit: rà soát renderer La Bàn và xác định nguyên nhân UI chưa phân tách rõ Accordion/Card Grid.
+- [x] V89 Tab 1: tách principle thành Accordion riêng có nội dung và nút Gửi Team sao chép share_text.
+- [x] V89 Tab 2: tách coaching_script thành Card Grid riêng có filter tags, action_text và CTA Roleplay theo prompt.
+- [x] V89 Verification: bổ sung regression, type-check, build, preview, restart và checkpoint phát hành.
+
+- [x] V92 Audit: rà soát schema nguyên tắc, metadata mini-quiz và component La Bàn thực tế.
+- [x] V92 Data: cập nhật riêng năm nguyên tắc với mô tả và mini-quiz; giữ nguyên toàn bộ coaching_script.
+- [x] V92 Tab 1: bỏ Gửi Team, giữ xuống dòng mô tả và thêm mini-quiz không XP/coin với feedback đúng/sai.
+- [x] V92 Verification: bổ sung regression, xác minh Supabase/RBAC, test, type-check, build, preview, restart và checkpoint phát hành.
+
+- [x] V94 Audit: rà soát metadata mini_quiz V92, schema và component Tab Nguyên tắc đang chạy.
+- [x] V94 Data: bổ sung situations/summary cho nguyên tắc Maxwell và cấu trúc tương thích cho bốn nguyên tắc còn lại; giữ nguyên coaching_script.
+- [x] V94 UI: triển khai Learning Carousel một tình huống mỗi bước, progress, feedback, tiếp tục và tổng kết/bài tập tương phản cao.
+- [x] V94 Verification: bổ sung regression, xác minh Supabase/RBAC, test, type-check, build, preview, restart và checkpoint phát hành.
+
+- [x] V95 Audit: đối chiếu 4 nguyên tắc có situations/summary với dữ liệu Carousel V94 và renderer Tab 1.
+- [x] V95 Data: thay thế data Carousel của mọi nguyên tắc theo JSON V95, giữ nguyên coaching_script.
+- [x] V95 UI: xác minh wizard/feedback/progress/summary hoạt động đồng nhất với mọi nguyên tắc.
+- [x] V95 Verification: bổ sung regression, xác minh Supabase/RBAC, test, type-check, build, preview, restart và checkpoint phát hành.
+
+- [x] V96 Audit: rà soát trạng thái màu Carousel và dữ liệu V95 của nguyên tắc 02 đến 04.
+- [x] V96 Data: thay thế situations nguyên tắc 02 đến 04 bằng bộ dữ liệu deep-dive V96; giữ nguyên nguyên tắc 01 và coaching_script.
+- [x] V96 UI: áp dụng selected state/feedback nền soft green hoặc soft amber với chữ tối, giữ summary Navy/Gold dễ đọc.
+- [x] V96 Verification: bổ sung regression, xác minh Supabase/RBAC, test, type-check, build, preview, restart và checkpoint phát hành.
+
+- [x] V97 Audit: rà soát Summary Carousel, CMS La Bàn hiện hữu, schema và RBAC Super Admin.
+- [x] V97 CMS: tạo form quản trị động cho principle/situations/summary và coaching_script/tags/action/prompt.
+- [x] V97 UX: tăng contrast Summary Navy/Gold/White, giữ hành vi Carousel và dùng CMS mới tại La Bàn.
+- [x] V97 Verification: bổ sung regression, xác minh quyền/CRUD, test, type-check, build, preview, restart và checkpoint phát hành.
+
+- [x] V98 Audit: rà soát Summary Navy và modal CMS hiện hữu theo vấn đề chật hẹp/tương phản người dùng phản ánh.
+- [x] V98 CMS UI: mở rộng modal, áp dụng grid 12 cột desktop và chuẩn hóa thẻ tình huống có khoảng cách dễ đọc.
+- [x] V98 Summary UI: cưỡng chế chữ white/gray-50 và accent yellow trên summary/homework box.
+- [x] V98 Verification: bổ sung regression, type-check, build, preview desktop, restart và checkpoint phát hành.
+
+- [x] V99 Audit: rà soát lớp surface thực tế của Dialog và constraint chiều rộng mặc định.
+- [x] V99 CSS: ép surface w-[95vw] !max-w-7xl min-h-[85vh] và grid nội bộ w-full h-full p-6.
+- [x] V99 Verification: bổ sung regression, type-check, build, preview, restart và checkpoint phát hành.
+
+- [x] V100 Daily Check-in: mở Nạp Não sau greeting cho TVV và Leader, khóa theo ngày, xoay câu hỏi và cập nhật XP/streak qua flow hiện hữu.
+- [x] V100 Streak Reminder: hiển thị nhắc chuỗi dưới avatar khi chưa hoàn thành Nạp Não hôm nay.
+- [x] V100 DISC Persistence: giữ kết quả DISC đã lưu và thay Start Test bằng Result Card cho TVV tại Trạm Đăng Kiểm.
+- [x] V100 Leader Journey: mount lại Hành trình của tôi cho Leader và giữ theo dõi mục tiêu tháng.
+- [x] V100 Community UI: nâng card/feed và thêm nút Thích, Bình luận, Chia sẻ có trạng thái placeholder rõ ràng.
+- [x] V100 Verification: viết regression, chạy type-check/build/tests, kiểm tra preview và lưu checkpoint.
+
+- [x] V101 Login flow: delay Nạp Não 3,5 giây sau greeting, không mở tức thì khi mount.
+- [x] V101 DISC Result: hiển thị payload đầy đủ gồm title, điểm mạnh, điểm cần cân bằng và phong cách tư vấn cho TVV.
+- [x] V101 Community PostCard: áp dụng card, avatar ring, badge gradient, action buttons, Tặng XP và comment input theo CSS chỉ định.
+- [x] V101 Verification: thêm regression, chạy tests/type-check/build, kiểm tra preview và lưu checkpoint.
+
+- [x] V102 Sidebar lock: áp dụng cùng role gate và lock/toast của Radar cho La Bàn Lãnh Đạo.
+- [x] V102 Route protection: chặn TVV khi truy cập trực tiếp La Bàn, hiển thị fallback và nút về trang chủ.
+- [x] V102 Verification: thêm regression, chạy tests/type-check/build, kiểm tra preview và lưu checkpoint.
+
+- [x] V103 Modal safety: bọc claim/update Nạp Não bằng try-catch-finally và luôn gọi onClose khi trả lời.
+- [x] V103 Escape hatch: thêm nút X và liên kết Bỏ qua hôm nay gọi onClose.
+- [x] V103 Greeting delay: ép state ban đầu đóng và timeout mở quiz đúng 4000ms.
+- [x] V103 Leader Playbook lock: giữ lock icon/toast và route protection cho TVV.
+- [x] V103 Verification: thêm regression, chạy tests/type-check/build, kiểm tra preview và lưu checkpoint.
+
+- [x] V107 NapNaoModal: thêm X, Bỏ qua hôm nay, try-catch-finally và luôn đóng modal.
+- [x] V107 Quiz trigger: state ban đầu false và timeout 4000ms sau greeting.
+- [x] V107 Leader Playbook RBAC: khóa La Bàn cho TVV bằng lock icon và hành vi từ chối.
+- [x] V107 Marketing RBAC: chỉ Admin thấy khu vực quản trị Phôi Marketing; Leader chỉ dùng template.
+- [x] V107 Quality: thêm regression, chạy tests/type-check/build, kiểm tra preview.
+- [x] V107 Export: tạo b2b_saas_export.zip loại trừ node_modules, .next và .git.
+
+- [x] V111 Community PostCard: áp wrapper/card text và action-button classes theo yêu cầu.
+- [x] V111 CRM journal: thay danh sách text bằng table có thead/tbody và bốn cột nghiệp vụ.
+- [x] V111 Leader Playbook Admin: click item bên trái phải nạp item vào form state hiện hữu.
+- [x] V111 God Mode quiz bank: thêm vùng max-h-64 scroll và map question bên dưới form.
+- [x] V111 Assets: thay hardcoded manus.space asset paths bằng relative paths chỉ khi asset tương ứng tồn tại.
+- [x] V111 Verification: thêm regression, chạy tests/type-check/build/preview.
+- [x] V111 Export: tạo b2b_saas_export_final.zip loại trừ node_modules, .next và .git.

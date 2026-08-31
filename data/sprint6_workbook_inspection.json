@@ -1,0 +1,764 @@
+{
+  "0_La Bàn Khởi Hành": {
+    "rows": 6,
+    "headers": [
+      "Mã HD",
+      "Chủ Đề",
+      "Thông Điệp Cốt Lõi",
+      "Hướng Dẫn Cụ Thể (Cách làm)",
+      "Link Video/Ảnh (Nếu có)"
+    ],
+    "sample": [
+      [
+        "HD01",
+        "👋 Chào mừng đến với Trợ Lý Số",
+        "Đây KHÔNG PHẢI là app quản lý để giám sát bạn. Đây là TRỢ LÝ ĐẮC LỰC giúp bạn nhân 3 thu nhập và làm việc thông minh hơn.",
+        "Hãy bắt đầu bằng việc vào '1_Hồ Sơ Chiến Binh' và điền Thu Nhập Kỳ Vọng tháng này của bạn. Trợ lý sẽ tính ra bạn cần đi bao nhiêu cuộc hẹn!",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+      ],
+      [
+        "HD02",
+        "🧭 Bước 1: Khám phá bản thân",
+        "Biết mình biết ta, trăm trận trăm thắng. Vũ khí sale của bạn là gì?",
+        "Hãy vào '10_Trạm Đăng Kiểm Năng Lực' làm bài test 5 câu. Hệ thống sẽ phân tích tính cách DISC của bạn và mở khóa các kịch bản sale phù hợp nhất.",
+        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80"
+      ],
+      [
+        "HD03",
+        "🔥 Bước 2: Nạp não mỗi sáng",
+        "Một ngày mới bắt đầu bằng một tư duy sắc bén.",
+        "Mỗi sáng lúc 7h30, hãy vào '12_Nạp Não Mỗi Sáng' trả lời 1 câu trắc nghiệm. Vừa kiếm 10 điểm XP, vừa duy trì ngọn lửa kỷ luật (Streak) của bản thân.",
+        "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&q=80"
+      ],
+      [
+        "HD04",
+        "🤝 Bước 3: Ghi nhận để phát triển",
+        "Đừng để khách hàng rơi rụng. Mọi lời từ chối đều là dữ liệu quý giá.",
+        "Sau mỗi cuộc gặp, hãy mở '2_Nhịp Đập Khách Hàng' để log lại kết quả. Khách từ chối? Hãy mở '3_Bảo Bối Thực Chiến' để lấy kịch bản hâm nóng!",
+        "https://images.unsplash.com/photo-1556761175-5973dc0f32b7?w=800&q=80"
+      ],
+      [
+        "HD05",
+        "🎁 Bước 4: Tích điểm đổi quà",
+        "Nỗ lực của bạn luôn được ghi nhận xứng đáng.",
+        "Những điểm XP bạn cày được từ Quiz và các ca CSKH xuất sắc sẽ được lưu ở '8_Ngân Hàng Điểm'. Hãy ghé '7_Trạm Tiếp Năng Lượng' để đổi những phần quà hấp dẫn hoặc quyền trợ giúp từ Sếp nhé!",
+        "https://images.unsplash.com/photo-1513530534585-c7b13d4c16dd?w=800&q=80"
+      ]
+    ]
+  },
+  "0_Cấu Hình App": {
+    "rows": 2,
+    "headers": [
+      "Mã Setup",
+      "Tên Công Ty",
+      "Màu Chủ Đạo",
+      "Màu Nhấn (Accent)",
+      "Logo URL",
+      "Slogan"
+    ],
+    "sample": [
+      [
+        "CF01",
+        "Sun Life Việt Nam",
+        "#F6A800",
+        "#1A365D",
+        "https://link-logo.png",
+        "Khách hàng trọn đời!"
+      ]
+    ]
+  },
+  "13_Marketing 1 Chạm": {
+    "rows": 10,
+    "headers": [
+      "Mã Mẫu",
+      "Phân Loại",
+      "Bối Cảnh / Dịp",
+      "Nội Dung Tin Nhắn (Template)",
+      "Link Ảnh Thiệp / Banner (URL)"
+    ],
+    "sample": [
+      [
+        "MKT01",
+        "Dành Cho Khách Hàng",
+        "Sinh nhật Khách hàng",
+        "Chúc mừng sinh nhật anh/chị! Chúc anh/chị một tuổi mới rực rỡ, sức khỏe dồi dào và gia đình luôn ngập tràn tiếng cười. Cảm ơn anh/chị đã luôn tin tưởng để em được làm 'vệ sĩ tài chính' bảo vệ tổ ấm nhà mình nhé! 🎂🎉",
+        "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=800&q=80"
+      ],
+      [
+        "MKT02",
+        "Dành Cho Khách Hàng",
+        "Trời trở lạnh / Mùa dịch bệnh",
+        "Dạ, đài báo đêm nay không khí lạnh về sâu đó chị. Chị nhớ giữ ấm cổ và gan bàn chân cho bé nhà mình nha. Mùa này lỡ bé có sụt sịt cần đi viện khám, chị cứ ới em lấy thẻ bảo lãnh qua thẳng viện quốc tế cho đỡ đông và lây chéo nha chị. Chúc gia đình mình buổi tối ấm áp! 🧣☕",
+        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80"
+      ],
+      [
+        "MKT03",
+        "Dành Cho Khách Hàng",
+        "Kỷ niệm 1 năm hợp đồng",
+        "Tròn 1 năm kể từ ngày anh/chị trao niềm tin cho em và công ty! Quỹ dự phòng của gia đình mình đã dày thêm một chút, và sự bình an cũng được củng cố vững vàng hơn. Cuối tuần vợ chồng rảnh cho em mời ly cafe dạo phố nha! 🤝✨",
+        "https://images.unsplash.com/photo-1561489396-888724a1543d?w=800&q=80"
+      ],
+      [
+        "LDR01",
+        "Vinh Danh Nội Bộ",
+        "Chúc mừng Sinh nhật TVV",
+        "Gửi chiến binh tuyệt vời của Team! Chúc em tuổi mới bùng nổ doanh số, ký hợp đồng mỏi tay và luôn giữ được trái tim nóng với nghề. Team luôn tự hào về em! 🦅🔥",
+        "https://images.unsplash.com/photo-1530103862676-de8892795f5f?w=800&q=80"
+      ],
+      [
+        "LDR02",
+        "Vinh Danh Nội Bộ",
+        "Vinh danh TVV có Ca CSKH xuất sắc (Mức WOW)",
+        "CHÚC MỪNG NGÔI SAO DỊCH VỤ! 🌟 Xin vinh danh sự tận tâm của bạn vì đã biến một sự cố thành khoảnh khắc WOW rực rỡ cho khách hàng. Sự tử tế của bạn chính là bộ mặt của cả văn phòng chúng ta. Tiếp tục phát huy nhé!",
+        "https://images.unsplash.com/photo-1533227260812-70ce6603a11e?w=800&q=80"
+      ]
+    ]
+  },
+  "14_Radar Giữ Quân": {
+    "rows": 2,
+    "headers": [
+      "Mã Cứu Net",
+      "Mã ID (TVV Đang chìm)",
+      "Ngày Giờ Cấp Cứu",
+      "Chẩn Đoán Bệnh (Từ Leader)",
+      "Đơn Thuốc (Giải Pháp/Cam Kết)",
+      "Trạng Thái Hậu Phục Hồi"
+    ],
+    "sample": [
+      [
+        "SOS01",
+        "ID04",
+        "2026-08-20 14:00:00",
+        "Rớt chuỗi 5 ngày, than vãn khách hàng từ chối nhiều, đang nản chí định nghỉ việc.",
+        "Leader dẫn đi cafe. Áp dụng 5 Whys: Hóa ra không phải khách từ chối, mà do bạn bị yếu kỹ năng Funnel. Leader cam kết đi chung 2 ca thực chiến tuần tới để làm mẫu.",
+        "Đang theo dõi"
+      ]
+    ]
+  },
+  "10_Trạm Đăng Kiểm Năng Lực": {
+    "rows": 6,
+    "headers": [
+      "Mã Câu Hỏi",
+      "Nội Dung Câu Hỏi",
+      "Đáp Án Nhóm D",
+      "Đáp Án Nhóm I",
+      "Đáp Án Nhóm S",
+      "Đáp Án Nhóm C"
+    ],
+    "sample": [
+      [
+        "Q1",
+        "1. Khi gặp một khách hàng khó tính, phản xạ đầu tiên của bạn là gì?",
+        "Tìm cách thuyết phục bằng lập luận sắc bén và hướng tới chốt deal. (D)",
+        "Dùng sự hài hước và nhiệt tình để phá vỡ sự căng thẳng. (I)",
+        "Lắng nghe, kiên nhẫn để hiểu khách hàng đang lo lắng điều gì. (S)",
+        "Cung cấp thêm số liệu, biểu đồ và điều khoản pháp lý để chứng minh. (C)"
+      ],
+      [
+        "Q2",
+        "2. Trong một buổi họp nhóm đánh giá hiệu suất, bạn thường thể hiện vai trò nào?",
+        "Người dẫn dắt, đưa ra quyết định nhanh và phân công công việc. (D)",
+        "Người khuấy động phong trào, truyền lửa cho anh em. (I)",
+        "Người hòa giải, đảm bảo mọi người đều thoải mái và đồng thuận. (S)",
+        "Người phân tích, soi kỹ các lỗ hổng trong báo cáo. (C)"
+      ],
+      [
+        "Q3",
+        "3. Lời từ chối nào của khách hàng làm bạn cảm thấy 'kích thích' muốn chinh phục nhất?",
+        "Anh có người quen làm bảo hiểm rồi' -> Phải chứng minh mình giỏi hơn. (D)",
+        "Chị chưa rảnh nghe đâu' -> Phải tìm cách kết bạn, làm thân bằng được. (I)",
+        "Để từ từ anh/chị suy nghĩ' -> Thích cảm giác đồng hành, chờ đợi khách mở lòng. (S)",
+        "Lãi suất bảo hiểm thấp quá' -> Lập tức lôi bảng dòng tiền ra so sánh chi tiết. (C)"
+      ],
+      [
+        "Q4",
+        "4. Khi trình bày hợp đồng (Bàn giao HĐ), phong cách của bạn là:",
+        "Đi thẳng vào quyền lợi chính và các mốc thời gian quan trọng. (D)",
+        "Nói chuyện thân tình, chúc mừng khách hàng đã có sự bảo vệ. (I)",
+        "Hỏi han sức khỏe gia đình trước, từ từ mới mở hợp đồng ra. (S)",
+        "Đọc và gạch chân từng điều khoản loại trừ để khách nắm rõ 100%. (C)"
+      ],
+      [
+        "Q5",
+        "5. Động lực lớn nhất khiến bạn gắn bó với nghề Bảo hiểm là gì?",
+        "Chinh phục các giải thưởng (MDRT, COT) và thu nhập đỉnh cao. (D)",
+        "Được gặp gỡ nhiều người, xây dựng thương hiệu cá nhân tỏa sáng. (I)",
+        "Sự ổn định, môi trường gắn bó và mang lại bình an cho các gia đình. (S)",
+        "Trở thành chuyên gia hoạch định tài chính uyên bác, rõ ràng minh bạch. (C)"
+      ]
+    ]
+  },
+  "1_Hồ Sơ Chiến Binh": {
+    "rows": 5,
+    "headers": [
+      "Mã ID",
+      "Biệt Danh",
+      "Phân Quyền (Lõi)",
+      "Chức Danh (Vỏ)",
+      "Mã Quản Lý Trực Tiếp",
+      "Nhóm DISC",
+      "Cấp Độ App",
+      "Thu Nhập Mong Muốn (VNĐ)",
+      "Doanh Số Hiện Tại",
+      "Chuỗi Ngày",
+      "Điểm",
+      "Trạng Thái",
+      "Số Cuộc Gặp Cần Thiết",
+      "Số Cuộc Gặp Đã Đạt"
+    ],
+    "sample": [
+      [
+        "ID01",
+        "Sếp Hạnh",
+        "Quản Lý",
+        "GAD",
+        null,
+        "D",
+        "Master",
+        "500000000.0",
+        null,
+        "150.0",
+        "5000.0",
+        "🔥 Hừng hực",
+        null,
+        null
+      ],
+      [
+        "ID02",
+        "Mai Trưởng Nhóm",
+        "Quản Lý",
+        "UM",
+        "ID01",
+        "I",
+        "Pro",
+        "100000000.0",
+        null,
+        "45.0",
+        "1200.0",
+        "🔥 Hừng hực",
+        null,
+        null
+      ],
+      [
+        "ID04",
+        "Tuấn Cày Số",
+        "Tư Vấn Viên",
+        "FC",
+        "ID02",
+        "D",
+        "Pro",
+        "30000000.0",
+        null,
+        "12.0",
+        "350.0",
+        "🔥 Hừng hực",
+        null,
+        null
+      ],
+      [
+        "ID05",
+        "Lan Chăm Sóc",
+        "Tư Vấn Viên",
+        "FC",
+        "ID02",
+        "S",
+        "Rookie",
+        "20000000.0",
+        null,
+        "2.0",
+        "45.0",
+        "💧 Hơi mệt",
+        null,
+        null
+      ]
+    ]
+  },
+  "2_Nhịp Đập Khách Hàng": {
+    "rows": 4,
+    "headers": [
+      "Mã Log",
+      "Mã ID",
+      "Ngày Giờ",
+      "Hành Động",
+      "Cấp Độ Dịch Vụ (1-6)",
+      "Khoảnh Khắc WOW / Thấu Cảm",
+      "Điểm Cộng",
+      "Chế Độ Riêng Tư",
+      "Doanh Số Mang Về (VNĐ)",
+      "Kết Quả Cuộc Gặp",
+      "Ngày Cần Follow-up (Hẹn Lại)"
+    ],
+    "sample": [
+      [
+        "L001",
+        "ID04",
+        "2026-08-10 09:00:00",
+        "Khảo sát KH",
+        "3. Như mong đợi",
+        "Khách nghe tư vấn bình thường",
+        "5.0",
+        "Công khai",
+        "0.0",
+        null,
+        null
+      ],
+      [
+        "L002",
+        "ID05",
+        "2026-08-10 10:30:00",
+        "Giao Hợp Đồng",
+        "6. WOW - Không thể tin được",
+        "Tặng bánh sinh nhật cho con KH lúc giao HĐ. Xin được 3 lời giới thiệu!",
+        "50.0",
+        "Công khai",
+        "20000000.0",
+        null,
+        null
+      ],
+      [
+        "L003",
+        "ID02",
+        "2026-08-10 14:00:00",
+        "Coaching TVV",
+        "5. Ngạc nhiên",
+        "Giúp FC02 gỡ rối ca tuyến giáp",
+        "20.0",
+        "Công khai",
+        "0.0",
+        null,
+        null
+      ]
+    ]
+  },
+  "3_Bảo Bối Thực Chiến": {
+    "rows": 14,
+    "headers": [
+      "Mã Bài",
+      "Hệ Kỹ Năng",
+      "Yêu Cầu Cấp Độ",
+      "Tình Huống (Khi nào dùng?)",
+      "Góc Nhìn Định Tâm (Mindset)",
+      "Câu Hỏi Khai Vấn & Dẫn Chứng",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "sample": [
+      [
+        "W001",
+        "Pháp Lý & Tuân Thủ",
+        "Rookie",
+        "Kịch bản Ghi âm (QĐ Bộ TC)",
+        "Dạ em xin phép ghi âm đoạn này để bảo vệ quyền lợi hợp pháp của gia đình mình sau này, đảm bảo em đã giải thích đúng & đủ các điều khoản loại trừ theo quy định...",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "W002",
+        "Y Khoa - Thẩm định",
+        "Pro",
+        "Khách có Nang Tuyến Giáp",
+        "BƯỚC 1: Rào trước kỳ vọng (Có thể hệ thống sẽ tạm hoãn). \nBƯỚC 2: Xin đủ Sổ khám, Siêu âm Tirads. \nBƯỚC 3: Nộp kèm 'Bản Tường Trình Y Khoa' xin loại trừ riêng tuyến giáp.",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "W003",
+        "Y Khoa - Bồi thường",
+        "Pro",
+        "Ngăn chặn Nằm viện an dưỡng",
+        "Bảo hiểm liên thông y tế. Nằm viện Khoa Đông Y/Lão khoa (K16/K17) quá ngày tiêu chuẩn, AI sẽ khóa hồ sơ thanh tra. Khuyên KH đi viện chữa bệnh thật, đừng vì vài đồng trợ cấp mà bị từ chối sai.",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "W004",
+        "Storytelling",
+        "Rookie",
+        "Kể chuyện: Chuyến xe buýt",
+        "Khi khách chần chừ: 'Anh chị tưởng tượng gia đình mình đang trên 1 chuyến xe. Anh là tài xế. Nếu lỡ tài xế gục ngã, ai sẽ cầm vô lăng chở bọn trẻ đi tiếp?' (Ngắt giọng 3 giây, nhìn vào mắt khách).",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "W005",
+        "Thẩm Định Y Khoa",
+        "Pro",
+        "Khách hàng khai bệnh nền (Viêm gan, Huyết áp, Tuyến giáp...)",
+        "KHÔNG xúi khách giấu bệnh. Hệ thống VssID liên thông sẽ phát hiện. Khám sức khỏe của cty KHÔNG thay thế nghĩa vụ kê khai trung thực.",
+        "👉 HƯỚNG DẪN KHÁCH: 'Anh/chị mở app VssID, em sẽ lấy đúng mã bệnh (ICD) để khai. Việc này giúp hồ sơ sạch, lỡ sau này claim bồi thường 1 phút 30 giây là tiền về. Nếu bị tăng phí, đó là sự công bằng của quỹ bảo hiểm bảo vệ anh chị.'",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  },
+  "4_Ngôn Ngữ Thấu Cảm": {
+    "rows": 5,
+    "headers": [
+      "Mã ĐK",
+      "Ngôn Ngữ Pháp Lý (Khó hiểu)",
+      "Dịch Thuật Thấu Cảm (Nói với khách)"
+    ],
+    "sample": [
+      [
+        "DK01",
+        "Thời gian chờ 90 ngày",
+        "Công ty cần 90 ngày để đảm bảo quỹ chung không bị lạm dụng bởi người ủ bệnh từ trước. Anh/chị khỏe mạnh thì hoàn toàn yên tâm, đây là cách công ty bảo vệ tiền của chính anh chị."
+      ],
+      [
+        "DK02",
+        "Bệnh lý có sẵn",
+        "Bảo hiểm là mua bình cứu hỏa trước khi cháy nhà. Mình khai thật 100% bệnh cũ, em sẽ làm tường trình xin công ty bảo vệ anh chị những bệnh khác để sau này claim bồi thường 1 phút 30 giây là tiền về."
+      ],
+      [
+        "DK06",
+        "Quan hệ được bảo hiểm (Insurable Interest)",
+        "Chỉ được mua bảo hiểm cho bản thân, vợ/chồng, con cái, cha mẹ hoặc người có quyền lợi tài chính. KHÔNG thể mua cho người ngoài/bạn bè để trục lợi. Đây là nguyên tắc đạo đức cốt lõi của ngành."
+      ],
+      [
+        "DK07",
+        "Giá trị hoàn lại (Cash Value) & Phí chấm dứt",
+        "Dòng tiền bị trừ Phí ban đầu và Phí rủi ro. Nếu hủy HĐ trong 1-3 năm đầu sẽ gần như mất trắng. Bảo hiểm là kỷ luật dài hạn, KHÔNG khuyên khách tham gia nếu chỉ định gửi 1-2 năm."
+      ]
+    ]
+  },
+  "5_Trợ Lý Thẩm Định": {
+    "rows": 5,
+    "headers": [
+      "Mã Form",
+      "Tình Huống",
+      "Mẫu Văn Bản Cover Letter (TVV Copy & Điền)"
+    ],
+    "sample": [
+      [
+        "F001",
+        "Khách có tì vết sức khỏe",
+        "Kính gửi UW. Khách hàng phát hiện [Tên bệnh] vào [Thời gian]. Hiện tại sức khỏe ổn định. Tôi đính kèm [Kết quả siêu âm/Xét nghiệm] gần nhất. Đề xuất UW xem xét bảo vệ quyền lợi tối đa hoặc loại trừ riêng bệnh lý này."
+      ],
+      [
+        "F002",
+        "Check VssID với khách",
+        "Anh/chị mở app VssID, cho em xem phần 'Lịch sử khám chữa bệnh'. Em sẽ ghi chú lại các Mã ICD để khai báo cực chuẩn xác, đảm bảo hồ sơ sạch, công ty không có cớ bắt bẻ sau này."
+      ],
+      [
+        "F003",
+        "Giải trình thông tin y tế qua VssID",
+        "Kính gửi Bộ phận Thẩm định (UW). Căn cứ theo ứng dụng VssID của khách hàng, lịch sử khám chữa bệnh ghi nhận [Mã ICD - Tên bệnh] vào ngày [Ngày]. Tôi đính kèm ảnh chụp màn hình VssID. Khách hàng cam kết khai báo trung thực. Kính mong UW xem xét tiến hành thẩm định."
+      ],
+      [
+        "F004",
+        "Xin xem xét lại quyết định Tăng phí / Loại trừ",
+        "Kính gửi UW. Nhận được quyết định [Tăng phí/Loại trừ] cho bệnh lý [Tên bệnh], tôi xin bổ sung Báo cáo bác sĩ điều trị (APS) mới nhất ngày [Ngày] cho thấy chỉ số [Tên chỉ số] đã về mức bình thường và ổn định. Mong UW tái thẩm định để mang lại quyền lợi tốt nhất cho Khách hàng."
+      ]
+    ]
+  },
+  "6_La Bàn Lãnh Đạo": {
+    "rows": 7,
+    "headers": [
+      "Mã Bài",
+      "Chủ Đề Lãnh Đạo",
+      "Tư Duy & Kỹ Năng Cốt Lõi"
+    ],
+    "sample": [
+      [
+        "LDR01",
+        "5 Cấp Độ Lãnh Đạo",
+        "Mức 1: Quyền lực (Nhân viên nghe vì sợ). Mức 2: Quan hệ (Nhân viên nghe vì nể). Mức 4: Phát triển người khác. Sếp đang ở mức nào?"
+      ],
+      [
+        "LDR02",
+        "Quản Lý vs Lãnh Đạo",
+        "Quản lý là làm đúng việc (Duy trì, kiểm soát). Lãnh đạo là làm những việc đúng (Đổi mới, phá vỡ khuôn khổ, truyền cảm hứng). Hãy bớt soi KPI, tăng cường lắng nghe!"
+      ],
+      [
+        "LDR03",
+        "Giải quyết xung đột",
+        "Giao tiếp hiệu quả giúp nhận diện và giải quyết xung đột nhanh chóng. Luôn cung cấp phản hồi xây dựng thay vì chỉ trích."
+      ],
+      [
+        "LDR04",
+        "Tư Duy Tảng Băng Trôi (Iceberg Model)",
+        "Khi TVV nghỉ việc hoặc rớt số liên tục, đừng chỉ nhìn 'Sự kiện' (Phần nổi). Hãy tìm 'Xu hướng' (Điều này lặp lại bao lâu rồi?), 'Cấu trúc' (Hệ thống/Quy trình nào gây ra?), và 'Mô hình tư duy' (Niềm tin ngầm nào của tổ chức đang sai?). Sửa từ gốc rễ."
+      ],
+      [
+        "LDR05",
+        "Kỹ Thuật 5 Whys (5 Lần Tại Sao)",
+        "Khi dự án fail hoặc khách hàng khiếu nại, cấm đổ lỗi cho cá nhân (Blameless learning). Hãy hỏi 'Tại sao' 5 lần để tìm lỗi hệ thống. VD: Tại sao trễ báo cáo? -> Tại sao thiếu dữ liệu? -> Tại sao không có quy trình bàn giao? -> Lỗi do quy trình, không phải do người."
+      ]
+    ]
+  },
+  "7_Trạm Tiếp Năng Lượng": {
+    "rows": 4,
+    "headers": [
+      "Mã Quà",
+      "Tên Quà Tặng",
+      "Loại",
+      "Mức Điểm Đổi",
+      "Trạng Thái"
+    ],
+    "sample": [
+      [
+        "Q001",
+        "Bùa Cứu Chuỗi (Streak Freeze)",
+        "Đặc quyền App",
+        "50.0",
+        "Hoạt động"
+      ],
+      [
+        "Q002",
+        "Cốc Cafe Starbucks từ Sếp",
+        "Hiện vật",
+        "150.0",
+        "Hoạt động"
+      ],
+      [
+        "Q003",
+        "Yêu cầu Sếp đi chốt sale cùng 1 ca",
+        "Đặc quyền VIP",
+        "500.0",
+        "Hoạt động"
+      ]
+    ]
+  },
+  "8_Ngân Hàng Điểm": {
+    "rows": 3,
+    "headers": [
+      "Mã GD",
+      "Mã ID",
+      "Ngày Giờ",
+      "Loại Giao Dịch",
+      "Số Điểm",
+      "Lý Do / Nguồn"
+    ],
+    "sample": [
+      [
+        "TX001",
+        "ID04",
+        "2026-08-12 09:00:00",
+        "Cộng Điểm",
+        "50.0",
+        "Giao HĐ xuất sắc - Khách WOW"
+      ],
+      [
+        "TX002",
+        "ID04",
+        "2026-08-13 10:00:00",
+        "Trừ Điểm",
+        "-50.0",
+        "Đổi Bùa Cứu Chuỗi (Q001)"
+      ]
+    ]
+  },
+  "9_Góc Lắng Nghe": {
+    "rows": 3,
+    "headers": [
+      "Mã GY",
+      "Mã ID",
+      "Tháng Đánh Giá",
+      "Điểm Tối Ưu (Sao)",
+      "Tính Năng Yêu Thích",
+      "Đề Xuất Phát Triển"
+    ],
+    "sample": [
+      [
+        "FB001",
+        "ID04",
+        "2026-08-01 00:00:00",
+        "5.0",
+        "Từ Điển Pháp Lý",
+        "App rất mượt, sếp cho thêm phần tính phí nhanh nữa thì tuyệt!"
+      ],
+      [
+        "FB002",
+        "ID02",
+        "2026-08-01 00:00:00",
+        "5.0",
+        "Radar Cảnh Báo",
+        "Giúp mình biết ai đang nản để hẹn đi cà phê kịp thời."
+      ]
+    ]
+  },
+  "11_Bản Tin 90s & Án Lệ": {
+    "rows": 4,
+    "headers": [
+      "Mã Bài",
+      "Phân Loại",
+      "Tiêu Đề",
+      "Tóm Tắt Ngắn Gọn (3 gạch đầu dòng)",
+      "Góc Nhìn Thực Chiến (Bài học cho TVV)",
+      "Ngày Đăng"
+    ],
+    "sample": [
+      [
+        "N001",
+        "Tin Vĩ Mô",
+        "Lãi suất tiết kiệm tiếp tục giảm kỷ lục",
+        "- Các ngân hàng lớn đồng loạt giảm lãi suất huy động.\n- Dòng tiền nhàn rỗi đang tìm kênh trú ẩn mới.",
+        "👉 ĐÂY LÀ CƠ HỘI: Gọi điện cho khách hàng có tiền gửi sắp đáo hạn. Đừng nói về bảo vệ, hãy nói về 'Kênh ủy thác đầu tư an toàn sinh lời dài hạn' qua Quỹ liên kết chung.",
+        "2026-08-15 00:00:00"
+      ],
+      [
+        "C001",
+        "Ca Bồi Thường (Chi Trả)",
+        "Chi trả 500tr Ung thư giai đoạn đầu",
+        "- Khách hàng 35 tuổi, phát hiện K tuyến giáp qua khám định kỳ.\n- Khách đã từng phân vân không mua vì nghĩ mình khỏe.",
+        "👉 BÀI HỌC: Trẻ và khỏe không phải là màng chắn ung thư. Hãy đưa Case Study này cho các khách hàng trẻ đang chủ quan xem.",
+        "2026-08-15 00:00:00"
+      ],
+      [
+        "C002",
+        "Ca Bồi Thường (Từ Chối)",
+        "Từ chối thanh toán viêm dạ dày do ngoại trú",
+        "- Khách nằm viện 1 đêm nhưng hồ sơ bệnh án bác sĩ ghi 'Theo dõi ngoại trú'.\n- Khách làm ầm lên chửi công ty lừa đảo.",
+        "👉 BÀI HỌC: TVV phải dặn khách cực kỹ: 'Khi bác sĩ bảo nhập viện, anh chị phải hỏi rõ là NỘI TRÚ hay NGOẠI TRÚ, vì có thẻ mới bảo lãnh Nội trú'.",
+        "2026-08-15 00:00:00"
+      ]
+    ]
+  },
+  "12_Nạp Não Mỗi Sáng": {
+    "rows": 3,
+    "headers": [
+      "Mã Thử Thách",
+      "Nội Dung Câu Hỏi",
+      "Đáp Án A",
+      "Đáp Án B",
+      "Đáp Án C",
+      "Đáp Án Đúng",
+      "Giải Thích Chuyên Sâu",
+      "Điểm Thưởng"
+    ],
+    "sample": [
+      [
+        "QZ001",
+        "Khách hàng bị tai nạn giao thông, hoàn toàn không có nồng độ cồn nhưng lại KHÔNG có bằng lái xe. Công ty có đền không?",
+        "A. Có, vì tai nạn là rủi ro khách quan.",
+        "B. Không, vì vi phạm pháp luật giao thông.",
+        "C. Đền 50% vì có tình tiết giảm nhẹ.",
+        "B",
+        "Việc điều khiển phương tiện mà không có giấy phép hợp lệ là hành vi vi phạm pháp luật, thuộc nhóm Điều khoản loại trừ cơ bản của TẤT CẢ các hợp đồng BHNT.",
+        "10.0"
+      ],
+      [
+        "QZ002",
+        "Khi khách hàng nói 'Chị mới mua một cái nhà, đang nợ ngân hàng nhiều lắm, không có tiền mua BH đâu', câu khai vấn nào là sắc bén nhất?",
+        "A. Dạ gói bên em mỗi ngày chỉ 30 ngàn thôi chị.",
+        "B. Dạ chị mua nhà trả góp đúng không, tháng chị trả ngân hàng bao nhiêu?",
+        "C. Dạ, nếu người trụ cột gia đình gặp rủi ro mất thu nhập, ai sẽ là người tiếp tục trả khoản nợ ngân hàng đó để giữ lại căn nhà cho các cháu ạ?",
+        "C",
+        "Đáp án C sử dụng kỹ thuật SPIN (Câu hỏi Hệ quả - Implication) để gắn rủi ro mất thu nhập với khoản nợ lớn nhất của khách hàng, tạo ra tính cấp bách.",
+        "10.0"
+      ]
+    ]
+  }
+}

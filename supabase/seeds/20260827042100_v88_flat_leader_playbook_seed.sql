@@ -1,0 +1,17 @@
+-- V88: Dữ liệu phẳng authoritative từ pasted_content_183.txt.
+-- Đã audit leader_playbook và coaching_logs trước khi clear theo chỉ định người dùng.
+begin;
+
+-- DELETE được dùng thay TRUNCATE để không lan cascade sang CRM table đang có FK.
+delete from public.leader_playbook;
+
+insert into public.leader_playbook (type, prefix, title, content, note, share_text, roleplay_prompt, tags, legacy_source_code)
+values
+  ('principle', '01', '5 Cấp Độ Lãnh Đạo (Cập nhật)', 'Mức 1: Quyền lực (sợ). Mức 2: Quan hệ (nể). Mức 3: Kết quả (ngưỡng mộ). Mức 4: Phát triển người khác (biết ơn). Sự chuyển dịch từ Mức 1 lên Mức 4 là hành trình từ người quản lý thành một Người Khai Vấn (Coach).', '📌 Dùng khi tự soi chiếu lại phong cách tương tác với team.', 'Một người quản lý giỏi tạo ra kết quả. Nhưng một Lãnh đạo thực thụ tạo ra những người giỏi hơn mình. Tuần mới, chúng ta cùng nhau nâng tầm nhé!', null, array[]::text[], 'v88-leader-playbook-01'),
+  ('principle', '02', 'Tư Duy Tảng Băng Trôi (Iceberg Model)', 'Những biểu hiện như đi trễ, giảm tương tác thường chỉ là 10% bề nổi. 90% phần chìm bên dưới có thể là nỗi sợ hãi hoặc áp lực. Sự thấu cảm bắt đầu từ việc khám phá 90% phần chìm này.', '📌 Dùng trước khi bước vào cuộc trò chuyện chấn chỉnh kỷ luật.', 'Những gì chúng ta thấy ở bề ngoài chưa chắc là toàn bộ câu chuyện. Hãy luôn giữ một khoảng lùi thấu cảm trước khi đưa ra đánh giá nhé.', null, array[]::text[], 'v88-leader-playbook-02'),
+  ('coaching_script', 'CHẠM 01', 'Xốc lại tinh thần sau rớt Hợp đồng', 'TVV đang rất hụt hẫng sau khi rớt deal phút chót. Hãy bắt đầu bằng sự đồng cảm, sau đó dùng câu hỏi mở: ''Trải nghiệm vừa rồi mang lại cho em góc nhìn mới nào?''', '⏱️ 15 phút 1-1 - Đặt câu hỏi Khai vấn', null, 'Đóng vai đại lý vừa rớt hợp đồng 50 triệu. Bạn rất suy sụp và muốn bỏ nghề. Leader (người dùng) đang nói chuyện với bạn. Chỉ mở lòng nếu họ thấu cảm và đặt câu hỏi mở.', array['Mất động lực']::text[], 'v88-leader-playbook-03'),
+  ('coaching_script', 'CHẠM 02', 'Tháo gỡ áp lực chỉ tiêu thi đua', 'Khi team lo âu với chỉ tiêu mới, áp dụng khung phản hồi SBI trong trò chuyện riêng sẽ gỡ rối tâm lý hiệu quả, bảo vệ sự tự tin của TVV.', '⏱️ 15 phút 1-1 - Góp ý chân thành, bảo vệ cái tôi', null, 'Đóng vai đại lý đang bực tức vì chỉ tiêu tháng này quá cao, vừa than vãn trên group. Leader (người dùng) gọi riêng. Hãy bảo vệ quan điểm, trừ khi họ áp dụng chuẩn khung SBI.', array['Áp lực chỉ tiêu']::text[], 'v88-leader-playbook-04'),
+  ('coaching_script', 'CHẠM 03', 'Chuyển hóa mâu thuẫn nội bộ', 'Khi có cọ xát, lắng nghe chủ động từ hai phía mà không phán xét giúp hạ nhiệt căng thẳng. Leader là nhịp cầu thấu cảm.', '⏱️ 20 phút 1-1 - Lắng nghe không phán xét', null, 'Đóng vai đại lý lâu năm bức xúc vì bị nhân viên mới giành khách. Bạn rất nóng giận. Leader (người dùng) hòa giải. Bạn cần cảm thấy mình được lắng nghe hoàn toàn trước khi hạ hỏa.', array['Mâu thuẫn']::text[], 'v88-leader-playbook-05'),
+  ('coaching_script', 'CHẠM 04', 'Truyền lửa vượt qua nỗi sợ Cold-call', 'Thay vì nhắc nhở, Leader chọn cách ngồi cạnh, bật loa ngoài và tự tay gọi mẫu vài cuộc. Lãnh đạo làm gương truyền thông điệp mạnh mẽ nhất.', '⏱️ 30 phút Joint-work - Lãnh đạo bằng hành động', null, 'Đóng vai TVV viện cớ bận để không gọi điện vì sợ bị từ chối. Leader (người dùng) yêu cầu bạn gọi. Bạn chống chế cho đến khi họ đề nghị ''gọi mẫu cho bạn xem''.', array['Kỹ năng yếu']::text[], 'v88-leader-playbook-06');
+
+commit;

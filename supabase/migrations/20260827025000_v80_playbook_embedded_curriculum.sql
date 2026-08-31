@@ -1,0 +1,119 @@
+-- V80: Embedded BHNT curriculum mapped to the existing Playbook/Iceberg contract.
+-- `ai_evaluation_rules` preserves the source roleplay prompt and all five raw Iceberg steps.
+insert into public.playbook_cards (
+  code, skill_system, required_level, situation, mindset, customer_insight,
+  core_logic, coaching_prompts, is_pro, source_sheet, sort_order, ai_evaluation_rules
+) values
+(
+  'v80-playbook-01',
+  'Xử lý Từ chối & Chốt Sales',
+  'Pro',
+  'Khách hàng đòi cắt hoa hồng hoặc chê phí cao',
+  'Bảo vệ giá trị nghề nghiệp. Đừng nhượng bộ bằng cách cắt máu (hoa hồng), hãy linh hoạt cấu trúc lại gói quyền lợi.',
+  'Khách hàng muốn tối ưu chi phí và nghĩ rằng hoa hồng đại lý là một khoản ''tiền bồi dưỡng'' có thể bớt xén được.',
+  'Góc nhìn định tâm: Giảm phí bằng cách cắt hoa hồng là tự hạ thấp giá trị phục vụ của bạn trong 15 năm tới. Hãy chuyển sự tập trung của khách từ ''Tiền hoa hồng'' sang ''Cấu trúc quyền lợi của Hợp đồng''.
+
+Logic ứng dụng: Nếu ngân sách khách hàng eo hẹp, giải pháp đúng là cấu trúc lại gói sản phẩm bổ trợ (Rider). Giữ lại các quyền lợi sinh tử và thẻ y tế, tạm thời bỏ qua các quyền lợi chưa cấp bách.',
+  'Dạ em hiểu ngân sách nhà mình đang cần cân đối lại. Bảng minh họa này em thiết kế là mức bảo vệ toàn diện nhất. Nếu anh/chị cần giảm phí, em tuyệt đối không thể cắt hoa hồng vì đó là chi phí để em đồng hành, lo thủ tục bồi thường cho gia đình mình suốt 15 năm tới. Thay vào đó, em sẽ cấu trúc lại gói: tạm thời bỏ Quyền lợi trợ cấp nằm viện qua một bên, chỉ giữ lại Thẻ sức khỏe nội trú và Bệnh lý nghiêm trọng để bảo vệ rủi ro lớn nhất trước. Anh/chị thấy hướng này hợp lý hơn không ạ?',
+  false,
+  'V80 · Embedded BHNT curriculum',
+  801,
+  jsonb_build_object(
+    'roleplay_prompt', 'Act as a tough life insurance client. You are ready to sign the contract today, but you aggressively ask the agent (user) to give you back their first-year commission, saying ''Another agent offered me a 20% cashback''. If the agent agrees to give you money, fail them. If the agent firmly but politely refuses, explains the value of their 15-year service, and offers to adjust the riders to fit your budget, praise them and agree to the adjusted plan.',
+    'iceberg_steps', jsonb_build_object(
+      'step_1_tinh_huong', 'Khách hàng đồng ý tham gia nhưng yêu cầu giảm phí, hoặc so sánh với đại lý khác và đòi ''cắt lại hoa hồng năm đầu'' mới chịu ký.',
+      'step_2_insight', 'Khách hàng muốn tối ưu chi phí và nghĩ rằng hoa hồng đại lý là một khoản ''tiền bồi dưỡng'' có thể bớt xén được.',
+      'step_3_goc_nhin', 'Giảm phí bằng cách cắt hoa hồng là tự hạ thấp giá trị phục vụ của bạn trong 15 năm tới. Hãy chuyển sự tập trung của khách từ ''Tiền hoa hồng'' sang ''Cấu trúc quyền lợi của Hợp đồng''.',
+      'step_4_logic', 'Nếu ngân sách khách hàng eo hẹp, giải pháp đúng là cấu trúc lại gói sản phẩm bổ trợ (Rider). Giữ lại các quyền lợi sinh tử và thẻ y tế, tạm thời bỏ qua các quyền lợi chưa cấp bách.',
+      'step_5_kich_ban', 'Dạ em hiểu ngân sách nhà mình đang cần cân đối lại. Bảng minh họa này em thiết kế là mức bảo vệ toàn diện nhất. Nếu anh/chị cần giảm phí, em tuyệt đối không thể cắt hoa hồng vì đó là chi phí để em đồng hành, lo thủ tục bồi thường cho gia đình mình suốt 15 năm tới. Thay vào đó, em sẽ cấu trúc lại gói: tạm thời bỏ Quyền lợi trợ cấp nằm viện qua một bên, chỉ giữ lại Thẻ sức khỏe nội trú và Bệnh lý nghiêm trọng để bảo vệ rủi ro lớn nhất trước. Anh/chị thấy hướng này hợp lý hơn không ạ?'
+    )
+  )
+),
+(
+  'v80-playbook-02',
+  'Nghệ thuật Khai vấn',
+  'Leader',
+  'TVV nản chí vì đăng bài BHNT không ai tương tác',
+  'Đừng cầm tay chỉ việc, hãy dùng Mô hình GROW để TVV thấu hiểu đặc thù tâm lý của tệp khách hàng online.',
+  'Đại lý mới đang bị ảo tưởng về tiếp thị bảo hiểm, nghĩ rằng cứ đăng quyền lợi là sẽ có khách mua như bán hàng online thông thường.',
+  'Góc nhìn định tâm: Thay vì đưa sẵn bài mẫu cho họ copy, Leader cần giúp họ tự nhận ra: Khách hàng bảo hiểm thường ''theo dõi ngầm'' chứ hiếm khi tương tác công khai vì sợ bị chèo kéo.
+
+Logic ứng dụng: Sử dụng câu hỏi gợi mở để đưa TVV trở lại thực tế (Reality). Giúp họ chuyển đổi từ nội dung ''bán hàng dọa dẫm'' sang ''chia sẻ giá trị bảo vệ''.',
+  'Chị hiểu cảm giác hụt hẫng này, lúc mới vào nghề ai cũng trải qua. Em biết không, đặc thù mua BHNT là khách hàng thường âm thầm theo dõi chứ ít khi like hay comment. Chị hỏi thật nhé: Mục tiêu bài đăng của em là để chốt khách ngay, hay để cho bạn bè biết em đang làm nghề này một cách nghiêm túc? Nếu là để tạo niềm tin, tuần này em thử ngừng copy bài quyền lợi, mà kể một câu chuyện thật về lý do em chọn nghề bảo hiểm xem sao nhé?',
+  false,
+  'V80 · Embedded BHNT curriculum',
+  802,
+  jsonb_build_object(
+    'roleplay_prompt', 'Act as a discouraged new insurance agent (Rookie). You have been posting life insurance quotes on Facebook for weeks with zero likes. You want your Leader (the user) to give you a ''viral template''. If the Leader just gives you a template or tells you to ''try harder'', act uninterested. If the Leader asks you coaching questions about your goals or explains the ''silent observer'' psychology of insurance clients, act enlightened and agree to change your approach.',
+    'iceberg_steps', jsonb_build_object(
+      'step_1_tinh_huong', 'Một đại lý mới (Rookie) than vãn: ''Chị ơi, em đăng bài bảo hiểm lên Facebook cả tháng nay chẳng ai like hay hỏi thăm, em nản quá''.',
+      'step_2_insight', 'Đại lý mới đang bị ảo tưởng về tiếp thị bảo hiểm, nghĩ rằng cứ đăng quyền lợi là sẽ có khách mua như bán hàng online thông thường.',
+      'step_3_goc_nhin', 'Thay vì đưa sẵn bài mẫu cho họ copy, Leader cần giúp họ tự nhận ra: Khách hàng bảo hiểm thường ''theo dõi ngầm'' chứ hiếm khi tương tác công khai vì sợ bị chèo kéo.',
+      'step_4_logic', 'Sử dụng câu hỏi gợi mở để đưa TVV trở lại thực tế (Reality). Giúp họ chuyển đổi từ nội dung ''bán hàng dọa dẫm'' sang ''chia sẻ giá trị bảo vệ''.',
+      'step_5_kich_ban', 'Chị hiểu cảm giác hụt hẫng này, lúc mới vào nghề ai cũng trải qua. Em biết không, đặc thù mua BHNT là khách hàng thường âm thầm theo dõi chứ ít khi like hay comment. Chị hỏi thật nhé: Mục tiêu bài đăng của em là để chốt khách ngay, hay để cho bạn bè biết em đang làm nghề này một cách nghiêm túc? Nếu là để tạo niềm tin, tuần này em thử ngừng copy bài quyền lợi, mà kể một câu chuyện thật về lý do em chọn nghề bảo hiểm xem sao nhé?'
+    )
+  )
+),
+(
+  'v80-playbook-03',
+  'Xử lý Từ chối & Chốt Sales',
+  'Rookie',
+  'Khách hàng so sánh lãi suất BHNT với Ngân hàng',
+  'Không tranh cãi về con số sinh lời. Dùng kỹ thuật kể chuyện (Narrative) để định vị lại ý nghĩa của ''Quỹ dự phòng''.',
+  'Khách hàng đang nhầm lẫn giữa công cụ Đầu tư sinh lời (Ngân hàng) và công cụ Quản trị rủi ro (Bảo hiểm).',
+  'Góc nhìn định tâm: Càng mang bảng minh họa ra tính toán lãi suất, bạn càng dễ mất khách. Hãy đồng thuận với họ về mặt tiết kiệm, nhưng mở ra góc nhìn về sự bảo vệ tài sản.
+
+Logic ứng dụng: Ngân hàng là nơi để ''tiền chẵn sinh ra tiền lẻ''. Bảo hiểm là nơi dùng ''tiền lẻ để bảo vệ cục tiền chẵn''. Hai quỹ này không đối đầu mà bổ trợ cho nhau.',
+  'Dạ anh nói rất chuẩn, nếu thuần túy để sinh lời thì gửi ngân hàng hay đầu tư luôn tốt hơn BHNT. Ngân hàng là nơi anh bỏ tiền chẵn vào để lấy tiền lẻ (tiền lãi) ra mỗi tháng. Còn hợp đồng bảo hiểm này, thực chất là quỹ dự phòng y tế: anh chỉ cần trích một khoản ''tiền lẻ'' nhỏ xíu, nhưng công ty bảo hiểm cam kết mang đến một ''cục tiền chẵn'' (1 tỷ đồng) ngay lúc gia đình mình cần nhất khi ốm đau. Mình trích 10% gửi qua quỹ này để bảo vệ 90% số tiền trong ngân hàng của anh nhé?',
+  false,
+  'V80 · Embedded BHNT curriculum',
+  803,
+  jsonb_build_object(
+    'roleplay_prompt', 'Act as a highly logical client. You refuse to buy life insurance because the return on investment is lower than your bank''s savings rate. You will dismiss any agent who tries to argue math with you. You will only be convinced if the agent effectively uses the ''Bank is for wealth building, Insurance is for wealth protection'' analogy and gently asks to allocate a small percentage to protect the larger asset.',
+    'iceberg_steps', jsonb_build_object(
+      'step_1_tinh_huong', 'Khách hàng chần chừ: ''Anh mang tiền này gửi tiết kiệm ngân hàng lãi cao hơn nhiều, tội gì mua bảo hiểm sinh lời thấp mà lại bị giam vốn''.',
+      'step_2_insight', 'Khách hàng đang nhầm lẫn giữa công cụ Đầu tư sinh lời (Ngân hàng) và công cụ Quản trị rủi ro (Bảo hiểm).',
+      'step_3_goc_nhin', 'Càng mang bảng minh họa ra tính toán lãi suất, bạn càng dễ mất khách. Hãy đồng thuận với họ về mặt tiết kiệm, nhưng mở ra góc nhìn về sự bảo vệ tài sản.',
+      'step_4_logic', 'Ngân hàng là nơi để ''tiền chẵn sinh ra tiền lẻ''. Bảo hiểm là nơi dùng ''tiền lẻ để bảo vệ cục tiền chẵn''. Hai quỹ này không đối đầu mà bổ trợ cho nhau.',
+      'step_5_kich_ban', 'Dạ anh nói rất chuẩn, nếu thuần túy để sinh lời thì gửi ngân hàng hay đầu tư luôn tốt hơn BHNT. Ngân hàng là nơi anh bỏ tiền chẵn vào để lấy tiền lẻ (tiền lãi) ra mỗi tháng. Còn hợp đồng bảo hiểm này, thực chất là quỹ dự phòng y tế: anh chỉ cần trích một khoản ''tiền lẻ'' nhỏ xíu, nhưng công ty bảo hiểm cam kết mang đến một ''cục tiền chẵn'' (1 tỷ đồng) ngay lúc gia đình mình cần nhất khi ốm đau. Mình trích 10% gửi qua quỹ này để bảo vệ 90% số tiền trong ngân hàng của anh nhé?'
+    )
+  )
+),
+(
+  'v80-playbook-04',
+  'Kỹ năng Thực chiến',
+  'Leader',
+  'TVV phản ứng tiêu cực với Memo chỉ tiêu thi đua',
+  'Bảo vệ văn hóa đội ngũ. Dùng khung phản hồi SBI để chấn chỉnh hành vi mà không xúc phạm cái tôi của TVV.',
+  'TVV này có thể đang gặp áp lực hoặc bế tắc nguồn khách, việc xả cảm xúc vào Memo chỉ là cái cớ. Tuy nhiên, nó đang phá hoại năng lượng của các đại lý mới.',
+  'Góc nhìn định tâm: Tuyệt đối không dán nhãn ''Em dạo này tiêu cực thế'' hay cãi tay đôi trên Group. Hãy dùng SBI (Situation - Behavior - Impact) để góp ý riêng tư, dựa trên sự thật khách quan.
+
+Logic ứng dụng: Tách bạch hành vi (nhắn tin than vãn) khỏi con người (năng lực của họ). Khi bạn mô tả tác động của hành vi lên người khác, TVV sẽ tự nhận ra vấn đề mà không bị kích hoạt cơ chế phòng thủ.',
+  'Sáng nay khi công ty vừa thông báo Memo thi đua (Hoàn cảnh), chị thấy em nhắn vài tin phản đối khá gắt về chỉ tiêu FYP trong group team (Hành vi). Việc này vô tình làm mấy bạn đại lý mới (Rookie) bị tụt năng lượng và hoang mang theo (Tác động). Chiều nay hai chị em mình ngồi cà phê 15 phút, em chia sẻ riêng với chị xem tệp khách hàng của em đang vướng ở đâu mà thấy chỉ tiêu này quá sức nhé?',
+  false,
+  'V80 · Embedded BHNT curriculum',
+  804,
+  jsonb_build_object(
+    'roleplay_prompt', 'Act as a veteran insurance agent. You just complained loudly in the team group chat about the ''unrealistic FYP quota'' in the new monthly contest. Your Leader (the user) is having a 1-on-1 with you. If the Leader attacks your attitude or sounds bossy, you will argue back fiercely. If the Leader uses the SBI framework (Situation, Behavior, Impact) calmly to point out how it affected the rookies, and asks what''s really bothering you, you will apologize and admit you are struggling with a dry client pipeline.',
+    'iceberg_steps', jsonb_build_object(
+      'step_1_tinh_huong', 'Công ty vừa ra Memo thi đua (Contest) tháng mới với chỉ tiêu FYP khá cao. Một TVV kỳ cựu nhắn tin chê bai, than phiền trong nhóm Zalo chung của Team.',
+      'step_2_insight', 'TVV này có thể đang gặp áp lực hoặc bế tắc nguồn khách, việc xả cảm xúc vào Memo chỉ là cái cớ. Tuy nhiên, nó đang phá hoại năng lượng của các đại lý mới.',
+      'step_3_goc_nhin', 'Tuyệt đối không dán nhãn ''Em dạo này tiêu cực thế'' hay cãi tay đôi trên Group. Hãy dùng SBI (Situation - Behavior - Impact) để góp ý riêng tư, dựa trên sự thật khách quan.',
+      'step_4_logic', 'Tách bạch hành vi (nhắn tin than vãn) khỏi con người (năng lực của họ). Khi bạn mô tả tác động của hành vi lên người khác, TVV sẽ tự nhận ra vấn đề mà không bị kích hoạt cơ chế phòng thủ.',
+      'step_5_kich_ban', 'Sáng nay khi công ty vừa thông báo Memo thi đua (Hoàn cảnh), chị thấy em nhắn vài tin phản đối khá gắt về chỉ tiêu FYP trong group team (Hành vi). Việc này vô tình làm mấy bạn đại lý mới (Rookie) bị tụt năng lượng và hoang mang theo (Tác động). Chiều nay hai chị em mình ngồi cà phê 15 phút, em chia sẻ riêng với chị xem tệp khách hàng của em đang vướng ở đâu mà thấy chỉ tiêu này quá sức nhé?'
+    )
+  )
+)
+on conflict (code) do update set
+  skill_system = excluded.skill_system,
+  required_level = excluded.required_level,
+  situation = excluded.situation,
+  mindset = excluded.mindset,
+  customer_insight = excluded.customer_insight,
+  core_logic = excluded.core_logic,
+  coaching_prompts = excluded.coaching_prompts,
+  is_pro = excluded.is_pro,
+  source_sheet = excluded.source_sheet,
+  sort_order = excluded.sort_order,
+  ai_evaluation_rules = excluded.ai_evaluation_rules,
+  updated_at = now();
