@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { CheckCircle2, PartyPopper, Sparkles, Star } from "lucide-react";
 import { AgentMomentCard, type AgentMomentCardProps } from "./AgentMomentCard";
 import leaderHeartImg from '../assets/images/leader-heart.png';
+import openChimeSound from '../assets/sounds/celebration-open-chime_b1969992.mp3';
+import claimCoinSound from '../assets/sounds/celebration-claim-coin_04b021b1.mp3';
 const BRIGHT_HEART_ASSET = leaderHeartImg;
-const CELEBRATION_OPEN_CHIME = "/manus-storage/celebration-open-chime_b1969992.mp3";
-const CELEBRATION_CLAIM_COIN = "/manus-storage/celebration-claim-coin_04b021b1.mp3";
+const CELEBRATION_OPEN_CHIME = openChimeSound;
+const CELEBRATION_CLAIM_COIN = claimCoinSound;
 
 function playCelebrationSound(src: string, volume: number) {
   if (typeof Audio === "undefined") return;

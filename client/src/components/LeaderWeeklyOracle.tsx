@@ -2,6 +2,8 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Check, Download, Image as ImageIcon, RefreshCw, Rocket, ShieldAlert, Sparkles, Target, X } from "lucide-react";
 import { toast } from "sonner";
 import { drawSmartTarotCard, type CosmicTarotCard } from "../lib/supabaseContent";
+import openChimeSound from '../assets/sounds/celebration-open-chime_b1969992.mp3';
+import claimCoinSound from '../assets/sounds/celebration-claim-coin_04b021b1.mp3';
 
 type SolarOracleCard = {
   id: string;
@@ -15,8 +17,8 @@ type SolarOracleCard = {
 
 type OracleStar = { id: number; top: string; left: string; size: string; delay: string; opacity: number };
 
-const ORACLE_DRAW_CHIME = "/manus-storage/celebration-open-chime_b1969992.mp3";
-const ORACLE_FLIP_TING = "/manus-storage/celebration-claim-coin_04b021b1.mp3";
+const ORACLE_DRAW_CHIME = openChimeSound;
+const ORACLE_FLIP_TING = claimCoinSound;
 
 function mapTarotCard(card: CosmicTarotCard): SolarOracleCard {
   const trigger = card.signalTrigger.toLowerCase();
