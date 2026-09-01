@@ -119,7 +119,7 @@ export function AdminHomeDashboard({ onNavigate, onQuizBankChanged }: Props) {
     { label: "Nhịp Đập Hạnh Phúc", value: String(philosophy.peerGifts30d), detail: "Lượt tặng XP ngang hàng trong 30 ngày.", tooltip: "Chỉ báo tổng hợp về ghi nhận tự nguyện, không phải KPI bắt buộc.", tone: "rose" as const, icon: <Zap size={19} /> },
   ];
   const contentCards = [
-    { title: "Bản Tin 90s & Án Lệ", route: "news" as const, icon: <Newspaper size={18} /> }, { title: "Marketing 1 Chạm", route: "marketing" as const, icon: <Sparkles size={18} /> }, { title: "La Bàn Lãnh Đạo", route: "leader" as const, icon: <Compass size={18} /> }, { title: "Trạm Đăng Kiểm", route: "disc" as const, icon: <BrainCircuit size={18} /> },
+    { title: "Bản Tin 90s & Án Lệ", route: "news" as const, icon: <Newspaper size={18} /> }, { title: "Marketing 1 Chạm", route: "marketing" as const, icon: <Sparkles size={18} /> }, { title: "La Bàn Lãnh Đạo", route: "leader" as const, icon: <Compass size={18} /> , roles: ['superadmin', 'director', 'leader'] }, { title: "Trạm Đăng Kiểm", route: "disc" as const, icon: <BrainCircuit size={18} /> },
   ];
 
   return <section className="screen-enter flex flex-col gap-6 pb-10" aria-label="Hệ Điều Hành Chống Rụng Số">

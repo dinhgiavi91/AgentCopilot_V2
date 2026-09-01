@@ -13,6 +13,8 @@ import "../sprint9.css";
 import "../sprint10.css";
 import "../sprint11.css";
 import "../pilot-step2.css";
+import logoImg from '../assets/logo.png';
+import trophyImg from '../assets/images/trophy.png';
 import {
   buildZaloDeepLink,
   calculateTargetPlan,
@@ -183,6 +185,7 @@ import {
   Landmark,
   Lightbulb,
   LockKeyhole,
+  type LucideIcon,
   Menu,
   MessageCircle,
   Newspaper,
@@ -223,7 +226,33 @@ type View =
   | "founder";
 type UserRole = "FREE" | "PRO";
 
-const OFFICIAL_LOGO = "/manus-storage/bhnt-official-logo_60b68461.png";
+const OFFICIAL_LOGO = logoImg;
+
+type SidebarNavRole = "superadmin" | "director" | "leader" | "advisor";
+
+const SECONDARY_NAV: {
+  id: View;
+  label: string;
+  icon: LucideIcon;
+  open: "view" | "news" | "case" | "leader";
+  roles?: SidebarNavRole[];
+}[] = [
+  { id: "customer_journal", label: "Nhật Ký Khách Hàng", icon: CalendarClock, open: "view" },
+  { id: "disc", label: "Trạm Đăng Kiểm", icon: ClipboardCheck, open: "view" },
+  { id: "cover", label: "Trợ Lý Thẩm Định", icon: PenLine, open: "view" },
+  { id: "news", label: "Bản Tin 90s", icon: Newspaper, open: "news" },
+  { id: "news", label: "Case Study Thực Chiến", icon: Landmark, open: "case" },
+  { id: "feedback", label: "Góc Lắng Nghe", icon: HeartHandshake, open: "view" },
+  { id: "empathy", label: "Ngôn Ngữ Thấu Cảm", icon: MessageCircle, open: "view" },
+  { id: "leader", label: "La Bàn Lãnh Đạo", icon: Compass, open: "leader", roles: ["superadmin", "director", "leader"] },
+  { id: "marketing", label: "Marketing 1-Chạm", icon: Send, open: "view" },
+];
+
+function matchesSidebarRole(role: string | undefined, roles?: SidebarNavRole[]) {
+  if (!roles?.length) return true;
+  const key = role === "super_admin" ? "superadmin" : role;
+  return Boolean(key && roles.includes(key as SidebarNavRole));
+}
 const money = new Intl.NumberFormat("vi-VN", { maximumFractionDigits: 0 });
 const emptyLibrary: OperationalLibrary = {
   playbooks: [],
@@ -1761,7 +1790,7 @@ export default function Home() {
               <div className="signal-orbit orbit-two" />
               <figure className="dashboard-motivation-art">
                 <img
-                  src="/manus-storage/dashboard-motivation-trophy_b18d3a51.jpg"
+                  src={trophyImg}
                   alt="Minh họa hành trình chinh phục mục tiêu"
                 />
                 <figcaption>
@@ -2459,56 +2488,28 @@ export default function Home() {
         </nav>
         <div className="nav-caption">CÔNG CỤ BỔ TRỢ</div>
         <nav className="secondary-nav">
-          <button onClick={() => openView("customer_journal")}>
-            <CalendarClock size={15} />
-            Nhật Ký Khách Hàng
-            <ChevronRight size={14} />
-          </button>
-          <button onClick={() => openView("disc")}>
-            <ClipboardCheck size={15} />
-            Trạm Đăng Kiểm
-            <ChevronRight size={14} />
-          </button>
-          <button onClick={() => openView("cover")}>
-            <PenLine size={15} />
-            Trợ Lý Thẩm Định
-            <ChevronRight size={14} />
-          </button>
-          <button onClick={() => openNewsSection("news")}>
-            <Newspaper size={15} />
-            Bản Tin 90s
-            <ChevronRight size={14} />
-          </button>
-          <button onClick={() => openNewsSection("case")}>
-            <Landmark size={15} />
-            Case Study Thực Chiến
-            <ChevronRight size={14} />
-          </button>
-          <button onClick={() => openView("feedback")}>
-            <HeartHandshake size={15} />
-            Góc Lắng Nghe
-            <ChevronRight size={14} />
-          </button>
-          <button onClick={() => openView("empathy")}>
-            <MessageCircle size={15} />
-            Ngôn Ngữ Thấu Cảm
-            <ChevronRight size={14} />
-          </button>
-          <button
-            type="button"
-            onClick={openLeaderPlaybook}
-            aria-disabled={leaderPlaybookLocked}
-            className={leaderPlaybookLocked ? "cursor-not-allowed opacity-70" : ""}
-          >
-            <Compass size={15} />
-            La Bàn Lãnh Đạo
-            {leaderPlaybookLocked ? <LockKeyhole size={14} aria-label="Khóa La Bàn Lãnh Đạo" /> : <ChevronRight size={14} />}
-          </button>
-          <button onClick={() => openView("marketing")}>
-            <Send size={15} />
-            Marketing 1-Chạm
-            <ChevronRight size={14} />
-          </button>
+          {SECONDARY_NAV.filter(item => matchesSidebarRole(pilotSession?.profile.role, item.roles)).map(item => {
+            const Icon = item.icon;
+            const locked = item.id === "leader" && leaderPlaybookLocked;
+            return (
+              <button
+                key={`${item.open}-${item.label}`}
+                type="button"
+                onClick={() => {
+                  if (item.open === "leader") openLeaderPlaybook();
+                  else if (item.open === "news") openNewsSection("news");
+                  else if (item.open === "case") openNewsSection("case");
+                  else openView(item.id);
+                }}
+                aria-disabled={locked || undefined}
+                className={locked ? "cursor-not-allowed opacity-70" : ""}
+              >
+                <Icon size={15} />
+                {item.label}
+                {locked ? <LockKeyhole size={14} aria-label="Khóa La Bàn Lãnh Đạo" /> : <ChevronRight size={14} />}
+              </button>
+            );
+          })}
         </nav>
         <div className="plan-card free-plan">
           <div className="plan-icon">

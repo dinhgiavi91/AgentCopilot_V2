@@ -12,25 +12,25 @@ const leaderGreetingTones: Record<"morning" | "noon" | "afternoon" | "night", Le
   morning: {
     time: "buổi sáng",
     gradient: "from-amber-50 to-orange-100/50",
-    iconUrl: "/manus-storage/morning-3d_2b91e70b.png",
+    iconUrl: "/images/morning.png",
     quote: "Một ngày mới để dẫn dắt đội ngũ chinh phục những đỉnh cao mới. Chúc sếp một buổi sáng chiến lược và bứt phá!",
   },
   noon: {
     time: "buổi trưa",
     gradient: "from-cyan-50 to-blue-100/50",
-    iconUrl: "/manus-storage/noon-3d_27590f72.png",
+    iconUrl: "/images/noon.png",
     quote: "Người thuyền trưởng vững vàng thì sóng gió cũng hóa êm ru. Sếp nhớ dành chút thời gian ăn trưa và nạp lại năng lượng nhé.",
   },
   afternoon: {
     time: "buổi chiều",
     gradient: "from-orange-50 to-rose-100/50",
-    iconUrl: "/manus-storage/afternoon-3d_0720c9df.png",
+    iconUrl: "/images/afternoon.png",
     quote: "Vài lời động viên, công nhận đúng lúc của sếp lúc này sẽ tiếp thêm ngọn lửa khổng lồ cho cả team đấy. Tiến lên nào!",
   },
   night: {
     time: "buổi tối",
     gradient: "from-indigo-50 to-slate-200/50",
-    iconUrl: "/manus-storage/night-3d_e69aa523.png",
+    iconUrl: "/images/night.png",
     quote: "Dẫn dắt một tập thể chưa bao giờ là điều dễ dàng. Sếp đã vất vả gánh vác hôm nay rồi, gác lại âu lo và nghỉ ngơi thôi!",
   },
 };

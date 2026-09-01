@@ -1,9 +1,11 @@
 import React from "react";
 import { Gift, Heart, MessageSquareQuote, Quote, ShieldCheck, Sparkles } from "lucide-react";
 import { AGENT_MOMENT_ASSETS } from "./agentMomentAssets";
+import logoImg from '../assets/logo.png';
+import leaderAvatarImg from '../assets/images/leader-avatar.png';
 
-const OFFICIAL_LOGO = "/manus-storage/logo-agent-copilot_7e9f7a25.png";
-const LAUREL_WREATH_IMAGE = "/manus-storage/laurel-wreath-3d-gold_eb5fed57.png";
+const OFFICIAL_LOGO = logoImg;
+const LAUREL_WREATH_IMAGE = leaderAvatarImg;
 
 export type MomentTheme = "default" | "recovery" | "consistency" | "leader";
 export type RecognitionType = "personal" | "team" | "leader";

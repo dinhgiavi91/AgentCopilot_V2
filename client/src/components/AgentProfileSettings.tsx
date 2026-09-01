@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 import { Camera, Check, Heart, Navigation, Shield, Target, User, X } from "lucide-react";
-
+import navImg from '../assets/avatars/navigator.png';
+import nurturerImg from '../assets/avatars/nurturer.png';
+import wiseImg from '../assets/avatars/owl.png';
+import loyalImg from '../assets/avatars/dog.png';
 export const CORE_CAST_AVATARS = [
   {
     id: "navigator",
@@ -9,7 +12,7 @@ export const CORE_CAST_AVATARS = [
     color: "text-[#1E3A8A]",
     bgInfo: "bg-[#1E3A8A]",
     Icon: Navigation,
-    url: "/manus-storage/navigator_bf1942c9.png",
+    url: navImg,
     traits: "Đáng tin cậy, rõ ràng, luôn hướng về phía trước.",
     quote: "“Tôi biết đường, hãy đi cùng tôi.”",
   },
@@ -20,7 +23,7 @@ export const CORE_CAST_AVATARS = [
     color: "text-[#F59E0B]",
     bgInfo: "bg-[#D97706]",
     Icon: Heart,
-    url: "/manus-storage/nurturer_f9392345.png",
+    url: nurturerImg,
     traits: "Ấm áp, lắng nghe, thấu cảm.",
     quote: "“Tôi ở đây để lắng nghe và hỗ trợ bạn.”",
   },
@@ -31,7 +34,7 @@ export const CORE_CAST_AVATARS = [
     color: "text-[#22D3EE]",
     bgInfo: "bg-[#0E7490]",
     Icon: Target,
-    url: "/manus-storage/wise-copilot_71afd824.png",
+    url: wiseImg,
     traits: "Thông thái, bao quát, tầm nhìn xa.",
     quote: "“Để tôi giúp bạn nhìn xa hơn.”",
   },
@@ -42,7 +45,7 @@ export const CORE_CAST_AVATARS = [
     color: "text-[#10B981]",
     bgInfo: "bg-[#15803D]",
     Icon: Shield,
-    url: "/manus-storage/loyal-guardian_1a5fa487.png",
+    url: loyalImg,
     traits: "Trung thành, bảo vệ, kiên định.",
     quote: "“Bạn không bao giờ phải đi một mình.”",
   },

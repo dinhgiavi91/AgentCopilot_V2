@@ -12,25 +12,25 @@ const greetingTones: Record<"morning" | "noon" | "afternoon" | "night", Greeting
   morning: {
     time: "buổi sáng",
     gradient: "from-amber-50 to-orange-100/50",
-    iconUrl: "/manus-storage/morning-3d_2b91e70b.png",
+    iconUrl: "/images/morning.png",
     quote: "Một ly cafe và một mục tiêu nhỏ. Chúc bạn một ngày mới bứt phá nhé!",
   },
   noon: {
     time: "buổi trưa",
     gradient: "from-cyan-50 to-blue-100/50",
-    iconUrl: "/manus-storage/noon-3d_27590f72.png",
+    iconUrl: "/images/noon.png",
     quote: "Nghỉ ngơi một chút đi bạn. Thành công là một chặng marathon, không phải chạy nước rút.",
   },
   afternoon: {
     time: "buổi chiều",
     gradient: "from-orange-50 to-rose-100/50",
-    iconUrl: "/manus-storage/afternoon-3d_0720c9df.png",
+    iconUrl: "/images/afternoon.png",
     quote: "Một chút cố gắng buổi chiều sẽ tạo nên kết quả bất ngờ. Tiến lên nào!",
   },
   night: {
     time: "buổi tối",
     gradient: "from-indigo-50 to-slate-200/50",
-    iconUrl: "/manus-storage/night-3d_e69aa523.png",
+    iconUrl: "/images/night.png",
     quote: "Không phải ngày nào cũng có hợp đồng, nhưng nỗ lực của bạn hôm nay là không thể phủ nhận. Nghỉ ngơi thôi!",
   },
 };

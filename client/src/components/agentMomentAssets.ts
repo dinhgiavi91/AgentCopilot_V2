@@ -1,15 +1,17 @@
+import rewardBgImg from '../assets/images/reward-bg.png';
+import leaderHeartImg from '../assets/images/leader-heart.png';
 export const AGENT_MOMENT_ASSETS = {
   heartMoment: "/manus-storage/heart-moment_8f6f2f41.png",
   growthMoment: "/manus-storage/growth-moment_a331c401.png",
-  trophyMoment: "/manus-storage/trophy-moment_90651156.png",
+  trophyMoment: rewardBgImg,
   recovery: "/manus-storage/01_recovery_moment_996404f0.png",
   consistency: "/manus-storage/02_7_day_consistency_014309fa.png",
-  leaderRecognition: "/manus-storage/03_leader_recognition_5650a092.png",
+  leaderRecognition: leaderHeartImg,
   breakthrough: "/manus-storage/04_breakthrough_moment_cfe29344.png",
-  rewardMoney: "/manus-storage/05_reward_money_1a57436a.png",
-  rewardCoffee: "/manus-storage/06_reward_coffee_1839c446.png",
-  rewardFood: "/manus-storage/07_reward_food_83210d81.png",
-  rewardGift: "/manus-storage/08_reward_gift_af0968f6.png",
+  rewardMoney: rewardBgImg,
+  rewardCoffee: rewardBgImg,
+  rewardFood: rewardBgImg,
+  rewardGift: rewardBgImg,
 } as const;
 
 export type AgentMomentAssetKey = keyof typeof AGENT_MOMENT_ASSETS;
