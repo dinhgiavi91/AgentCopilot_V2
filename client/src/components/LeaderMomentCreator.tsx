@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Send, Sparkles, X } from "lucide-react";
 import { AgentMomentCard } from "./AgentMomentCard";
 import { SYSTEM_MESSAGES, type Tone } from "../lib/momentCopyEngine";
-
-const BRIGHT_HEART_ASSET = "/manus-storage/heart-emerald-bright-3d_6d6779c0.png";
+import leaderHeartImg from '../assets/images/leader-heart.png';
+const BRIGHT_HEART_ASSET = leaderHeartImg;
 
 export type LeaderMomentDraft = { tone: Tone; message: string; rewardName: string | null };
 

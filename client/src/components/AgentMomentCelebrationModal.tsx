@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { CheckCircle2, PartyPopper, Sparkles, Star } from "lucide-react";
 import { AgentMomentCard, type AgentMomentCardProps } from "./AgentMomentCard";
-
-const BRIGHT_HEART_ASSET = "/manus-storage/heart-emerald-bright-3d_6d6779c0.png";
+import leaderHeartImg from '../assets/images/leader-heart.png';
+const BRIGHT_HEART_ASSET = leaderHeartImg;
 const CELEBRATION_OPEN_CHIME = "/manus-storage/celebration-open-chime_b1969992.mp3";
 const CELEBRATION_CLAIM_COIN = "/manus-storage/celebration-claim-coin_04b021b1.mp3";
 
