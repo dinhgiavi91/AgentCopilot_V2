@@ -1,13 +1,13 @@
 import rewardBgImg from '../assets/images/reward-bg.png';
 import leaderHeartImg from '../assets/images/leader-heart.png';
 export const AGENT_MOMENT_ASSETS = {
-  heartMoment: "/manus-storage/heart-moment_8f6f2f41.png",
-  growthMoment: "/manus-storage/growth-moment_a331c401.png",
+  heartMoment: leaderHeartImg,
+  growthMoment: rewardBgImg,
   trophyMoment: rewardBgImg,
-  recovery: "/manus-storage/01_recovery_moment_996404f0.png",
-  consistency: "/manus-storage/02_7_day_consistency_014309fa.png",
+  recovery: rewardBgImg,
+  consistency: rewardBgImg,
   leaderRecognition: leaderHeartImg,
-  breakthrough: "/manus-storage/04_breakthrough_moment_cfe29344.png",
+  breakthrough: rewardBgImg,
   rewardMoney: rewardBgImg,
   rewardCoffee: rewardBgImg,
   rewardFood: rewardBgImg,
