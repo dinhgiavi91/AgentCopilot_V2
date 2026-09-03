@@ -926,7 +926,7 @@ export default function Home() {
         toast.message("Cột mốc này đã được nhận thưởng trước đó.");
       }
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Không thể nhận thưởng Chuỗi Bền Bỉ.");
+      toast.error((error as any)?.message || "Không thể nhận thưởng Chuỗi Bền Bỉ.");
     } finally {
       setClaimingStreakMilestoneId(null);
     }

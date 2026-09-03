@@ -1605,6 +1605,7 @@ export async function claimStreakMilestone(milestoneId: string): Promise<StreakM
   const session = await getCurrentPilotSession();
   if (!session) throw new Error("Hãy đăng nhập để nhận thưởng Chuỗi Bền Bỉ.");
   const { data, error } = await client.rpc("claim_streak_milestone_v1", { p_milestone_id: milestoneId });
+  console.log("Check ID truyền vào:", milestoneId);
   if (error) throw error;
   const row = (Array.isArray(data) ? data[0] : data) as Record<string, unknown> | null;
   if (!row) throw new Error("Không nhận được kết quả nhận thưởng chuỗi.");
